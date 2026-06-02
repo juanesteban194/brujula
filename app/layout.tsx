@@ -40,7 +40,7 @@ export const viewport: Viewport = {
   initialScale: 1,
   viewportFit: "cover",
   userScalable: false,
-  themeColor: "#0A0E14",
+  themeColor: "#0D0A08",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -52,7 +52,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <meta name="apple-mobile-web-app-title" content="Brújula" />
         <link rel="apple-touch-icon" href="/icons/icon-apple-180.png" />
         <link rel="manifest" href="/manifest.json" />
-        <meta name="theme-color" content="#0A0E14" />
+        <meta name="theme-color" content="#0D0A08" />
       </head>
       <body className="bg-bg-base text-text-primary antialiased">
         <Providers>

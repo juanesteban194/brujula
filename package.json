@@ -9,6 +9,7 @@
     "lint": "next lint",
     "type-check": "tsc --noEmit",
     "augment": "node scripts/augment-data.ts",
+    "icons": "node scripts/generate-icons.ts",
     "test:e2e": "playwright test",
     "test:e2e:ui": "playwright test --ui"
   },
