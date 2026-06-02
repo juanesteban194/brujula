@@ -1,0 +1,4202 @@
+[
+  {
+    "id": "rep_7de19b12",
+    "type": "robo",
+    "lat": 6.229225,
+    "lon": -75.632464,
+    "severity": 4,
+    "description": "Hurto de celulares reportado por vecinos",
+    "timestamp": "2026-03-10T11:08:36Z",
+    "votes": {
+      "confirm": 11,
+      "deny": 1
+    },
+    "active": true
+  },
+  {
+    "id": "rep_889f6633",
+    "type": "acoso_verbal",
+    "lat": 6.199942,
+    "lon": -75.567111,
+    "severity": 3,
+    "description": "Grupo de hombres gritando piropos",
+    "timestamp": "2026-04-19T00:14:36Z",
+    "votes": {
+      "confirm": 0,
+      "deny": 3
+    },
+    "active": true
+  },
+  {
+    "id": "rep_8c6d4325",
+    "type": "acoso_verbal",
+    "lat": 6.289072,
+    "lon": -75.601066,
+    "severity": 2,
+    "description": "Comentarios obscenos desde un carro",
+    "timestamp": "2026-04-01T08:16:36Z",
+    "votes": {
+      "confirm": 11,
+      "deny": 1
+    },
+    "active": true
+  },
+  {
+    "id": "rep_7eb8b06a",
+    "type": "bien",
+    "lat": 6.299283,
+    "lon": -75.590099,
+    "severity": 1,
+    "description": "Zona muy iluminada y transitada, me sentí segura",
+    "timestamp": "2026-03-02T06:28:36Z",
+    "votes": {
+      "confirm": 10,
+      "deny": 3
+    },
+    "active": true
+  },
+  {
+    "id": "rep_789d1e88",
+    "type": "zona_solitaria",
+    "lat": 6.29734,
+    "lon": -75.568509,
+    "severity": 3,
+    "description": "Callejón sin salida con poca iluminación",
+    "timestamp": "2026-05-10T12:03:36Z",
+    "votes": {
+      "confirm": 1,
+      "deny": 0
+    },
+    "active": true
+  },
+  {
+    "id": "rep_08e323e2",
+    "type": "zona_solitaria",
+    "lat": 6.229261,
+    "lon": -75.617874,
+    "severity": 4,
+    "description": "Parque sin presencia de personas en horario nocturno",
+    "timestamp": "2026-05-10T01:26:36Z",
+    "votes": {
+      "confirm": 6,
+      "deny": 2
+    },
+    "active": true
+  },
+  {
+    "id": "rep_9ceb2e91",
+    "type": "acoso_verbal",
+    "lat": 6.232062,
+    "lon": -75.623998,
+    "severity": 2,
+    "description": "Hombre haciendo comentarios sobre la apariencia",
+    "timestamp": "2026-05-18T10:46:36Z",
+    "votes": {
+      "confirm": 8,
+      "deny": 1
+    },
+    "active": true
+  },
+  {
+    "id": "rep_163c9953",
+    "type": "iluminacion_deficiente",
+    "lat": 6.238032,
+    "lon": -75.625341,
+    "severity": 3,
+    "description": "Varias luminarias dañadas en este tramo",
+    "timestamp": "2026-04-09T11:18:36Z",
+    "votes": {
+      "confirm": 13,
+      "deny": 3
+    },
+    "active": true
+  },
+  {
+    "id": "rep_f5e1396b",
+    "type": "robo",
+    "lat": 6.230443,
+    "lon": -75.61646,
+    "severity": 4,
+    "description": "Asalto a mano armada en la noche",
+    "timestamp": "2026-05-02T00:10:36Z",
+    "votes": {
+      "confirm": 2,
+      "deny": 3
+    },
+    "active": true
+  },
+  {
+    "id": "rep_b3a5039d",
+    "type": "bien",
+    "lat": 6.316663,
+    "lon": -75.554196,
+    "severity": 1,
+    "description": "Zona comercial animada, sin incidentes",
+    "timestamp": "2026-05-26T17:39:36Z",
+    "votes": {
+      "confirm": 9,
+      "deny": 1
+    },
+    "active": true
+  },
+  {
+    "id": "rep_fe3ed2df",
+    "type": "iluminacion_deficiente",
+    "lat": 6.282668,
+    "lon": -75.546757,
+    "severity": 3,
+    "description": "Iluminación intermitente, muy tenue",
+    "timestamp": "2026-05-04T09:24:36Z",
+    "votes": {
+      "confirm": 4,
+      "deny": 3
+    },
+    "active": true
+  },
+  {
+    "id": "rep_b885d16e",
+    "type": "iluminacion_deficiente",
+    "lat": 6.28706,
+    "lon": -75.546391,
+    "severity": 3,
+    "description": "Bloque entero sin alumbrado público",
+    "timestamp": "2026-04-11T08:13:36Z",
+    "votes": {
+      "confirm": 2,
+      "deny": 3
+    },
+    "active": true
+  },
+  {
+    "id": "rep_95b8e634",
+    "type": "iluminacion_deficiente",
+    "lat": 6.302918,
+    "lon": -75.546151,
+    "severity": 2,
+    "description": "Iluminación intermitente, muy tenue",
+    "timestamp": "2026-05-15T21:56:36Z",
+    "votes": {
+      "confirm": 0,
+      "deny": 3
+    },
+    "active": true
+  },
+  {
+    "id": "rep_24cf596f",
+    "type": "acoso_verbal",
+    "lat": 6.226664,
+    "lon": -75.614621,
+    "severity": 2,
+    "description": "Grupo de hombres gritando piropos",
+    "timestamp": "2026-05-18T08:32:36Z",
+    "votes": {
+      "confirm": 10,
+      "deny": 0
+    },
+    "active": true
+  },
+  {
+    "id": "rep_3d79aa63",
+    "type": "robo",
+    "lat": 6.262153,
+    "lon": -75.617421,
+    "severity": 5,
+    "description": "Fleteo reportado en esta esquina",
+    "timestamp": "2026-05-15T10:17:36Z",
+    "votes": {
+      "confirm": 5,
+      "deny": 0
+    },
+    "active": true
+  },
+  {
+    "id": "rep_fcab2499",
+    "type": "bien",
+    "lat": 6.289588,
+    "lon": -75.554745,
+    "severity": 1,
+    "description": "Zona muy iluminada y transitada, me sentí segura",
+    "timestamp": "2026-05-06T04:00:36Z",
+    "votes": {
+      "confirm": 1,
+      "deny": 1
+    },
+    "active": true
+  },
+  {
+    "id": "rep_f045a4e2",
+    "type": "acoso_verbal",
+    "lat": 6.250562,
+    "lon": -75.573049,
+    "severity": 2,
+    "description": "Hombre siguiendo y diciendo comentarios inapropiados",
+    "timestamp": "2026-04-16T10:34:36Z",
+    "votes": {
+      "confirm": 7,
+      "deny": 1
+    },
+    "active": true
+  },
+  {
+    "id": "rep_2917323a",
+    "type": "bien",
+    "lat": 6.257584,
+    "lon": -75.621269,
+    "severity": 1,
+    "description": "Zona comercial animada, sin incidentes",
+    "timestamp": "2026-04-24T14:43:36Z",
+    "votes": {
+      "confirm": 11,
+      "deny": 1
+    },
+    "active": true
+  },
+  {
+    "id": "rep_6d96a805",
+    "type": "acoso_verbal",
+    "lat": 6.262732,
+    "lon": -75.623959,
+    "severity": 2,
+    "description": "Hombre haciendo comentarios sobre la apariencia",
+    "timestamp": "2026-04-25T18:17:36Z",
+    "votes": {
+      "confirm": 0,
+      "deny": 2
+    },
+    "active": true
+  },
+  {
+    "id": "rep_107417cc",
+    "type": "zona_solitaria",
+    "lat": 6.315072,
+    "lon": -75.556498,
+    "severity": 3,
+    "description": "Callejón sin salida con poca iluminación",
+    "timestamp": "2026-03-12T20:31:36Z",
+    "votes": {
+      "confirm": 1,
+      "deny": 2
+    },
+    "active": true
+  },
+  {
+    "id": "rep_017c71f2",
+    "type": "iluminacion_deficiente",
+    "lat": 6.284762,
+    "lon": -75.558604,
+    "severity": 3,
+    "description": "Iluminación intermitente, muy tenue",
+    "timestamp": "2026-03-29T00:44:36Z",
+    "votes": {
+      "confirm": 2,
+      "deny": 3
+    },
+    "active": true
+  },
+  {
+    "id": "rep_e7d87621",
+    "type": "acoso_verbal",
+    "lat": 6.253314,
+    "lon": -75.630532,
+    "severity": 2,
+    "description": "Hombre siguiendo y diciendo comentarios inapropiados",
+    "timestamp": "2026-03-16T01:51:36Z",
+    "votes": {
+      "confirm": 12,
+      "deny": 0
+    },
+    "active": true
+  },
+  {
+    "id": "rep_2a375bce",
+    "type": "acoso_verbal",
+    "lat": 6.250537,
+    "lon": -75.57732,
+    "severity": 3,
+    "description": "Hombre haciendo comentarios sobre la apariencia",
+    "timestamp": "2026-04-25T04:29:36Z",
+    "votes": {
+      "confirm": 5,
+      "deny": 3
+    },
+    "active": true
+  },
+  {
+    "id": "rep_ea19a614",
+    "type": "acoso_verbal",
+    "lat": 6.250187,
+    "lon": -75.582481,
+    "severity": 2,
+    "description": "Grupo de hombres gritando piropos",
+    "timestamp": "2026-05-07T14:14:36Z",
+    "votes": {
+      "confirm": 4,
+      "deny": 0
+    },
+    "active": true
+  },
+  {
+    "id": "rep_f4d0cf09",
+    "type": "iluminacion_deficiente",
+    "lat": 6.287444,
+    "lon": -75.559952,
+    "severity": 2,
+    "description": "Iluminación intermitente, muy tenue",
+    "timestamp": "2026-04-29T14:17:36Z",
+    "votes": {
+      "confirm": 13,
+      "deny": 0
+    },
+    "active": true
+  },
+  {
+    "id": "rep_01a538dd",
+    "type": "bien",
+    "lat": 6.279913,
+    "lon": -75.593237,
+    "severity": 1,
+    "description": "Excelente iluminación y presencia de policía",
+    "timestamp": "2026-03-07T08:18:36Z",
+    "votes": {
+      "confirm": 9,
+      "deny": 2
+    },
+    "active": true
+  },
+  {
+    "id": "rep_a8a778bd",
+    "type": "acoso_verbal",
+    "lat": 6.228334,
+    "lon": -75.61647,
+    "severity": 2,
+    "description": "Silbidos y gritos desde obra de construcción",
+    "timestamp": "2026-03-13T21:26:36Z",
+    "votes": {
+      "confirm": 12,
+      "deny": 2
+    },
+    "active": true
+  },
+  {
+    "id": "rep_4674df28",
+    "type": "zona_solitaria",
+    "lat": 6.217352,
+    "lon": -75.554301,
+    "severity": 3,
+    "description": "Sin tráfico peatonal después de las 8pm",
+    "timestamp": "2026-05-31T12:12:36Z",
+    "votes": {
+      "confirm": 0,
+      "deny": 3
+    },
+    "active": true
+  },
+  {
+    "id": "rep_33e4284b",
+    "type": "iluminacion_deficiente",
+    "lat": 6.254842,
+    "lon": -75.573061,
+    "severity": 3,
+    "description": "Bloque entero sin alumbrado público",
+    "timestamp": "2026-04-08T19:36:36Z",
+    "votes": {
+      "confirm": 9,
+      "deny": 0
+    },
+    "active": true
+  },
+  {
+    "id": "rep_0521927b",
+    "type": "zona_solitaria",
+    "lat": 6.312475,
+    "lon": -75.5478,
+    "severity": 3,
+    "description": "Parque sin presencia de personas en horario nocturno",
+    "timestamp": "2026-03-20T23:45:36Z",
+    "votes": {
+      "confirm": 6,
+      "deny": 2
+    },
+    "active": true
+  },
+  {
+    "id": "rep_2131ca26",
+    "type": "iluminacion_deficiente",
+    "lat": 6.273739,
+    "lon": -75.561457,
+    "severity": 2,
+    "description": "Iluminación intermitente, muy tenue",
+    "timestamp": "2026-03-07T21:06:36Z",
+    "votes": {
+      "confirm": 6,
+      "deny": 3
+    },
+    "active": true
+  },
+  {
+    "id": "rep_93e35e92",
+    "type": "zona_solitaria",
+    "lat": 6.254832,
+    "lon": -75.568178,
+    "severity": 2,
+    "description": "Parque sin presencia de personas en horario nocturno",
+    "timestamp": "2026-05-10T04:22:36Z",
+    "votes": {
+      "confirm": 7,
+      "deny": 0
+    },
+    "active": true
+  },
+  {
+    "id": "rep_fda764fe",
+    "type": "iluminacion_deficiente",
+    "lat": 6.235902,
+    "lon": -75.621762,
+    "severity": 3,
+    "description": "Calle completamente oscura, no hay faroles",
+    "timestamp": "2026-03-24T14:21:36Z",
+    "votes": {
+      "confirm": 2,
+      "deny": 3
+    },
+    "active": true
+  },
+  {
+    "id": "rep_c98042b8",
+    "type": "bien",
+    "lat": 6.245254,
+    "lon": -75.570505,
+    "severity": 1,
+    "description": "Mucho movimiento de personas, seguro",
+    "timestamp": "2026-05-05T04:23:36Z",
+    "votes": {
+      "confirm": 3,
+      "deny": 0
+    },
+    "active": true
+  },
+  {
+    "id": "rep_2ae407d7",
+    "type": "zona_solitaria",
+    "lat": 6.30984,
+    "lon": -75.570848,
+    "severity": 4,
+    "description": "Sin tráfico peatonal después de las 8pm",
+    "timestamp": "2026-04-12T14:43:36Z",
+    "votes": {
+      "confirm": 12,
+      "deny": 3
+    },
+    "active": true
+  },
+  {
+    "id": "rep_8e89e827",
+    "type": "acoso_verbal",
+    "lat": 6.291895,
+    "lon": -75.59055,
+    "severity": 2,
+    "description": "Hombre haciendo comentarios sobre la apariencia",
+    "timestamp": "2026-03-08T05:17:36Z",
+    "votes": {
+      "confirm": 9,
+      "deny": 2
+    },
+    "active": true
+  },
+  {
+    "id": "rep_738ecf6a",
+    "type": "acoso_verbal",
+    "lat": 6.226208,
+    "lon": -75.626284,
+    "severity": 2,
+    "description": "Hombre haciendo comentarios sobre la apariencia",
+    "timestamp": "2026-03-24T08:31:36Z",
+    "votes": {
+      "confirm": 2,
+      "deny": 0
+    },
+    "active": true
+  },
+  {
+    "id": "rep_416fd675",
+    "type": "robo",
+    "lat": 6.301456,
+    "lon": -75.55771,
+    "severity": 4,
+    "description": "Zona de alta incidencia de robos según comunidad",
+    "timestamp": "2026-04-03T05:10:36Z",
+    "votes": {
+      "confirm": 15,
+      "deny": 0
+    },
+    "active": true
+  },
+  {
+    "id": "rep_94ac9b49",
+    "type": "zona_solitaria",
+    "lat": 6.288191,
+    "lon": -75.566365,
+    "severity": 4,
+    "description": "Parque sin presencia de personas en horario nocturno",
+    "timestamp": "2026-04-25T07:37:36Z",
+    "votes": {
+      "confirm": 10,
+      "deny": 1
+    },
+    "active": true
+  },
+  {
+    "id": "rep_416c2bb7",
+    "type": "zona_solitaria",
+    "lat": 6.244493,
+    "lon": -75.561483,
+    "severity": 3,
+    "description": "Sin tráfico peatonal después de las 8pm",
+    "timestamp": "2026-04-14T11:43:36Z",
+    "votes": {
+      "confirm": 3,
+      "deny": 0
+    },
+    "active": true
+  },
+  {
+    "id": "rep_28c31182",
+    "type": "acoso_verbal",
+    "lat": 6.281781,
+    "lon": -75.555115,
+    "severity": 2,
+    "description": "Hombre siguiendo y diciendo comentarios inapropiados",
+    "timestamp": "2026-03-30T08:37:36Z",
+    "votes": {
+      "confirm": 15,
+      "deny": 2
+    },
+    "active": true
+  },
+  {
+    "id": "rep_4f44fdbc",
+    "type": "bien",
+    "lat": 6.272795,
+    "lon": -75.567433,
+    "severity": 1,
+    "description": "Mucho movimiento de personas, seguro",
+    "timestamp": "2026-04-18T03:55:36Z",
+    "votes": {
+      "confirm": 7,
+      "deny": 0
+    },
+    "active": true
+  },
+  {
+    "id": "rep_39285b85",
+    "type": "acoso_verbal",
+    "lat": 6.266609,
+    "lon": -75.635324,
+    "severity": 2,
+    "description": "Hombre siguiendo y diciendo comentarios inapropiados",
+    "timestamp": "2026-04-15T00:17:36Z",
+    "votes": {
+      "confirm": 5,
+      "deny": 3
+    },
+    "active": true
+  },
+  {
+    "id": "rep_145679ca",
+    "type": "zona_solitaria",
+    "lat": 6.264422,
+    "lon": -75.61578,
+    "severity": 2,
+    "description": "Callejón sin salida con poca iluminación",
+    "timestamp": "2026-03-27T05:14:36Z",
+    "votes": {
+      "confirm": 0,
+      "deny": 3
+    },
+    "active": true
+  },
+  {
+    "id": "rep_fa655817",
+    "type": "robo",
+    "lat": 6.244922,
+    "lon": -75.559282,
+    "severity": 5,
+    "description": "Hurto de celulares reportado por vecinos",
+    "timestamp": "2026-05-03T22:58:36Z",
+    "votes": {
+      "confirm": 12,
+      "deny": 2
+    },
+    "active": true
+  },
+  {
+    "id": "rep_1d37230a",
+    "type": "acoso_verbal",
+    "lat": 6.244501,
+    "lon": -75.565435,
+    "severity": 2,
+    "description": "Grupo de hombres gritando piropos",
+    "timestamp": "2026-04-20T10:56:36Z",
+    "votes": {
+      "confirm": 3,
+      "deny": 0
+    },
+    "active": true
+  },
+  {
+    "id": "rep_7dfe8b95",
+    "type": "iluminacion_deficiente",
+    "lat": 6.255772,
+    "lon": -75.619383,
+    "severity": 2,
+    "description": "Bloque entero sin alumbrado público",
+    "timestamp": "2026-03-03T07:41:36Z",
+    "votes": {
+      "confirm": 10,
+      "deny": 1
+    },
+    "active": true
+  },
+  {
+    "id": "rep_6e913e8f",
+    "type": "zona_solitaria",
+    "lat": 6.258109,
+    "lon": -75.562761,
+    "severity": 4,
+    "description": "Calle completamente vacía a las 9pm",
+    "timestamp": "2026-04-01T11:45:36Z",
+    "votes": {
+      "confirm": 11,
+      "deny": 1
+    },
+    "active": true
+  },
+  {
+    "id": "rep_ee055970",
+    "type": "zona_solitaria",
+    "lat": 6.29421,
+    "lon": -75.561974,
+    "severity": 4,
+    "description": "Calle completamente vacía a las 9pm",
+    "timestamp": "2026-05-22T14:12:36Z",
+    "votes": {
+      "confirm": 3,
+      "deny": 1
+    },
+    "active": true
+  },
+  {
+    "id": "rep_4e225c36",
+    "type": "zona_solitaria",
+    "lat": 6.219212,
+    "lon": -75.569417,
+    "severity": 3,
+    "description": "Calle completamente vacía a las 9pm",
+    "timestamp": "2026-04-10T02:54:36Z",
+    "votes": {
+      "confirm": 6,
+      "deny": 1
+    },
+    "active": true
+  },
+  {
+    "id": "rep_a75928a1",
+    "type": "zona_solitaria",
+    "lat": 6.281053,
+    "lon": -75.550721,
+    "severity": 3,
+    "description": "Zona industrial sin personas en la noche",
+    "timestamp": "2026-05-17T13:21:36Z",
+    "votes": {
+      "confirm": 12,
+      "deny": 0
+    },
+    "active": true
+  },
+  {
+    "id": "rep_20df3a06",
+    "type": "iluminacion_deficiente",
+    "lat": 6.255436,
+    "lon": -75.56683,
+    "severity": 2,
+    "description": "Varias luminarias dañadas en este tramo",
+    "timestamp": "2026-05-07T22:30:36Z",
+    "votes": {
+      "confirm": 13,
+      "deny": 3
+    },
+    "active": true
+  },
+  {
+    "id": "rep_047f3cea",
+    "type": "acoso_verbal",
+    "lat": 6.296966,
+    "lon": -75.551629,
+    "severity": 2,
+    "description": "Comentarios obscenos desde un carro",
+    "timestamp": "2026-04-09T00:19:36Z",
+    "votes": {
+      "confirm": 12,
+      "deny": 3
+    },
+    "active": true
+  },
+  {
+    "id": "rep_5f035b3e",
+    "type": "zona_solitaria",
+    "lat": 6.304116,
+    "lon": -75.56261,
+    "severity": 2,
+    "description": "Calle completamente vacía a las 9pm",
+    "timestamp": "2026-04-19T06:14:36Z",
+    "votes": {
+      "confirm": 0,
+      "deny": 3
+    },
+    "active": true
+  },
+  {
+    "id": "rep_f6c270b9",
+    "type": "iluminacion_deficiente",
+    "lat": 6.278523,
+    "lon": -75.544534,
+    "severity": 3,
+    "description": "Calle completamente oscura, no hay faroles",
+    "timestamp": "2026-04-21T03:07:36Z",
+    "votes": {
+      "confirm": 10,
+      "deny": 3
+    },
+    "active": true
+  },
+  {
+    "id": "rep_28307fc9",
+    "type": "acoso_verbal",
+    "lat": 6.269343,
+    "lon": -75.561437,
+    "severity": 3,
+    "description": "Hombre siguiendo y diciendo comentarios inapropiados",
+    "timestamp": "2026-05-12T19:04:36Z",
+    "votes": {
+      "confirm": 15,
+      "deny": 1
+    },
+    "active": true
+  },
+  {
+    "id": "rep_80340cb3",
+    "type": "iluminacion_deficiente",
+    "lat": 6.309035,
+    "lon": -75.557539,
+    "severity": 3,
+    "description": "Bloque entero sin alumbrado público",
+    "timestamp": "2026-03-31T14:55:36Z",
+    "votes": {
+      "confirm": 14,
+      "deny": 2
+    },
+    "active": true
+  },
+  {
+    "id": "rep_e7e0bb21",
+    "type": "robo",
+    "lat": 6.230784,
+    "lon": -75.621682,
+    "severity": 5,
+    "description": "Zona de alta incidencia de robos según comunidad",
+    "timestamp": "2026-04-02T21:27:36Z",
+    "votes": {
+      "confirm": 10,
+      "deny": 3
+    },
+    "active": true
+  },
+  {
+    "id": "rep_0da32a83",
+    "type": "acoso_verbal",
+    "lat": 6.286802,
+    "lon": -75.594738,
+    "severity": 2,
+    "description": "Hombre haciendo comentarios sobre la apariencia",
+    "timestamp": "2026-05-11T02:59:36Z",
+    "votes": {
+      "confirm": 14,
+      "deny": 2
+    },
+    "active": true
+  },
+  {
+    "id": "rep_3b516ba2",
+    "type": "robo",
+    "lat": 6.29084,
+    "lon": -75.59689,
+    "severity": 4,
+    "description": "Fleteo reportado en esta esquina",
+    "timestamp": "2026-03-03T11:34:36Z",
+    "votes": {
+      "confirm": 12,
+      "deny": 0
+    },
+    "active": true
+  },
+  {
+    "id": "rep_277ec966",
+    "type": "robo",
+    "lat": 6.278535,
+    "lon": -75.575683,
+    "severity": 4,
+    "description": "Asalto a mano armada en la noche",
+    "timestamp": "2026-04-17T02:48:36Z",
+    "votes": {
+      "confirm": 4,
+      "deny": 2
+    },
+    "active": true
+  },
+  {
+    "id": "rep_5fdff9ce",
+    "type": "robo",
+    "lat": 6.231377,
+    "lon": -75.614655,
+    "severity": 4,
+    "description": "Asalto a mano armada en la noche",
+    "timestamp": "2026-03-14T19:07:36Z",
+    "votes": {
+      "confirm": 1,
+      "deny": 2
+    },
+    "active": true
+  },
+  {
+    "id": "rep_d2cb2e29",
+    "type": "acoso_verbal",
+    "lat": 6.306233,
+    "lon": -75.565926,
+    "severity": 2,
+    "description": "Comentarios obscenos desde un carro",
+    "timestamp": "2026-05-08T19:36:36Z",
+    "votes": {
+      "confirm": 5,
+      "deny": 2
+    },
+    "active": true
+  },
+  {
+    "id": "rep_e8da87e1",
+    "type": "acoso_verbal",
+    "lat": 6.252308,
+    "lon": -75.561615,
+    "severity": 2,
+    "description": "Hombre siguiendo y diciendo comentarios inapropiados",
+    "timestamp": "2026-05-09T10:58:36Z",
+    "votes": {
+      "confirm": 3,
+      "deny": 0
+    },
+    "active": true
+  },
+  {
+    "id": "rep_5c810790",
+    "type": "acoso_verbal",
+    "lat": 6.290302,
+    "lon": -75.588301,
+    "severity": 2,
+    "description": "Hombre siguiendo y diciendo comentarios inapropiados",
+    "timestamp": "2026-05-01T04:06:36Z",
+    "votes": {
+      "confirm": 14,
+      "deny": 1
+    },
+    "active": true
+  },
+  {
+    "id": "rep_678efa53",
+    "type": "zona_solitaria",
+    "lat": 6.288475,
+    "lon": -75.612017,
+    "severity": 4,
+    "description": "Callejón sin salida con poca iluminación",
+    "timestamp": "2026-03-30T15:58:36Z",
+    "votes": {
+      "confirm": 5,
+      "deny": 1
+    },
+    "active": true
+  },
+  {
+    "id": "rep_dd912af8",
+    "type": "acoso_verbal",
+    "lat": 6.248354,
+    "lon": -75.557624,
+    "severity": 3,
+    "description": "Hombre haciendo comentarios sobre la apariencia",
+    "timestamp": "2026-03-28T20:42:36Z",
+    "votes": {
+      "confirm": 6,
+      "deny": 1
+    },
+    "active": true
+  },
+  {
+    "id": "rep_67a51da4",
+    "type": "acoso_verbal",
+    "lat": 6.22988,
+    "lon": -75.603077,
+    "severity": 2,
+    "description": "Hombre siguiendo y diciendo comentarios inapropiados",
+    "timestamp": "2026-05-19T15:45:36Z",
+    "votes": {
+      "confirm": 0,
+      "deny": 3
+    },
+    "active": true
+  },
+  {
+    "id": "rep_7da80206",
+    "type": "acoso_verbal",
+    "lat": 6.251703,
+    "lon": -75.633513,
+    "severity": 2,
+    "description": "Hombre siguiendo y diciendo comentarios inapropiados",
+    "timestamp": "2026-03-22T04:34:36Z",
+    "votes": {
+      "confirm": 13,
+      "deny": 0
+    },
+    "active": true
+  },
+  {
+    "id": "rep_59c309ef",
+    "type": "acoso_verbal",
+    "lat": 6.259937,
+    "lon": -75.618283,
+    "severity": 2,
+    "description": "Hombre siguiendo y diciendo comentarios inapropiados",
+    "timestamp": "2026-05-12T06:12:36Z",
+    "votes": {
+      "confirm": 0,
+      "deny": 0
+    },
+    "active": true
+  },
+  {
+    "id": "rep_9ecc6170",
+    "type": "acoso_verbal",
+    "lat": 6.225001,
+    "lon": -75.611239,
+    "severity": 2,
+    "description": "Grupo de hombres gritando piropos",
+    "timestamp": "2026-04-02T14:53:36Z",
+    "votes": {
+      "confirm": 13,
+      "deny": 2
+    },
+    "active": true
+  },
+  {
+    "id": "rep_910412b6",
+    "type": "zona_solitaria",
+    "lat": 6.250306,
+    "lon": -75.56846,
+    "severity": 3,
+    "description": "Callejón sin salida con poca iluminación",
+    "timestamp": "2026-04-19T20:57:36Z",
+    "votes": {
+      "confirm": 9,
+      "deny": 0
+    },
+    "active": true
+  },
+  {
+    "id": "rep_026762d5",
+    "type": "acoso_verbal",
+    "lat": 6.282624,
+    "lon": -75.59106,
+    "severity": 2,
+    "description": "Comentarios obscenos desde un carro",
+    "timestamp": "2026-05-02T13:26:36Z",
+    "votes": {
+      "confirm": 8,
+      "deny": 0
+    },
+    "active": true
+  },
+  {
+    "id": "rep_6c06d1fa",
+    "type": "acoso_verbal",
+    "lat": 6.247436,
+    "lon": -75.574803,
+    "severity": 3,
+    "description": "Hombre siguiendo y diciendo comentarios inapropiados",
+    "timestamp": "2026-04-04T13:16:36Z",
+    "votes": {
+      "confirm": 7,
+      "deny": 1
+    },
+    "active": true
+  },
+  {
+    "id": "rep_05bf8ed9",
+    "type": "acoso_verbal",
+    "lat": 6.283677,
+    "lon": -75.580888,
+    "severity": 2,
+    "description": "Silbidos y gritos desde obra de construcción",
+    "timestamp": "2026-03-06T08:10:36Z",
+    "votes": {
+      "confirm": 11,
+      "deny": 3
+    },
+    "active": true
+  },
+  {
+    "id": "rep_64eb5650",
+    "type": "robo",
+    "lat": 6.259634,
+    "lon": -75.569319,
+    "severity": 5,
+    "description": "Fleteo reportado en esta esquina",
+    "timestamp": "2026-03-24T02:58:36Z",
+    "votes": {
+      "confirm": 7,
+      "deny": 3
+    },
+    "active": true
+  },
+  {
+    "id": "rep_4de9e748",
+    "type": "acoso_verbal",
+    "lat": 6.28121,
+    "lon": -75.560675,
+    "severity": 3,
+    "description": "Comentarios obscenos desde un carro",
+    "timestamp": "2026-04-05T02:46:36Z",
+    "votes": {
+      "confirm": 0,
+      "deny": 3
+    },
+    "active": true
+  },
+  {
+    "id": "rep_f599600f",
+    "type": "robo",
+    "lat": 6.287653,
+    "lon": -75.558294,
+    "severity": 4,
+    "description": "Raponazo frecuente en este sector",
+    "timestamp": "2026-04-28T20:34:36Z",
+    "votes": {
+      "confirm": 5,
+      "deny": 3
+    },
+    "active": true
+  },
+  {
+    "id": "rep_791cf689",
+    "type": "acoso_verbal",
+    "lat": 6.254194,
+    "lon": -75.586536,
+    "severity": 2,
+    "description": "Comentarios obscenos desde un carro",
+    "timestamp": "2026-03-25T21:14:36Z",
+    "votes": {
+      "confirm": 12,
+      "deny": 3
+    },
+    "active": true
+  },
+  {
+    "id": "rep_d7360a67",
+    "type": "zona_solitaria",
+    "lat": 6.246281,
+    "lon": -75.571402,
+    "severity": 4,
+    "description": "Sin tráfico peatonal después de las 8pm",
+    "timestamp": "2026-03-08T14:35:36Z",
+    "votes": {
+      "confirm": 2,
+      "deny": 1
+    },
+    "active": true
+  },
+  {
+    "id": "rep_7565e48e",
+    "type": "acoso_verbal",
+    "lat": 6.249284,
+    "lon": -75.620613,
+    "severity": 2,
+    "description": "Comentarios obscenos desde un carro",
+    "timestamp": "2026-04-15T19:59:36Z",
+    "votes": {
+      "confirm": 14,
+      "deny": 3
+    },
+    "active": true
+  },
+  {
+    "id": "rep_25e39c16",
+    "type": "acoso_verbal",
+    "lat": 6.29426,
+    "lon": -75.590455,
+    "severity": 3,
+    "description": "Silbidos y gritos desde obra de construcción",
+    "timestamp": "2026-05-02T21:52:36Z",
+    "votes": {
+      "confirm": 1,
+      "deny": 2
+    },
+    "active": true
+  },
+  {
+    "id": "rep_5f235f7b",
+    "type": "iluminacion_deficiente",
+    "lat": 6.213556,
+    "lon": -75.566152,
+    "severity": 2,
+    "description": "Bloque entero sin alumbrado público",
+    "timestamp": "2026-03-04T23:21:36Z",
+    "votes": {
+      "confirm": 15,
+      "deny": 2
+    },
+    "active": true
+  },
+  {
+    "id": "rep_de4ad7d2",
+    "type": "bien",
+    "lat": 6.295145,
+    "lon": -75.578585,
+    "severity": 1,
+    "description": "Mucho movimiento de personas, seguro",
+    "timestamp": "2026-03-26T06:12:36Z",
+    "votes": {
+      "confirm": 1,
+      "deny": 1
+    },
+    "active": true
+  },
+  {
+    "id": "rep_659a8a67",
+    "type": "acoso_verbal",
+    "lat": 6.285156,
+    "lon": -75.576869,
+    "severity": 3,
+    "description": "Silbidos y gritos desde obra de construcción",
+    "timestamp": "2026-05-14T07:33:36Z",
+    "votes": {
+      "confirm": 10,
+      "deny": 1
+    },
+    "active": true
+  },
+  {
+    "id": "rep_055a9c1c",
+    "type": "acoso_verbal",
+    "lat": 6.291833,
+    "lon": -75.55441,
+    "severity": 2,
+    "description": "Silbidos y gritos desde obra de construcción",
+    "timestamp": "2026-04-15T21:46:36Z",
+    "votes": {
+      "confirm": 1,
+      "deny": 0
+    },
+    "active": true
+  },
+  {
+    "id": "rep_7a7c1504",
+    "type": "iluminacion_deficiente",
+    "lat": 6.28551,
+    "lon": -75.568304,
+    "severity": 3,
+    "description": "Calle completamente oscura, no hay faroles",
+    "timestamp": "2026-04-18T05:19:36Z",
+    "votes": {
+      "confirm": 6,
+      "deny": 2
+    },
+    "active": true
+  },
+  {
+    "id": "rep_ac817701",
+    "type": "iluminacion_deficiente",
+    "lat": 6.290271,
+    "lon": -75.581345,
+    "severity": 3,
+    "description": "Iluminación intermitente, muy tenue",
+    "timestamp": "2026-05-06T07:04:36Z",
+    "votes": {
+      "confirm": 15,
+      "deny": 2
+    },
+    "active": true
+  },
+  {
+    "id": "rep_2cb09d50",
+    "type": "robo",
+    "lat": 6.295493,
+    "lon": -75.554135,
+    "severity": 5,
+    "description": "Zona de alta incidencia de robos según comunidad",
+    "timestamp": "2026-05-11T10:54:36Z",
+    "votes": {
+      "confirm": 2,
+      "deny": 1
+    },
+    "active": true
+  },
+  {
+    "id": "rep_9199a96b",
+    "type": "robo",
+    "lat": 6.249662,
+    "lon": -75.567986,
+    "severity": 5,
+    "description": "Asalto a mano armada en la noche",
+    "timestamp": "2026-04-11T03:54:36Z",
+    "votes": {
+      "confirm": 6,
+      "deny": 2
+    },
+    "active": true
+  },
+  {
+    "id": "rep_0caa3122",
+    "type": "acoso_verbal",
+    "lat": 6.249133,
+    "lon": -75.572976,
+    "severity": 2,
+    "description": "Hombre siguiendo y diciendo comentarios inapropiados",
+    "timestamp": "2026-04-28T17:58:36Z",
+    "votes": {
+      "confirm": 12,
+      "deny": 3
+    },
+    "active": true
+  },
+  {
+    "id": "rep_feb87ad1",
+    "type": "bien",
+    "lat": 6.262558,
+    "lon": -75.62638,
+    "severity": 1,
+    "description": "Zona muy iluminada y transitada, me sentí segura",
+    "timestamp": "2026-03-07T20:10:36Z",
+    "votes": {
+      "confirm": 15,
+      "deny": 2
+    },
+    "active": true
+  },
+  {
+    "id": "rep_b9b3fe60",
+    "type": "bien",
+    "lat": 6.281213,
+    "lon": -75.565104,
+    "severity": 1,
+    "description": "Zona comercial animada, sin incidentes",
+    "timestamp": "2026-03-24T15:44:36Z",
+    "votes": {
+      "confirm": 5,
+      "deny": 3
+    },
+    "active": true
+  },
+  {
+    "id": "rep_59e7fc47",
+    "type": "acoso_verbal",
+    "lat": 6.253521,
+    "lon": -75.559215,
+    "severity": 2,
+    "description": "Comentarios obscenos desde un carro",
+    "timestamp": "2026-05-08T11:45:36Z",
+    "votes": {
+      "confirm": 14,
+      "deny": 0
+    },
+    "active": true
+  },
+  {
+    "id": "rep_12a1e57e",
+    "type": "robo",
+    "lat": 6.270547,
+    "lon": -75.566843,
+    "severity": 4,
+    "description": "Fleteo reportado en esta esquina",
+    "timestamp": "2026-04-10T23:15:36Z",
+    "votes": {
+      "confirm": 4,
+      "deny": 2
+    },
+    "active": true
+  },
+  {
+    "id": "rep_15cfd572",
+    "type": "bien",
+    "lat": 6.294354,
+    "lon": -75.596064,
+    "severity": 1,
+    "description": "Zona muy iluminada y transitada, me sentí segura",
+    "timestamp": "2026-04-06T01:23:36Z",
+    "votes": {
+      "confirm": 6,
+      "deny": 3
+    },
+    "active": true
+  },
+  {
+    "id": "rep_81e762bf",
+    "type": "robo",
+    "lat": 6.288109,
+    "lon": -75.554342,
+    "severity": 5,
+    "description": "Zona de alta incidencia de robos según comunidad",
+    "timestamp": "2026-03-31T06:43:36Z",
+    "votes": {
+      "confirm": 7,
+      "deny": 0
+    },
+    "active": true
+  },
+  {
+    "id": "rep_8abf7113",
+    "type": "acoso_verbal",
+    "lat": 6.216592,
+    "lon": -75.617176,
+    "severity": 3,
+    "description": "Silbidos y gritos desde obra de construcción",
+    "timestamp": "2026-03-08T23:16:36Z",
+    "votes": {
+      "confirm": 7,
+      "deny": 1
+    },
+    "active": true
+  },
+  {
+    "id": "rep_610c61c4",
+    "type": "zona_solitaria",
+    "lat": 6.285101,
+    "lon": -75.554627,
+    "severity": 3,
+    "description": "Sin tráfico peatonal después de las 8pm",
+    "timestamp": "2026-03-13T16:19:36Z",
+    "votes": {
+      "confirm": 7,
+      "deny": 0
+    },
+    "active": true
+  },
+  {
+    "id": "rep_cb88ab31",
+    "type": "robo",
+    "lat": 6.284709,
+    "lon": -75.586551,
+    "severity": 4,
+    "description": "Raponazo frecuente en este sector",
+    "timestamp": "2026-05-01T08:27:36Z",
+    "votes": {
+      "confirm": 0,
+      "deny": 0
+    },
+    "active": true
+  },
+  {
+    "id": "rep_1e6841cc",
+    "type": "zona_solitaria",
+    "lat": 6.259164,
+    "lon": -75.628133,
+    "severity": 4,
+    "description": "Parque sin presencia de personas en horario nocturno",
+    "timestamp": "2026-03-04T08:44:36Z",
+    "votes": {
+      "confirm": 12,
+      "deny": 1
+    },
+    "active": true
+  },
+  {
+    "id": "rep_5c1c3f36",
+    "type": "acoso_verbal",
+    "lat": 6.280467,
+    "lon": -75.550269,
+    "severity": 2,
+    "description": "Grupo de hombres gritando piropos",
+    "timestamp": "2026-03-21T11:54:36Z",
+    "votes": {
+      "confirm": 2,
+      "deny": 0
+    },
+    "active": true
+  },
+  {
+    "id": "rep_fb30a445",
+    "type": "zona_solitaria",
+    "lat": 6.312304,
+    "lon": -75.549635,
+    "severity": 2,
+    "description": "Calle completamente vacía a las 9pm",
+    "timestamp": "2026-03-26T02:52:36Z",
+    "votes": {
+      "confirm": 6,
+      "deny": 2
+    },
+    "active": true
+  },
+  {
+    "id": "rep_56904ba8",
+    "type": "iluminacion_deficiente",
+    "lat": 6.271382,
+    "lon": -75.608771,
+    "severity": 2,
+    "description": "Iluminación intermitente, muy tenue",
+    "timestamp": "2026-03-13T06:44:36Z",
+    "votes": {
+      "confirm": 8,
+      "deny": 0
+    },
+    "active": true
+  },
+  {
+    "id": "rep_81df6ec8",
+    "type": "iluminacion_deficiente",
+    "lat": 6.306006,
+    "lon": -75.556159,
+    "severity": 2,
+    "description": "Iluminación intermitente, muy tenue",
+    "timestamp": "2026-04-26T09:21:36Z",
+    "votes": {
+      "confirm": 13,
+      "deny": 3
+    },
+    "active": true
+  },
+  {
+    "id": "rep_7edef986",
+    "type": "robo",
+    "lat": 6.293342,
+    "lon": -75.549518,
+    "severity": 5,
+    "description": "Raponazo frecuente en este sector",
+    "timestamp": "2026-03-24T01:50:36Z",
+    "votes": {
+      "confirm": 15,
+      "deny": 2
+    },
+    "active": true
+  },
+  {
+    "id": "rep_cbe2a02e",
+    "type": "acoso_verbal",
+    "lat": 6.254436,
+    "lon": -75.582781,
+    "severity": 3,
+    "description": "Silbidos y gritos desde obra de construcción",
+    "timestamp": "2026-04-21T23:20:36Z",
+    "votes": {
+      "confirm": 7,
+      "deny": 3
+    },
+    "active": true
+  },
+  {
+    "id": "rep_6a2e60bc",
+    "type": "acoso_verbal",
+    "lat": 6.282846,
+    "lon": -75.564539,
+    "severity": 3,
+    "description": "Hombre haciendo comentarios sobre la apariencia",
+    "timestamp": "2026-03-07T07:48:36Z",
+    "votes": {
+      "confirm": 0,
+      "deny": 0
+    },
+    "active": true
+  },
+  {
+    "id": "rep_7cbb0c2c",
+    "type": "acoso_verbal",
+    "lat": 6.234375,
+    "lon": -75.61343,
+    "severity": 3,
+    "description": "Grupo de hombres gritando piropos",
+    "timestamp": "2026-05-14T03:56:36Z",
+    "votes": {
+      "confirm": 8,
+      "deny": 1
+    },
+    "active": true
+  },
+  {
+    "id": "rep_ee908b93",
+    "type": "robo",
+    "lat": 6.269474,
+    "lon": -75.619386,
+    "severity": 5,
+    "description": "Hurto de celulares reportado por vecinos",
+    "timestamp": "2026-04-18T21:05:36Z",
+    "votes": {
+      "confirm": 9,
+      "deny": 0
+    },
+    "active": true
+  },
+  {
+    "id": "rep_0b56c464",
+    "type": "acoso_verbal",
+    "lat": 6.295252,
+    "lon": -75.559418,
+    "severity": 2,
+    "description": "Silbidos y gritos desde obra de construcción",
+    "timestamp": "2026-03-25T13:02:36Z",
+    "votes": {
+      "confirm": 1,
+      "deny": 2
+    },
+    "active": true
+  },
+  {
+    "id": "rep_723fa812",
+    "type": "acoso_verbal",
+    "lat": 6.306482,
+    "lon": -75.54622,
+    "severity": 2,
+    "description": "Hombre siguiendo y diciendo comentarios inapropiados",
+    "timestamp": "2026-04-03T23:12:36Z",
+    "votes": {
+      "confirm": 5,
+      "deny": 2
+    },
+    "active": true
+  },
+  {
+    "id": "rep_5df9d665",
+    "type": "iluminacion_deficiente",
+    "lat": 6.253315,
+    "lon": -75.565988,
+    "severity": 3,
+    "description": "Bloque entero sin alumbrado público",
+    "timestamp": "2026-05-01T11:39:36Z",
+    "votes": {
+      "confirm": 5,
+      "deny": 0
+    },
+    "active": true
+  },
+  {
+    "id": "rep_95c78ca4",
+    "type": "zona_solitaria",
+    "lat": 6.273278,
+    "lon": -75.56863,
+    "severity": 2,
+    "description": "Zona industrial sin personas en la noche",
+    "timestamp": "2026-04-05T12:15:36Z",
+    "votes": {
+      "confirm": 9,
+      "deny": 2
+    },
+    "active": true
+  },
+  {
+    "id": "rep_7c6f86db",
+    "type": "zona_solitaria",
+    "lat": 6.262456,
+    "lon": -75.637636,
+    "severity": 2,
+    "description": "Calle completamente vacía a las 9pm",
+    "timestamp": "2026-04-05T18:25:36Z",
+    "votes": {
+      "confirm": 11,
+      "deny": 2
+    },
+    "active": true
+  },
+  {
+    "id": "rep_a8770a73",
+    "type": "acoso_verbal",
+    "lat": 6.319624,
+    "lon": -75.536767,
+    "severity": 2,
+    "description": "Hombre siguiendo y diciendo comentarios inapropiados",
+    "timestamp": "2026-05-07T10:32:36Z",
+    "votes": {
+      "confirm": 0,
+      "deny": 1
+    },
+    "active": true
+  },
+  {
+    "id": "rep_24ba2a9e",
+    "type": "bien",
+    "lat": 6.258126,
+    "lon": -75.556381,
+    "severity": 1,
+    "description": "Zona comercial animada, sin incidentes",
+    "timestamp": "2026-05-24T23:10:36Z",
+    "votes": {
+      "confirm": 15,
+      "deny": 2
+    },
+    "active": true
+  },
+  {
+    "id": "rep_7fdb9c9b",
+    "type": "bien",
+    "lat": 6.243857,
+    "lon": -75.564634,
+    "severity": 1,
+    "description": "Mucho movimiento de personas, seguro",
+    "timestamp": "2026-03-04T06:09:36Z",
+    "votes": {
+      "confirm": 12,
+      "deny": 2
+    },
+    "active": true
+  },
+  {
+    "id": "rep_cb2a0846",
+    "type": "robo",
+    "lat": 6.251207,
+    "lon": -75.629574,
+    "severity": 4,
+    "description": "Asalto a mano armada en la noche",
+    "timestamp": "2026-05-06T15:35:36Z",
+    "votes": {
+      "confirm": 15,
+      "deny": 0
+    },
+    "active": true
+  },
+  {
+    "id": "rep_5390f187",
+    "type": "robo",
+    "lat": 6.292038,
+    "lon": -75.549576,
+    "severity": 5,
+    "description": "Fleteo reportado en esta esquina",
+    "timestamp": "2026-04-25T20:34:36Z",
+    "votes": {
+      "confirm": 7,
+      "deny": 3
+    },
+    "active": true
+  },
+  {
+    "id": "rep_6132095a",
+    "type": "acoso_verbal",
+    "lat": 6.272257,
+    "lon": -75.636493,
+    "severity": 3,
+    "description": "Hombre siguiendo y diciendo comentarios inapropiados",
+    "timestamp": "2026-03-07T02:24:36Z",
+    "votes": {
+      "confirm": 9,
+      "deny": 3
+    },
+    "active": true
+  },
+  {
+    "id": "rep_0903da10",
+    "type": "robo",
+    "lat": 6.208852,
+    "lon": -75.57182,
+    "severity": 5,
+    "description": "Hurto de celulares reportado por vecinos",
+    "timestamp": "2026-04-03T18:12:36Z",
+    "votes": {
+      "confirm": 3,
+      "deny": 3
+    },
+    "active": true
+  },
+  {
+    "id": "rep_ffed9600",
+    "type": "zona_solitaria",
+    "lat": 6.281982,
+    "lon": -75.562368,
+    "severity": 2,
+    "description": "Parque sin presencia de personas en horario nocturno",
+    "timestamp": "2026-03-25T04:31:36Z",
+    "votes": {
+      "confirm": 6,
+      "deny": 1
+    },
+    "active": true
+  },
+  {
+    "id": "rep_8aa9db8a",
+    "type": "bien",
+    "lat": 6.282357,
+    "lon": -75.546568,
+    "severity": 1,
+    "description": "Excelente iluminación y presencia de policía",
+    "timestamp": "2026-03-18T22:25:36Z",
+    "votes": {
+      "confirm": 8,
+      "deny": 3
+    },
+    "active": true
+  },
+  {
+    "id": "rep_6f38c02d",
+    "type": "zona_solitaria",
+    "lat": 6.301814,
+    "lon": -75.590941,
+    "severity": 3,
+    "description": "Zona industrial sin personas en la noche",
+    "timestamp": "2026-03-09T06:31:36Z",
+    "votes": {
+      "confirm": 9,
+      "deny": 3
+    },
+    "active": true
+  },
+  {
+    "id": "rep_bf0d17aa",
+    "type": "acoso_verbal",
+    "lat": 6.210654,
+    "lon": -75.580061,
+    "severity": 2,
+    "description": "Grupo de hombres gritando piropos",
+    "timestamp": "2026-05-20T11:42:36Z",
+    "votes": {
+      "confirm": 11,
+      "deny": 1
+    },
+    "active": true
+  },
+  {
+    "id": "rep_722927fc",
+    "type": "acoso_verbal",
+    "lat": 6.319751,
+    "lon": -75.549817,
+    "severity": 2,
+    "description": "Grupo de hombres gritando piropos",
+    "timestamp": "2026-04-09T19:47:36Z",
+    "votes": {
+      "confirm": 7,
+      "deny": 2
+    },
+    "active": true
+  },
+  {
+    "id": "rep_720f054b",
+    "type": "acoso_verbal",
+    "lat": 6.284672,
+    "lon": -75.595342,
+    "severity": 2,
+    "description": "Hombre haciendo comentarios sobre la apariencia",
+    "timestamp": "2026-04-22T08:15:36Z",
+    "votes": {
+      "confirm": 15,
+      "deny": 0
+    },
+    "active": true
+  },
+  {
+    "id": "rep_7e7a1f0d",
+    "type": "acoso_verbal",
+    "lat": 6.284581,
+    "lon": -75.556079,
+    "severity": 2,
+    "description": "Grupo de hombres gritando piropos",
+    "timestamp": "2026-03-24T00:03:36Z",
+    "votes": {
+      "confirm": 8,
+      "deny": 0
+    },
+    "active": true
+  },
+  {
+    "id": "rep_699ff350",
+    "type": "iluminacion_deficiente",
+    "lat": 6.247992,
+    "lon": -75.614409,
+    "severity": 3,
+    "description": "Iluminación intermitente, muy tenue",
+    "timestamp": "2026-03-27T00:17:36Z",
+    "votes": {
+      "confirm": 8,
+      "deny": 2
+    },
+    "active": true
+  },
+  {
+    "id": "rep_dc438e8f",
+    "type": "acoso_verbal",
+    "lat": 6.227292,
+    "lon": -75.615004,
+    "severity": 2,
+    "description": "Silbidos y gritos desde obra de construcción",
+    "timestamp": "2026-05-04T06:56:36Z",
+    "votes": {
+      "confirm": 7,
+      "deny": 0
+    },
+    "active": true
+  },
+  {
+    "id": "rep_2aa3d0fc",
+    "type": "acoso_verbal",
+    "lat": 6.250586,
+    "lon": -75.557995,
+    "severity": 2,
+    "description": "Grupo de hombres gritando piropos",
+    "timestamp": "2026-04-18T15:52:36Z",
+    "votes": {
+      "confirm": 6,
+      "deny": 3
+    },
+    "active": true
+  },
+  {
+    "id": "rep_699a692b",
+    "type": "iluminacion_deficiente",
+    "lat": 6.243559,
+    "lon": -75.577961,
+    "severity": 3,
+    "description": "Varias luminarias dañadas en este tramo",
+    "timestamp": "2026-04-20T08:02:36Z",
+    "votes": {
+      "confirm": 3,
+      "deny": 1
+    },
+    "active": true
+  },
+  {
+    "id": "rep_65a03225",
+    "type": "acoso_verbal",
+    "lat": 6.302604,
+    "lon": -75.550383,
+    "severity": 3,
+    "description": "Hombre siguiendo y diciendo comentarios inapropiados",
+    "timestamp": "2026-03-07T01:43:36Z",
+    "votes": {
+      "confirm": 15,
+      "deny": 2
+    },
+    "active": true
+  },
+  {
+    "id": "rep_ddeff282",
+    "type": "acoso_verbal",
+    "lat": 6.260001,
+    "lon": -75.635269,
+    "severity": 2,
+    "description": "Hombre haciendo comentarios sobre la apariencia",
+    "timestamp": "2026-04-20T03:54:36Z",
+    "votes": {
+      "confirm": 11,
+      "deny": 3
+    },
+    "active": true
+  },
+  {
+    "id": "rep_600a4a19",
+    "type": "acoso_verbal",
+    "lat": 6.260459,
+    "lon": -75.634254,
+    "severity": 2,
+    "description": "Grupo de hombres gritando piropos",
+    "timestamp": "2026-03-17T05:44:36Z",
+    "votes": {
+      "confirm": 12,
+      "deny": 1
+    },
+    "active": true
+  },
+  {
+    "id": "rep_c8d0e756",
+    "type": "iluminacion_deficiente",
+    "lat": 6.223422,
+    "lon": -75.602758,
+    "severity": 3,
+    "description": "Varias luminarias dañadas en este tramo",
+    "timestamp": "2026-05-23T17:07:36Z",
+    "votes": {
+      "confirm": 3,
+      "deny": 1
+    },
+    "active": true
+  },
+  {
+    "id": "rep_e7388970",
+    "type": "zona_solitaria",
+    "lat": 6.197274,
+    "lon": -75.554073,
+    "severity": 4,
+    "description": "Sin tráfico peatonal después de las 8pm",
+    "timestamp": "2026-04-15T03:21:36Z",
+    "votes": {
+      "confirm": 11,
+      "deny": 0
+    },
+    "active": true
+  },
+  {
+    "id": "rep_6475c6b2",
+    "type": "acoso_verbal",
+    "lat": 6.239553,
+    "lon": -75.622633,
+    "severity": 3,
+    "description": "Hombre siguiendo y diciendo comentarios inapropiados",
+    "timestamp": "2026-05-25T02:57:36Z",
+    "votes": {
+      "confirm": 7,
+      "deny": 0
+    },
+    "active": true
+  },
+  {
+    "id": "rep_9e7bb834",
+    "type": "acoso_verbal",
+    "lat": 6.198019,
+    "lon": -75.578726,
+    "severity": 2,
+    "description": "Grupo de hombres gritando piropos",
+    "timestamp": "2026-03-22T19:36:36Z",
+    "votes": {
+      "confirm": 7,
+      "deny": 2
+    },
+    "active": true
+  },
+  {
+    "id": "rep_e6884e00",
+    "type": "acoso_verbal",
+    "lat": 6.249693,
+    "lon": -75.586064,
+    "severity": 3,
+    "description": "Comentarios obscenos desde un carro",
+    "timestamp": "2026-04-13T14:14:36Z",
+    "votes": {
+      "confirm": 1,
+      "deny": 1
+    },
+    "active": true
+  },
+  {
+    "id": "rep_25d6cbcc",
+    "type": "robo",
+    "lat": 6.228802,
+    "lon": -75.61036,
+    "severity": 5,
+    "description": "Zona de alta incidencia de robos según comunidad",
+    "timestamp": "2026-03-14T22:36:36Z",
+    "votes": {
+      "confirm": 2,
+      "deny": 0
+    },
+    "active": true
+  },
+  {
+    "id": "rep_3668aba0",
+    "type": "acoso_verbal",
+    "lat": 6.222405,
+    "lon": -75.624895,
+    "severity": 3,
+    "description": "Grupo de hombres gritando piropos",
+    "timestamp": "2026-03-25T11:56:36Z",
+    "votes": {
+      "confirm": 1,
+      "deny": 1
+    },
+    "active": true
+  },
+  {
+    "id": "rep_867551e6",
+    "type": "zona_solitaria",
+    "lat": 6.259968,
+    "lon": -75.555293,
+    "severity": 2,
+    "description": "Calle completamente vacía a las 9pm",
+    "timestamp": "2026-05-05T08:37:36Z",
+    "votes": {
+      "confirm": 9,
+      "deny": 0
+    },
+    "active": true
+  },
+  {
+    "id": "rep_10aa9d8b",
+    "type": "robo",
+    "lat": 6.288136,
+    "lon": -75.574662,
+    "severity": 5,
+    "description": "Hurto de celulares reportado por vecinos",
+    "timestamp": "2026-04-22T23:17:36Z",
+    "votes": {
+      "confirm": 15,
+      "deny": 1
+    },
+    "active": true
+  },
+  {
+    "id": "rep_020507f2",
+    "type": "acoso_verbal",
+    "lat": 6.25846,
+    "lon": -75.57268,
+    "severity": 2,
+    "description": "Hombre siguiendo y diciendo comentarios inapropiados",
+    "timestamp": "2026-04-13T15:03:36Z",
+    "votes": {
+      "confirm": 11,
+      "deny": 0
+    },
+    "active": true
+  },
+  {
+    "id": "rep_fd3b7168",
+    "type": "robo",
+    "lat": 6.290354,
+    "lon": -75.606951,
+    "severity": 5,
+    "description": "Raponazo frecuente en este sector",
+    "timestamp": "2026-05-21T10:52:36Z",
+    "votes": {
+      "confirm": 11,
+      "deny": 2
+    },
+    "active": true
+  },
+  {
+    "id": "rep_4b047204",
+    "type": "acoso_verbal",
+    "lat": 6.267385,
+    "lon": -75.641897,
+    "severity": 3,
+    "description": "Silbidos y gritos desde obra de construcción",
+    "timestamp": "2026-05-28T19:59:36Z",
+    "votes": {
+      "confirm": 12,
+      "deny": 3
+    },
+    "active": true
+  },
+  {
+    "id": "rep_b294e0bf",
+    "type": "acoso_verbal",
+    "lat": 6.223064,
+    "lon": -75.607183,
+    "severity": 3,
+    "description": "Comentarios obscenos desde un carro",
+    "timestamp": "2026-05-03T06:55:36Z",
+    "votes": {
+      "confirm": 12,
+      "deny": 0
+    },
+    "active": true
+  },
+  {
+    "id": "rep_795bf065",
+    "type": "iluminacion_deficiente",
+    "lat": 6.286059,
+    "lon": -75.544337,
+    "severity": 2,
+    "description": "Bloque entero sin alumbrado público",
+    "timestamp": "2026-03-02T08:04:36Z",
+    "votes": {
+      "confirm": 1,
+      "deny": 3
+    },
+    "active": true
+  },
+  {
+    "id": "rep_7811a37f",
+    "type": "zona_solitaria",
+    "lat": 6.253185,
+    "lon": -75.622701,
+    "severity": 2,
+    "description": "Calle completamente vacía a las 9pm",
+    "timestamp": "2026-04-05T00:06:36Z",
+    "votes": {
+      "confirm": 12,
+      "deny": 1
+    },
+    "active": true
+  },
+  {
+    "id": "rep_f9ad89cd",
+    "type": "robo",
+    "lat": 6.293935,
+    "lon": -75.565014,
+    "severity": 4,
+    "description": "Asalto a mano armada en la noche",
+    "timestamp": "2026-03-08T21:38:36Z",
+    "votes": {
+      "confirm": 2,
+      "deny": 2
+    },
+    "active": true
+  },
+  {
+    "id": "rep_95bda19f",
+    "type": "zona_solitaria",
+    "lat": 6.201023,
+    "lon": -75.553859,
+    "severity": 4,
+    "description": "Callejón sin salida con poca iluminación",
+    "timestamp": "2026-03-14T12:31:36Z",
+    "votes": {
+      "confirm": 9,
+      "deny": 1
+    },
+    "active": true
+  },
+  {
+    "id": "rep_9f23960f",
+    "type": "iluminacion_deficiente",
+    "lat": 6.226376,
+    "lon": -75.614013,
+    "severity": 3,
+    "description": "Varias luminarias dañadas en este tramo",
+    "timestamp": "2026-04-27T06:33:36Z",
+    "votes": {
+      "confirm": 3,
+      "deny": 0
+    },
+    "active": true
+  },
+  {
+    "id": "rep_2e195202",
+    "type": "acoso_verbal",
+    "lat": 6.271047,
+    "lon": -75.554784,
+    "severity": 2,
+    "description": "Hombre haciendo comentarios sobre la apariencia",
+    "timestamp": "2026-05-15T12:44:36Z",
+    "votes": {
+      "confirm": 2,
+      "deny": 2
+    },
+    "active": true
+  },
+  {
+    "id": "rep_fefd86fc",
+    "type": "acoso_verbal",
+    "lat": 6.227696,
+    "lon": -75.618812,
+    "severity": 2,
+    "description": "Hombre haciendo comentarios sobre la apariencia",
+    "timestamp": "2026-05-09T14:43:36Z",
+    "votes": {
+      "confirm": 8,
+      "deny": 2
+    },
+    "active": true
+  },
+  {
+    "id": "rep_2e05ef8e",
+    "type": "iluminacion_deficiente",
+    "lat": 6.279067,
+    "lon": -75.548507,
+    "severity": 3,
+    "description": "Bloque entero sin alumbrado público",
+    "timestamp": "2026-03-26T23:24:36Z",
+    "votes": {
+      "confirm": 9,
+      "deny": 0
+    },
+    "active": true
+  },
+  {
+    "id": "rep_a8aa2918",
+    "type": "iluminacion_deficiente",
+    "lat": 6.254666,
+    "lon": -75.576928,
+    "severity": 3,
+    "description": "Calle completamente oscura, no hay faroles",
+    "timestamp": "2026-04-18T13:17:36Z",
+    "votes": {
+      "confirm": 5,
+      "deny": 2
+    },
+    "active": true
+  },
+  {
+    "id": "rep_f75ca745",
+    "type": "iluminacion_deficiente",
+    "lat": 6.293207,
+    "lon": -75.55896,
+    "severity": 3,
+    "description": "Iluminación intermitente, muy tenue",
+    "timestamp": "2026-03-21T07:32:36Z",
+    "votes": {
+      "confirm": 8,
+      "deny": 2
+    },
+    "active": true
+  },
+  {
+    "id": "rep_64aa01ad",
+    "type": "robo",
+    "lat": 6.258846,
+    "lon": -75.630837,
+    "severity": 5,
+    "description": "Hurto de celulares reportado por vecinos",
+    "timestamp": "2026-03-07T01:14:36Z",
+    "votes": {
+      "confirm": 1,
+      "deny": 1
+    },
+    "active": true
+  },
+  {
+    "id": "rep_82895298",
+    "type": "iluminacion_deficiente",
+    "lat": 6.293772,
+    "lon": -75.590299,
+    "severity": 2,
+    "description": "Calle completamente oscura, no hay faroles",
+    "timestamp": "2026-04-03T20:19:36Z",
+    "votes": {
+      "confirm": 1,
+      "deny": 0
+    },
+    "active": true
+  },
+  {
+    "id": "rep_01262cca",
+    "type": "iluminacion_deficiente",
+    "lat": 6.285803,
+    "lon": -75.592444,
+    "severity": 2,
+    "description": "Calle completamente oscura, no hay faroles",
+    "timestamp": "2026-04-11T03:48:36Z",
+    "votes": {
+      "confirm": 6,
+      "deny": 3
+    },
+    "active": true
+  },
+  {
+    "id": "rep_7f0c2f78",
+    "type": "acoso_verbal",
+    "lat": 6.255062,
+    "lon": -75.568298,
+    "severity": 3,
+    "description": "Grupo de hombres gritando piropos",
+    "timestamp": "2026-05-01T02:41:36Z",
+    "votes": {
+      "confirm": 12,
+      "deny": 3
+    },
+    "active": true
+  },
+  {
+    "id": "rep_b8c6c33f",
+    "type": "robo",
+    "lat": 6.282868,
+    "lon": -75.559815,
+    "severity": 4,
+    "description": "Raponazo frecuente en este sector",
+    "timestamp": "2026-03-11T08:27:36Z",
+    "votes": {
+      "confirm": 15,
+      "deny": 2
+    },
+    "active": true
+  },
+  {
+    "id": "rep_7888784c",
+    "type": "bien",
+    "lat": 6.241294,
+    "lon": -75.567455,
+    "severity": 1,
+    "description": "Zona muy iluminada y transitada, me sentí segura",
+    "timestamp": "2026-03-05T12:39:36Z",
+    "votes": {
+      "confirm": 10,
+      "deny": 2
+    },
+    "active": true
+  },
+  {
+    "id": "rep_c4bcb883",
+    "type": "zona_solitaria",
+    "lat": 6.284504,
+    "lon": -75.550362,
+    "severity": 2,
+    "description": "Calle completamente vacía a las 9pm",
+    "timestamp": "2026-05-28T11:40:36Z",
+    "votes": {
+      "confirm": 5,
+      "deny": 3
+    },
+    "active": true
+  },
+  {
+    "id": "rep_b967a9c9",
+    "type": "robo",
+    "lat": 6.251737,
+    "lon": -75.577824,
+    "severity": 4,
+    "description": "Hurto de celulares reportado por vecinos",
+    "timestamp": "2026-04-08T04:37:36Z",
+    "votes": {
+      "confirm": 11,
+      "deny": 3
+    },
+    "active": true
+  },
+  {
+    "id": "rep_4ae3cdc4",
+    "type": "acoso_verbal",
+    "lat": 6.223306,
+    "lon": -75.614508,
+    "severity": 3,
+    "description": "Comentarios obscenos desde un carro",
+    "timestamp": "2026-03-25T14:51:36Z",
+    "votes": {
+      "confirm": 8,
+      "deny": 3
+    },
+    "active": true
+  },
+  {
+    "id": "rep_68e0e86a",
+    "type": "zona_solitaria",
+    "lat": 6.260065,
+    "lon": -75.629706,
+    "severity": 4,
+    "description": "Zona industrial sin personas en la noche",
+    "timestamp": "2026-05-28T02:14:36Z",
+    "votes": {
+      "confirm": 3,
+      "deny": 3
+    },
+    "active": true
+  },
+  {
+    "id": "rep_2c533a1b",
+    "type": "acoso_verbal",
+    "lat": 6.282428,
+    "lon": -75.625295,
+    "severity": 3,
+    "description": "Comentarios obscenos desde un carro",
+    "timestamp": "2026-04-20T07:19:36Z",
+    "votes": {
+      "confirm": 5,
+      "deny": 2
+    },
+    "active": true
+  },
+  {
+    "id": "rep_e9931826",
+    "type": "bien",
+    "lat": 6.311192,
+    "lon": -75.554824,
+    "severity": 1,
+    "description": "Zona comercial animada, sin incidentes",
+    "timestamp": "2026-03-22T14:16:36Z",
+    "votes": {
+      "confirm": 1,
+      "deny": 0
+    },
+    "active": true
+  },
+  {
+    "id": "rep_7c8446c5",
+    "type": "robo",
+    "lat": 6.250926,
+    "lon": -75.632503,
+    "severity": 5,
+    "description": "Zona de alta incidencia de robos según comunidad",
+    "timestamp": "2026-05-11T05:17:36Z",
+    "votes": {
+      "confirm": 6,
+      "deny": 2
+    },
+    "active": true
+  },
+  {
+    "id": "rep_3df26bce",
+    "type": "zona_solitaria",
+    "lat": 6.223238,
+    "lon": -75.633095,
+    "severity": 2,
+    "description": "Callejón sin salida con poca iluminación",
+    "timestamp": "2026-04-01T06:05:36Z",
+    "votes": {
+      "confirm": 3,
+      "deny": 3
+    },
+    "active": true
+  },
+  {
+    "id": "rep_ce268798",
+    "type": "robo",
+    "lat": 6.27883,
+    "lon": -75.606347,
+    "severity": 5,
+    "description": "Raponazo frecuente en este sector",
+    "timestamp": "2026-05-23T04:26:36Z",
+    "votes": {
+      "confirm": 13,
+      "deny": 3
+    },
+    "active": true
+  },
+  {
+    "id": "rep_a0044237",
+    "type": "bien",
+    "lat": 6.211555,
+    "lon": -75.558264,
+    "severity": 1,
+    "description": "Excelente iluminación y presencia de policía",
+    "timestamp": "2026-04-14T09:08:36Z",
+    "votes": {
+      "confirm": 9,
+      "deny": 1
+    },
+    "active": true
+  },
+  {
+    "id": "rep_de1f66fa",
+    "type": "robo",
+    "lat": 6.293284,
+    "lon": -75.548781,
+    "severity": 5,
+    "description": "Hurto de celulares reportado por vecinos",
+    "timestamp": "2026-05-13T23:48:36Z",
+    "votes": {
+      "confirm": 2,
+      "deny": 3
+    },
+    "active": true
+  },
+  {
+    "id": "rep_947cf6d8",
+    "type": "iluminacion_deficiente",
+    "lat": 6.248274,
+    "lon": -75.587989,
+    "severity": 3,
+    "description": "Calle completamente oscura, no hay faroles",
+    "timestamp": "2026-04-13T23:21:36Z",
+    "votes": {
+      "confirm": 9,
+      "deny": 2
+    },
+    "active": true
+  },
+  {
+    "id": "rep_ac13599b",
+    "type": "acoso_verbal",
+    "lat": 6.277516,
+    "lon": -75.560336,
+    "severity": 3,
+    "description": "Silbidos y gritos desde obra de construcción",
+    "timestamp": "2026-03-30T06:38:36Z",
+    "votes": {
+      "confirm": 7,
+      "deny": 3
+    },
+    "active": true
+  },
+  {
+    "id": "rep_271f6590",
+    "type": "acoso_verbal",
+    "lat": 6.306103,
+    "lon": -75.562522,
+    "severity": 3,
+    "description": "Silbidos y gritos desde obra de construcción",
+    "timestamp": "2026-05-22T02:00:36Z",
+    "votes": {
+      "confirm": 9,
+      "deny": 1
+    },
+    "active": true
+  },
+  {
+    "id": "rep_cfa511bf",
+    "type": "acoso_verbal",
+    "lat": 6.243206,
+    "lon": -75.56552,
+    "severity": 3,
+    "description": "Hombre haciendo comentarios sobre la apariencia",
+    "timestamp": "2026-04-24T00:56:36Z",
+    "votes": {
+      "confirm": 9,
+      "deny": 3
+    },
+    "active": true
+  },
+  {
+    "id": "rep_8d3b80a2",
+    "type": "robo",
+    "lat": 6.253429,
+    "lon": -75.62796,
+    "severity": 4,
+    "description": "Fleteo reportado en esta esquina",
+    "timestamp": "2026-03-17T17:23:36Z",
+    "votes": {
+      "confirm": 0,
+      "deny": 0
+    },
+    "active": true
+  },
+  {
+    "id": "rep_e4a59857",
+    "type": "acoso_verbal",
+    "lat": 6.289542,
+    "lon": -75.543262,
+    "severity": 2,
+    "description": "Hombre siguiendo y diciendo comentarios inapropiados",
+    "timestamp": "2026-03-15T09:22:36Z",
+    "votes": {
+      "confirm": 14,
+      "deny": 0
+    },
+    "active": true
+  },
+  {
+    "id": "rep_3b3ffd3b",
+    "type": "acoso_verbal",
+    "lat": 6.238147,
+    "lon": -75.630733,
+    "severity": 3,
+    "description": "Grupo de hombres gritando piropos",
+    "timestamp": "2026-04-05T20:21:36Z",
+    "votes": {
+      "confirm": 7,
+      "deny": 0
+    },
+    "active": true
+  },
+  {
+    "id": "rep_fb6b08d0",
+    "type": "acoso_verbal",
+    "lat": 6.259376,
+    "lon": -75.638296,
+    "severity": 3,
+    "description": "Grupo de hombres gritando piropos",
+    "timestamp": "2026-05-17T19:05:36Z",
+    "votes": {
+      "confirm": 9,
+      "deny": 3
+    },
+    "active": true
+  },
+  {
+    "id": "rep_7fc03eba",
+    "type": "acoso_verbal",
+    "lat": 6.207642,
+    "lon": -75.574923,
+    "severity": 3,
+    "description": "Silbidos y gritos desde obra de construcción",
+    "timestamp": "2026-04-11T10:46:36Z",
+    "votes": {
+      "confirm": 6,
+      "deny": 0
+    },
+    "active": true
+  },
+  {
+    "id": "rep_2e6d94d7",
+    "type": "acoso_verbal",
+    "lat": 6.290818,
+    "lon": -75.567332,
+    "severity": 3,
+    "description": "Grupo de hombres gritando piropos",
+    "timestamp": "2026-05-22T20:45:36Z",
+    "votes": {
+      "confirm": 13,
+      "deny": 3
+    },
+    "active": true
+  },
+  {
+    "id": "rep_6466476a",
+    "type": "acoso_verbal",
+    "lat": 6.273712,
+    "lon": -75.583618,
+    "severity": 2,
+    "description": "Silbidos y gritos desde obra de construcción",
+    "timestamp": "2026-04-06T16:02:36Z",
+    "votes": {
+      "confirm": 10,
+      "deny": 1
+    },
+    "active": true
+  },
+  {
+    "id": "rep_49898a18",
+    "type": "robo",
+    "lat": 6.265383,
+    "lon": -75.612602,
+    "severity": 5,
+    "description": "Hurto de celulares reportado por vecinos",
+    "timestamp": "2026-04-21T15:22:36Z",
+    "votes": {
+      "confirm": 11,
+      "deny": 2
+    },
+    "active": true
+  },
+  {
+    "id": "rep_e2e34d2e",
+    "type": "acoso_verbal",
+    "lat": 6.187271,
+    "lon": -75.566092,
+    "severity": 2,
+    "description": "Silbidos y gritos desde obra de construcción",
+    "timestamp": "2026-04-30T21:31:36Z",
+    "votes": {
+      "confirm": 1,
+      "deny": 1
+    },
+    "active": true
+  },
+  {
+    "id": "rep_69a6d4c0",
+    "type": "acoso_verbal",
+    "lat": 6.231596,
+    "lon": -75.613645,
+    "severity": 2,
+    "description": "Silbidos y gritos desde obra de construcción",
+    "timestamp": "2026-03-31T15:09:36Z",
+    "votes": {
+      "confirm": 8,
+      "deny": 1
+    },
+    "active": true
+  },
+  {
+    "id": "rep_8313bd3b",
+    "type": "zona_solitaria",
+    "lat": 6.290578,
+    "lon": -75.550184,
+    "severity": 3,
+    "description": "Calle completamente vacía a las 9pm",
+    "timestamp": "2026-03-18T04:35:36Z",
+    "votes": {
+      "confirm": 8,
+      "deny": 0
+    },
+    "active": true
+  },
+  {
+    "id": "rep_73d3efb6",
+    "type": "zona_solitaria",
+    "lat": 6.296228,
+    "lon": -75.599535,
+    "severity": 2,
+    "description": "Sin tráfico peatonal después de las 8pm",
+    "timestamp": "2026-05-25T06:37:36Z",
+    "votes": {
+      "confirm": 7,
+      "deny": 1
+    },
+    "active": true
+  },
+  {
+    "id": "rep_d6d02b0f",
+    "type": "acoso_verbal",
+    "lat": 6.273759,
+    "lon": -75.618068,
+    "severity": 3,
+    "description": "Hombre haciendo comentarios sobre la apariencia",
+    "timestamp": "2026-05-30T06:34:36Z",
+    "votes": {
+      "confirm": 14,
+      "deny": 2
+    },
+    "active": true
+  },
+  {
+    "id": "rep_99e0100f",
+    "type": "iluminacion_deficiente",
+    "lat": 6.301911,
+    "lon": -75.56033,
+    "severity": 2,
+    "description": "Iluminación intermitente, muy tenue",
+    "timestamp": "2026-04-19T14:10:36Z",
+    "votes": {
+      "confirm": 0,
+      "deny": 3
+    },
+    "active": true
+  },
+  {
+    "id": "rep_cc80778e",
+    "type": "robo",
+    "lat": 6.28409,
+    "lon": -75.552475,
+    "severity": 4,
+    "description": "Zona de alta incidencia de robos según comunidad",
+    "timestamp": "2026-03-19T16:31:36Z",
+    "votes": {
+      "confirm": 4,
+      "deny": 1
+    },
+    "active": true
+  },
+  {
+    "id": "rep_17267354",
+    "type": "zona_solitaria",
+    "lat": 6.292069,
+    "lon": -75.55213,
+    "severity": 4,
+    "description": "Zona industrial sin personas en la noche",
+    "timestamp": "2026-03-22T01:35:36Z",
+    "votes": {
+      "confirm": 5,
+      "deny": 1
+    },
+    "active": true
+  },
+  {
+    "id": "rep_03bd1069",
+    "type": "acoso_verbal",
+    "lat": 6.292369,
+    "lon": -75.575044,
+    "severity": 3,
+    "description": "Hombre haciendo comentarios sobre la apariencia",
+    "timestamp": "2026-03-15T02:25:36Z",
+    "votes": {
+      "confirm": 0,
+      "deny": 1
+    },
+    "active": true
+  },
+  {
+    "id": "rep_db31b72b",
+    "type": "robo",
+    "lat": 6.298409,
+    "lon": -75.551693,
+    "severity": 4,
+    "description": "Raponazo frecuente en este sector",
+    "timestamp": "2026-04-05T22:43:36Z",
+    "votes": {
+      "confirm": 4,
+      "deny": 2
+    },
+    "active": true
+  },
+  {
+    "id": "rep_1388dd7f",
+    "type": "acoso_verbal",
+    "lat": 6.229575,
+    "lon": -75.628165,
+    "severity": 2,
+    "description": "Grupo de hombres gritando piropos",
+    "timestamp": "2026-04-30T16:45:36Z",
+    "votes": {
+      "confirm": 0,
+      "deny": 2
+    },
+    "active": true
+  },
+  {
+    "id": "rep_434e1f56",
+    "type": "iluminacion_deficiente",
+    "lat": 6.240592,
+    "lon": -75.614299,
+    "severity": 3,
+    "description": "Varias luminarias dañadas en este tramo",
+    "timestamp": "2026-03-16T00:39:36Z",
+    "votes": {
+      "confirm": 2,
+      "deny": 1
+    },
+    "active": true
+  },
+  {
+    "id": "rep_6086e15f",
+    "type": "zona_solitaria",
+    "lat": 6.286191,
+    "lon": -75.58917,
+    "severity": 3,
+    "description": "Parque sin presencia de personas en horario nocturno",
+    "timestamp": "2026-04-27T06:14:36Z",
+    "votes": {
+      "confirm": 11,
+      "deny": 0
+    },
+    "active": true
+  },
+  {
+    "id": "rep_bb84034c",
+    "type": "bien",
+    "lat": 6.271227,
+    "lon": -75.561409,
+    "severity": 1,
+    "description": "Zona comercial animada, sin incidentes",
+    "timestamp": "2026-04-15T00:30:36Z",
+    "votes": {
+      "confirm": 7,
+      "deny": 2
+    },
+    "active": true
+  },
+  {
+    "id": "rep_86e4f1d8",
+    "type": "acoso_verbal",
+    "lat": 6.255912,
+    "lon": -75.575388,
+    "severity": 2,
+    "description": "Hombre haciendo comentarios sobre la apariencia",
+    "timestamp": "2026-05-05T02:36:36Z",
+    "votes": {
+      "confirm": 12,
+      "deny": 0
+    },
+    "active": true
+  },
+  {
+    "id": "rep_499dff88",
+    "type": "acoso_verbal",
+    "lat": 6.262392,
+    "lon": -75.643941,
+    "severity": 2,
+    "description": "Silbidos y gritos desde obra de construcción",
+    "timestamp": "2026-04-07T21:43:36Z",
+    "votes": {
+      "confirm": 0,
+      "deny": 1
+    },
+    "active": true
+  },
+  {
+    "id": "rep_b49c00ec",
+    "type": "acoso_verbal",
+    "lat": 6.281137,
+    "lon": -75.584646,
+    "severity": 2,
+    "description": "Comentarios obscenos desde un carro",
+    "timestamp": "2026-05-19T16:57:36Z",
+    "votes": {
+      "confirm": 5,
+      "deny": 2
+    },
+    "active": true
+  },
+  {
+    "id": "rep_5e222b29",
+    "type": "bien",
+    "lat": 6.252348,
+    "lon": -75.633955,
+    "severity": 1,
+    "description": "Zona comercial animada, sin incidentes",
+    "timestamp": "2026-05-03T00:30:36Z",
+    "votes": {
+      "confirm": 3,
+      "deny": 1
+    },
+    "active": true
+  },
+  {
+    "id": "rep_bd83c471",
+    "type": "acoso_verbal",
+    "lat": 6.244157,
+    "lon": -75.609031,
+    "severity": 3,
+    "description": "Hombre siguiendo y diciendo comentarios inapropiados",
+    "timestamp": "2026-03-25T14:58:36Z",
+    "votes": {
+      "confirm": 5,
+      "deny": 0
+    },
+    "active": true
+  },
+  {
+    "id": "rep_e7d6938d",
+    "type": "zona_solitaria",
+    "lat": 6.293227,
+    "lon": -75.600714,
+    "severity": 2,
+    "description": "Sin tráfico peatonal después de las 8pm",
+    "timestamp": "2026-05-29T08:29:36Z",
+    "votes": {
+      "confirm": 6,
+      "deny": 1
+    },
+    "active": true
+  },
+  {
+    "id": "rep_b90667ae",
+    "type": "bien",
+    "lat": 6.249149,
+    "lon": -75.56369,
+    "severity": 1,
+    "description": "Excelente iluminación y presencia de policía",
+    "timestamp": "2026-03-02T08:44:36Z",
+    "votes": {
+      "confirm": 1,
+      "deny": 0
+    },
+    "active": true
+  },
+  {
+    "id": "rep_68187001",
+    "type": "zona_solitaria",
+    "lat": 6.229177,
+    "lon": -75.566028,
+    "severity": 4,
+    "description": "Calle completamente vacía a las 9pm",
+    "timestamp": "2026-05-17T06:07:36Z",
+    "votes": {
+      "confirm": 4,
+      "deny": 2
+    },
+    "active": true
+  },
+  {
+    "id": "rep_5cdc0311",
+    "type": "acoso_verbal",
+    "lat": 6.217301,
+    "lon": -75.585079,
+    "severity": 3,
+    "description": "Grupo de hombres gritando piropos",
+    "timestamp": "2026-03-31T18:51:36Z",
+    "votes": {
+      "confirm": 0,
+      "deny": 3
+    },
+    "active": true
+  },
+  {
+    "id": "rep_085b8f16",
+    "type": "acoso_verbal",
+    "lat": 6.291345,
+    "lon": -75.599763,
+    "severity": 2,
+    "description": "Hombre haciendo comentarios sobre la apariencia",
+    "timestamp": "2026-04-29T02:53:36Z",
+    "votes": {
+      "confirm": 0,
+      "deny": 3
+    },
+    "active": true
+  },
+  {
+    "id": "rep_27805815",
+    "type": "iluminacion_deficiente",
+    "lat": 6.264541,
+    "lon": -75.628907,
+    "severity": 2,
+    "description": "Bloque entero sin alumbrado público",
+    "timestamp": "2026-05-16T09:16:36Z",
+    "votes": {
+      "confirm": 9,
+      "deny": 2
+    },
+    "active": true
+  },
+  {
+    "id": "rep_8588c1c8",
+    "type": "iluminacion_deficiente",
+    "lat": 6.244088,
+    "lon": -75.572866,
+    "severity": 2,
+    "description": "Calle completamente oscura, no hay faroles",
+    "timestamp": "2026-04-25T14:35:36Z",
+    "votes": {
+      "confirm": 4,
+      "deny": 0
+    },
+    "active": true
+  },
+  {
+    "id": "rep_ef204835",
+    "type": "zona_solitaria",
+    "lat": 6.253322,
+    "lon": -75.637179,
+    "severity": 3,
+    "description": "Calle completamente vacía a las 9pm",
+    "timestamp": "2026-05-05T11:52:36Z",
+    "votes": {
+      "confirm": 2,
+      "deny": 3
+    },
+    "active": true
+  },
+  {
+    "id": "rep_144a57e7",
+    "type": "acoso_verbal",
+    "lat": 6.256992,
+    "lon": -75.562688,
+    "severity": 2,
+    "description": "Grupo de hombres gritando piropos",
+    "timestamp": "2026-04-03T00:57:36Z",
+    "votes": {
+      "confirm": 7,
+      "deny": 0
+    },
+    "active": true
+  },
+  {
+    "id": "rep_26a1b65d",
+    "type": "acoso_verbal",
+    "lat": 6.220992,
+    "lon": -75.571183,
+    "severity": 3,
+    "description": "Hombre siguiendo y diciendo comentarios inapropiados",
+    "timestamp": "2026-05-23T17:53:36Z",
+    "votes": {
+      "confirm": 4,
+      "deny": 3
+    },
+    "active": true
+  },
+  {
+    "id": "rep_d8b49059",
+    "type": "bien",
+    "lat": 6.24963,
+    "lon": -75.579766,
+    "severity": 1,
+    "description": "Excelente iluminación y presencia de policía",
+    "timestamp": "2026-05-05T21:11:36Z",
+    "votes": {
+      "confirm": 7,
+      "deny": 3
+    },
+    "active": true
+  },
+  {
+    "id": "rep_df91271c",
+    "type": "robo",
+    "lat": 6.224969,
+    "lon": -75.61003,
+    "severity": 4,
+    "description": "Asalto a mano armada en la noche",
+    "timestamp": "2026-05-29T20:19:36Z",
+    "votes": {
+      "confirm": 6,
+      "deny": 1
+    },
+    "active": true
+  },
+  {
+    "id": "rep_2611204c",
+    "type": "acoso_verbal",
+    "lat": 6.262622,
+    "lon": -75.565378,
+    "severity": 2,
+    "description": "Hombre siguiendo y diciendo comentarios inapropiados",
+    "timestamp": "2026-03-28T21:59:36Z",
+    "votes": {
+      "confirm": 15,
+      "deny": 1
+    },
+    "active": true
+  },
+  {
+    "id": "rep_4ebb6119",
+    "type": "zona_solitaria",
+    "lat": 6.237485,
+    "lon": -75.612356,
+    "severity": 4,
+    "description": "Calle completamente vacía a las 9pm",
+    "timestamp": "2026-05-25T00:24:36Z",
+    "votes": {
+      "confirm": 11,
+      "deny": 2
+    },
+    "active": true
+  },
+  {
+    "id": "rep_48758813",
+    "type": "acoso_verbal",
+    "lat": 6.300293,
+    "lon": -75.554936,
+    "severity": 2,
+    "description": "Comentarios obscenos desde un carro",
+    "timestamp": "2026-04-12T23:51:36Z",
+    "votes": {
+      "confirm": 6,
+      "deny": 1
+    },
+    "active": true
+  },
+  {
+    "id": "rep_dd92a3e7",
+    "type": "acoso_verbal",
+    "lat": 6.194498,
+    "lon": -75.559372,
+    "severity": 3,
+    "description": "Grupo de hombres gritando piropos",
+    "timestamp": "2026-04-14T01:47:36Z",
+    "votes": {
+      "confirm": 3,
+      "deny": 1
+    },
+    "active": true
+  },
+  {
+    "id": "rep_028e7dfb",
+    "type": "acoso_verbal",
+    "lat": 6.28658,
+    "lon": -75.562225,
+    "severity": 3,
+    "description": "Comentarios obscenos desde un carro",
+    "timestamp": "2026-05-24T03:12:36Z",
+    "votes": {
+      "confirm": 9,
+      "deny": 2
+    },
+    "active": true
+  },
+  {
+    "id": "rep_c4a5bc3a",
+    "type": "acoso_verbal",
+    "lat": 6.279703,
+    "lon": -75.565527,
+    "severity": 2,
+    "description": "Grupo de hombres gritando piropos",
+    "timestamp": "2026-05-27T06:36:36Z",
+    "votes": {
+      "confirm": 3,
+      "deny": 3
+    },
+    "active": true
+  },
+  {
+    "id": "rep_fe13a258",
+    "type": "zona_solitaria",
+    "lat": 6.210853,
+    "lon": -75.601161,
+    "severity": 2,
+    "description": "Zona industrial sin personas en la noche",
+    "timestamp": "2026-03-26T23:16:36Z",
+    "votes": {
+      "confirm": 11,
+      "deny": 0
+    },
+    "active": true
+  },
+  {
+    "id": "rep_13308ee8",
+    "type": "robo",
+    "lat": 6.279416,
+    "lon": -75.556938,
+    "severity": 5,
+    "description": "Hurto de celulares reportado por vecinos",
+    "timestamp": "2026-04-06T00:42:36Z",
+    "votes": {
+      "confirm": 15,
+      "deny": 3
+    },
+    "active": true
+  },
+  {
+    "id": "rep_3f53331f",
+    "type": "acoso_verbal",
+    "lat": 6.259837,
+    "lon": -75.571063,
+    "severity": 2,
+    "description": "Grupo de hombres gritando piropos",
+    "timestamp": "2026-03-06T17:03:36Z",
+    "votes": {
+      "confirm": 13,
+      "deny": 2
+    },
+    "active": true
+  },
+  {
+    "id": "rep_b681626c",
+    "type": "iluminacion_deficiente",
+    "lat": 6.222997,
+    "lon": -75.623981,
+    "severity": 3,
+    "description": "Bloque entero sin alumbrado público",
+    "timestamp": "2026-05-08T20:55:36Z",
+    "votes": {
+      "confirm": 2,
+      "deny": 0
+    },
+    "active": true
+  },
+  {
+    "id": "rep_a5f8660d",
+    "type": "iluminacion_deficiente",
+    "lat": 6.278116,
+    "lon": -75.554173,
+    "severity": 3,
+    "description": "Bloque entero sin alumbrado público",
+    "timestamp": "2026-03-16T14:37:36Z",
+    "votes": {
+      "confirm": 10,
+      "deny": 3
+    },
+    "active": true
+  },
+  {
+    "id": "rep_4face525",
+    "type": "acoso_verbal",
+    "lat": 6.25315,
+    "lon": -75.55767,
+    "severity": 2,
+    "description": "Hombre siguiendo y diciendo comentarios inapropiados",
+    "timestamp": "2026-05-25T00:05:36Z",
+    "votes": {
+      "confirm": 1,
+      "deny": 3
+    },
+    "active": true
+  },
+  {
+    "id": "rep_55f79fac",
+    "type": "robo",
+    "lat": 6.221567,
+    "lon": -75.615933,
+    "severity": 5,
+    "description": "Fleteo reportado en esta esquina",
+    "timestamp": "2026-03-25T08:06:36Z",
+    "votes": {
+      "confirm": 7,
+      "deny": 1
+    },
+    "active": true
+  },
+  {
+    "id": "rep_6ecc05b9",
+    "type": "bien",
+    "lat": 6.26514,
+    "lon": -75.615957,
+    "severity": 1,
+    "description": "Excelente iluminación y presencia de policía",
+    "timestamp": "2026-05-27T20:32:36Z",
+    "votes": {
+      "confirm": 12,
+      "deny": 2
+    },
+    "active": true
+  },
+  {
+    "id": "rep_5885d22c",
+    "type": "iluminacion_deficiente",
+    "lat": 6.247492,
+    "lon": -75.58755,
+    "severity": 3,
+    "description": "Bloque entero sin alumbrado público",
+    "timestamp": "2026-04-04T21:35:36Z",
+    "votes": {
+      "confirm": 13,
+      "deny": 2
+    },
+    "active": true
+  },
+  {
+    "id": "rep_9b7945c4",
+    "type": "acoso_verbal",
+    "lat": 6.224656,
+    "lon": -75.62033,
+    "severity": 3,
+    "description": "Hombre haciendo comentarios sobre la apariencia",
+    "timestamp": "2026-05-06T10:22:36Z",
+    "votes": {
+      "confirm": 11,
+      "deny": 0
+    },
+    "active": true
+  },
+  {
+    "id": "rep_2b4bfafb",
+    "type": "zona_solitaria",
+    "lat": 6.282026,
+    "lon": -75.55609,
+    "severity": 3,
+    "description": "Callejón sin salida con poca iluminación",
+    "timestamp": "2026-04-18T22:17:36Z",
+    "votes": {
+      "confirm": 8,
+      "deny": 3
+    },
+    "active": true
+  },
+  {
+    "id": "rep_7695be0f",
+    "type": "acoso_verbal",
+    "lat": 6.242947,
+    "lon": -75.566695,
+    "severity": 2,
+    "description": "Hombre haciendo comentarios sobre la apariencia",
+    "timestamp": "2026-05-31T03:39:36Z",
+    "votes": {
+      "confirm": 5,
+      "deny": 0
+    },
+    "active": true
+  },
+  {
+    "id": "rep_bdeca892",
+    "type": "acoso_verbal",
+    "lat": 6.259468,
+    "lon": -75.570375,
+    "severity": 3,
+    "description": "Silbidos y gritos desde obra de construcción",
+    "timestamp": "2026-04-10T18:12:36Z",
+    "votes": {
+      "confirm": 3,
+      "deny": 0
+    },
+    "active": true
+  },
+  {
+    "id": "rep_1f85de13",
+    "type": "zona_solitaria",
+    "lat": 6.2424,
+    "lon": -75.607891,
+    "severity": 3,
+    "description": "Sin tráfico peatonal después de las 8pm",
+    "timestamp": "2026-03-10T03:13:36Z",
+    "votes": {
+      "confirm": 5,
+      "deny": 1
+    },
+    "active": true
+  },
+  {
+    "id": "rep_b03d1dc3",
+    "type": "zona_solitaria",
+    "lat": 6.291664,
+    "lon": -75.592129,
+    "severity": 4,
+    "description": "Calle completamente vacía a las 9pm",
+    "timestamp": "2026-03-03T17:34:36Z",
+    "votes": {
+      "confirm": 8,
+      "deny": 0
+    },
+    "active": true
+  },
+  {
+    "id": "rep_f9123a05",
+    "type": "zona_solitaria",
+    "lat": 6.247528,
+    "lon": -75.573919,
+    "severity": 2,
+    "description": "Zona industrial sin personas en la noche",
+    "timestamp": "2026-05-03T15:51:36Z",
+    "votes": {
+      "confirm": 9,
+      "deny": 0
+    },
+    "active": true
+  },
+  {
+    "id": "rep_098f2b09",
+    "type": "iluminacion_deficiente",
+    "lat": 6.300165,
+    "lon": -75.575674,
+    "severity": 3,
+    "description": "Iluminación intermitente, muy tenue",
+    "timestamp": "2026-05-03T06:12:36Z",
+    "votes": {
+      "confirm": 13,
+      "deny": 0
+    },
+    "active": true
+  },
+  {
+    "id": "rep_d9f7b4a3",
+    "type": "robo",
+    "lat": 6.22421,
+    "lon": -75.610515,
+    "severity": 4,
+    "description": "Hurto de celulares reportado por vecinos",
+    "timestamp": "2026-03-18T15:09:36Z",
+    "votes": {
+      "confirm": 0,
+      "deny": 0
+    },
+    "active": true
+  },
+  {
+    "id": "rep_80b806ba",
+    "type": "zona_solitaria",
+    "lat": 6.24949,
+    "lon": -75.556594,
+    "severity": 2,
+    "description": "Parque sin presencia de personas en horario nocturno",
+    "timestamp": "2026-03-06T13:14:36Z",
+    "votes": {
+      "confirm": 0,
+      "deny": 0
+    },
+    "active": true
+  },
+  {
+    "id": "rep_f82d2646",
+    "type": "bien",
+    "lat": 6.196657,
+    "lon": -75.577831,
+    "severity": 1,
+    "description": "Zona comercial animada, sin incidentes",
+    "timestamp": "2026-04-04T00:33:36Z",
+    "votes": {
+      "confirm": 14,
+      "deny": 3
+    },
+    "active": true
+  },
+  {
+    "id": "rep_667ab1be",
+    "type": "iluminacion_deficiente",
+    "lat": 6.271699,
+    "lon": -75.623875,
+    "severity": 2,
+    "description": "Bloque entero sin alumbrado público",
+    "timestamp": "2026-03-02T22:32:36Z",
+    "votes": {
+      "confirm": 9,
+      "deny": 1
+    },
+    "active": true
+  },
+  {
+    "id": "rep_00351e30",
+    "type": "zona_solitaria",
+    "lat": 6.225346,
+    "lon": -75.614747,
+    "severity": 3,
+    "description": "Zona industrial sin personas en la noche",
+    "timestamp": "2026-04-23T21:00:36Z",
+    "votes": {
+      "confirm": 4,
+      "deny": 0
+    },
+    "active": true
+  },
+  {
+    "id": "rep_2013aa95",
+    "type": "bien",
+    "lat": 6.247077,
+    "lon": -75.565996,
+    "severity": 1,
+    "description": "Zona comercial animada, sin incidentes",
+    "timestamp": "2026-03-23T03:19:36Z",
+    "votes": {
+      "confirm": 0,
+      "deny": 3
+    },
+    "active": true
+  },
+  {
+    "id": "rep_a7bbfa15",
+    "type": "robo",
+    "lat": 6.29725,
+    "lon": -75.556696,
+    "severity": 5,
+    "description": "Asalto a mano armada en la noche",
+    "timestamp": "2026-05-17T02:38:36Z",
+    "votes": {
+      "confirm": 0,
+      "deny": 0
+    },
+    "active": true
+  },
+  {
+    "id": "rep_7cd7ebad",
+    "type": "acoso_verbal",
+    "lat": 6.285703,
+    "lon": -75.551774,
+    "severity": 3,
+    "description": "Hombre haciendo comentarios sobre la apariencia",
+    "timestamp": "2026-04-19T10:40:36Z",
+    "votes": {
+      "confirm": 7,
+      "deny": 3
+    },
+    "active": true
+  },
+  {
+    "id": "rep_aa280899",
+    "type": "zona_solitaria",
+    "lat": 6.253167,
+    "lon": -75.621312,
+    "severity": 4,
+    "description": "Callejón sin salida con poca iluminación",
+    "timestamp": "2026-03-16T05:47:36Z",
+    "votes": {
+      "confirm": 0,
+      "deny": 1
+    },
+    "active": true
+  },
+  {
+    "id": "rep_8f3ddd5f",
+    "type": "zona_solitaria",
+    "lat": 6.281962,
+    "lon": -75.563536,
+    "severity": 2,
+    "description": "Zona industrial sin personas en la noche",
+    "timestamp": "2026-03-18T16:41:36Z",
+    "votes": {
+      "confirm": 0,
+      "deny": 0
+    },
+    "active": true
+  },
+  {
+    "id": "rep_abc00f51",
+    "type": "iluminacion_deficiente",
+    "lat": 6.294199,
+    "lon": -75.588187,
+    "severity": 2,
+    "description": "Calle completamente oscura, no hay faroles",
+    "timestamp": "2026-04-20T14:13:36Z",
+    "votes": {
+      "confirm": 15,
+      "deny": 2
+    },
+    "active": true
+  },
+  {
+    "id": "rep_0a6ec477",
+    "type": "robo",
+    "lat": 6.330019,
+    "lon": -75.538292,
+    "severity": 4,
+    "description": "Hurto de celulares reportado por vecinos",
+    "timestamp": "2026-04-08T07:19:36Z",
+    "votes": {
+      "confirm": 5,
+      "deny": 1
+    },
+    "active": true
+  },
+  {
+    "id": "rep_f9a7a688",
+    "type": "acoso_verbal",
+    "lat": 6.263965,
+    "lon": -75.579391,
+    "severity": 2,
+    "description": "Silbidos y gritos desde obra de construcción",
+    "timestamp": "2026-04-09T05:34:36Z",
+    "votes": {
+      "confirm": 14,
+      "deny": 0
+    },
+    "active": true
+  },
+  {
+    "id": "rep_4c18e3df",
+    "type": "acoso_verbal",
+    "lat": 6.24303,
+    "lon": -75.573687,
+    "severity": 3,
+    "description": "Silbidos y gritos desde obra de construcción",
+    "timestamp": "2026-05-24T13:51:36Z",
+    "votes": {
+      "confirm": 5,
+      "deny": 2
+    },
+    "active": true
+  },
+  {
+    "id": "rep_fe49e8b1",
+    "type": "bien",
+    "lat": 6.20689,
+    "lon": -75.58036,
+    "severity": 1,
+    "description": "Excelente iluminación y presencia de policía",
+    "timestamp": "2026-03-31T15:56:36Z",
+    "votes": {
+      "confirm": 9,
+      "deny": 3
+    },
+    "active": true
+  },
+  {
+    "id": "rep_0b2a09b5",
+    "type": "acoso_verbal",
+    "lat": 6.25503,
+    "lon": -75.622371,
+    "severity": 2,
+    "description": "Comentarios obscenos desde un carro",
+    "timestamp": "2026-03-23T23:13:36Z",
+    "votes": {
+      "confirm": 5,
+      "deny": 2
+    },
+    "active": true
+  },
+  {
+    "id": "rep_a771b7a5",
+    "type": "robo",
+    "lat": 6.22516,
+    "lon": -75.610383,
+    "severity": 5,
+    "description": "Asalto a mano armada en la noche",
+    "timestamp": "2026-04-22T09:02:36Z",
+    "votes": {
+      "confirm": 1,
+      "deny": 2
+    },
+    "active": true
+  },
+  {
+    "id": "rep_a0bf6fca",
+    "type": "zona_solitaria",
+    "lat": 6.207184,
+    "lon": -75.561505,
+    "severity": 3,
+    "description": "Zona industrial sin personas en la noche",
+    "timestamp": "2026-03-29T22:14:36Z",
+    "votes": {
+      "confirm": 4,
+      "deny": 1
+    },
+    "active": true
+  },
+  {
+    "id": "rep_8a848cea",
+    "type": "zona_solitaria",
+    "lat": 6.25597,
+    "lon": -75.620098,
+    "severity": 2,
+    "description": "Callejón sin salida con poca iluminación",
+    "timestamp": "2026-05-09T00:01:36Z",
+    "votes": {
+      "confirm": 10,
+      "deny": 0
+    },
+    "active": true
+  },
+  {
+    "id": "rep_8d703c65",
+    "type": "acoso_verbal",
+    "lat": 6.253596,
+    "lon": -75.563892,
+    "severity": 3,
+    "description": "Grupo de hombres gritando piropos",
+    "timestamp": "2026-04-24T21:12:36Z",
+    "votes": {
+      "confirm": 3,
+      "deny": 1
+    },
+    "active": true
+  },
+  {
+    "id": "rep_bf309463",
+    "type": "robo",
+    "lat": 6.194273,
+    "lon": -75.570091,
+    "severity": 5,
+    "description": "Hurto de celulares reportado por vecinos",
+    "timestamp": "2026-03-03T19:28:36Z",
+    "votes": {
+      "confirm": 2,
+      "deny": 3
+    },
+    "active": true
+  },
+  {
+    "id": "rep_a87ba3b5",
+    "type": "zona_solitaria",
+    "lat": 6.270056,
+    "lon": -75.621114,
+    "severity": 3,
+    "description": "Sin tráfico peatonal después de las 8pm",
+    "timestamp": "2026-05-26T07:54:36Z",
+    "votes": {
+      "confirm": 9,
+      "deny": 2
+    },
+    "active": true
+  },
+  {
+    "id": "rep_c09fce43",
+    "type": "robo",
+    "lat": 6.273516,
+    "lon": -75.564843,
+    "severity": 4,
+    "description": "Asalto a mano armada en la noche",
+    "timestamp": "2026-04-01T16:21:36Z",
+    "votes": {
+      "confirm": 14,
+      "deny": 1
+    },
+    "active": true
+  },
+  {
+    "id": "rep_094b49a7",
+    "type": "iluminacion_deficiente",
+    "lat": 6.285587,
+    "lon": -75.590521,
+    "severity": 3,
+    "description": "Iluminación intermitente, muy tenue",
+    "timestamp": "2026-04-13T16:39:36Z",
+    "votes": {
+      "confirm": 5,
+      "deny": 2
+    },
+    "active": true
+  },
+  {
+    "id": "rep_bb1f2346",
+    "type": "zona_solitaria",
+    "lat": 6.224356,
+    "lon": -75.619184,
+    "severity": 4,
+    "description": "Sin tráfico peatonal después de las 8pm",
+    "timestamp": "2026-04-25T15:21:36Z",
+    "votes": {
+      "confirm": 9,
+      "deny": 0
+    },
+    "active": true
+  },
+  {
+    "id": "rep_22146ff1",
+    "type": "acoso_verbal",
+    "lat": 6.277712,
+    "lon": -75.567604,
+    "severity": 3,
+    "description": "Grupo de hombres gritando piropos",
+    "timestamp": "2026-03-26T02:35:36Z",
+    "votes": {
+      "confirm": 4,
+      "deny": 1
+    },
+    "active": true
+  },
+  {
+    "id": "rep_c14e76ed",
+    "type": "acoso_verbal",
+    "lat": 6.255365,
+    "lon": -75.571188,
+    "severity": 3,
+    "description": "Silbidos y gritos desde obra de construcción",
+    "timestamp": "2026-03-13T05:12:36Z",
+    "votes": {
+      "confirm": 5,
+      "deny": 0
+    },
+    "active": true
+  },
+  {
+    "id": "rep_c70f6d33",
+    "type": "acoso_verbal",
+    "lat": 6.193363,
+    "lon": -75.573205,
+    "severity": 2,
+    "description": "Silbidos y gritos desde obra de construcción",
+    "timestamp": "2026-04-18T02:18:36Z",
+    "votes": {
+      "confirm": 14,
+      "deny": 0
+    },
+    "active": true
+  },
+  {
+    "id": "rep_9bc0e290",
+    "type": "acoso_verbal",
+    "lat": 6.299138,
+    "lon": -75.561494,
+    "severity": 3,
+    "description": "Comentarios obscenos desde un carro",
+    "timestamp": "2026-03-16T11:07:36Z",
+    "votes": {
+      "confirm": 15,
+      "deny": 1
+    },
+    "active": true
+  },
+  {
+    "id": "rep_4bd74800",
+    "type": "acoso_verbal",
+    "lat": 6.221951,
+    "lon": -75.612054,
+    "severity": 2,
+    "description": "Hombre haciendo comentarios sobre la apariencia",
+    "timestamp": "2026-04-23T01:24:36Z",
+    "votes": {
+      "confirm": 5,
+      "deny": 1
+    },
+    "active": true
+  },
+  {
+    "id": "rep_2db80841",
+    "type": "acoso_verbal",
+    "lat": 6.193881,
+    "lon": -75.582548,
+    "severity": 3,
+    "description": "Hombre haciendo comentarios sobre la apariencia",
+    "timestamp": "2026-05-27T06:44:36Z",
+    "votes": {
+      "confirm": 8,
+      "deny": 3
+    },
+    "active": true
+  },
+  {
+    "id": "rep_ddf9d2b1",
+    "type": "robo",
+    "lat": 6.215318,
+    "lon": -75.62047,
+    "severity": 5,
+    "description": "Fleteo reportado en esta esquina",
+    "timestamp": "2026-05-05T06:57:36Z",
+    "votes": {
+      "confirm": 0,
+      "deny": 3
+    },
+    "active": true
+  },
+  {
+    "id": "rep_447a648e",
+    "type": "zona_solitaria",
+    "lat": 6.302484,
+    "lon": -75.550473,
+    "severity": 2,
+    "description": "Calle completamente vacía a las 9pm",
+    "timestamp": "2026-05-07T10:25:36Z",
+    "votes": {
+      "confirm": 10,
+      "deny": 2
+    },
+    "active": true
+  },
+  {
+    "id": "rep_41f36b4c",
+    "type": "acoso_verbal",
+    "lat": 6.27325,
+    "lon": -75.561809,
+    "severity": 2,
+    "description": "Hombre siguiendo y diciendo comentarios inapropiados",
+    "timestamp": "2026-03-14T02:09:36Z",
+    "votes": {
+      "confirm": 12,
+      "deny": 3
+    },
+    "active": true
+  },
+  {
+    "id": "rep_b2af3c4b",
+    "type": "acoso_verbal",
+    "lat": 6.294408,
+    "lon": -75.589168,
+    "severity": 3,
+    "description": "Hombre haciendo comentarios sobre la apariencia",
+    "timestamp": "2026-04-12T02:21:36Z",
+    "votes": {
+      "confirm": 12,
+      "deny": 2
+    },
+    "active": true
+  },
+  {
+    "id": "rep_a605e3b0",
+    "type": "iluminacion_deficiente",
+    "lat": 6.29077,
+    "lon": -75.569482,
+    "severity": 3,
+    "description": "Varias luminarias dañadas en este tramo",
+    "timestamp": "2026-03-25T19:55:36Z",
+    "votes": {
+      "confirm": 11,
+      "deny": 3
+    },
+    "active": true
+  },
+  {
+    "id": "rep_26c42e51",
+    "type": "bien",
+    "lat": 6.240099,
+    "lon": -75.622151,
+    "severity": 1,
+    "description": "Zona comercial animada, sin incidentes",
+    "timestamp": "2026-05-26T00:54:36Z",
+    "votes": {
+      "confirm": 2,
+      "deny": 1
+    },
+    "active": true
+  },
+  {
+    "id": "rep_1cb1cab7",
+    "type": "iluminacion_deficiente",
+    "lat": 6.262773,
+    "lon": -75.5594,
+    "severity": 2,
+    "description": "Iluminación intermitente, muy tenue",
+    "timestamp": "2026-05-25T23:12:36Z",
+    "votes": {
+      "confirm": 2,
+      "deny": 0
+    },
+    "active": true
+  },
+  {
+    "id": "rep_eb97355e",
+    "type": "acoso_verbal",
+    "lat": 6.221804,
+    "lon": -75.622741,
+    "severity": 3,
+    "description": "Grupo de hombres gritando piropos",
+    "timestamp": "2026-04-03T09:01:36Z",
+    "votes": {
+      "confirm": 7,
+      "deny": 2
+    },
+    "active": true
+  },
+  {
+    "id": "rep_99a8a78a",
+    "type": "acoso_verbal",
+    "lat": 6.298956,
+    "lon": -75.567636,
+    "severity": 2,
+    "description": "Hombre siguiendo y diciendo comentarios inapropiados",
+    "timestamp": "2026-05-29T04:36:36Z",
+    "votes": {
+      "confirm": 14,
+      "deny": 1
+    },
+    "active": true
+  },
+  {
+    "id": "rep_302b7266",
+    "type": "zona_solitaria",
+    "lat": 6.253554,
+    "lon": -75.566276,
+    "severity": 2,
+    "description": "Calle completamente vacía a las 9pm",
+    "timestamp": "2026-03-19T17:13:36Z",
+    "votes": {
+      "confirm": 4,
+      "deny": 2
+    },
+    "active": true
+  },
+  {
+    "id": "rep_c43fb901",
+    "type": "bien",
+    "lat": 6.25049,
+    "lon": -75.574986,
+    "severity": 1,
+    "description": "Excelente iluminación y presencia de policía",
+    "timestamp": "2026-03-22T00:57:36Z",
+    "votes": {
+      "confirm": 2,
+      "deny": 0
+    },
+    "active": true
+  },
+  {
+    "id": "rep_777da1f9",
+    "type": "zona_solitaria",
+    "lat": 6.260004,
+    "lon": -75.62617,
+    "severity": 4,
+    "description": "Calle completamente vacía a las 9pm",
+    "timestamp": "2026-03-29T08:08:36Z",
+    "votes": {
+      "confirm": 3,
+      "deny": 1
+    },
+    "active": true
+  },
+  {
+    "id": "rep_151912e2",
+    "type": "acoso_verbal",
+    "lat": 6.258108,
+    "lon": -75.571618,
+    "severity": 2,
+    "description": "Hombre siguiendo y diciendo comentarios inapropiados",
+    "timestamp": "2026-03-10T02:50:36Z",
+    "votes": {
+      "confirm": 6,
+      "deny": 1
+    },
+    "active": true
+  },
+  {
+    "id": "rep_14b24dd3",
+    "type": "acoso_verbal",
+    "lat": 6.205859,
+    "lon": -75.575774,
+    "severity": 2,
+    "description": "Hombre haciendo comentarios sobre la apariencia",
+    "timestamp": "2026-03-23T09:58:36Z",
+    "votes": {
+      "confirm": 3,
+      "deny": 0
+    },
+    "active": true
+  },
+  {
+    "id": "rep_a3de1628",
+    "type": "bien",
+    "lat": 6.293611,
+    "lon": -75.582677,
+    "severity": 1,
+    "description": "Zona muy iluminada y transitada, me sentí segura",
+    "timestamp": "2026-04-05T01:52:36Z",
+    "votes": {
+      "confirm": 12,
+      "deny": 1
+    },
+    "active": true
+  },
+  {
+    "id": "rep_87680c13",
+    "type": "zona_solitaria",
+    "lat": 6.208053,
+    "lon": -75.573228,
+    "severity": 3,
+    "description": "Sin tráfico peatonal después de las 8pm",
+    "timestamp": "2026-04-05T06:51:36Z",
+    "votes": {
+      "confirm": 4,
+      "deny": 3
+    },
+    "active": true
+  },
+  {
+    "id": "rep_9e23f669",
+    "type": "zona_solitaria",
+    "lat": 6.281068,
+    "lon": -75.5634,
+    "severity": 3,
+    "description": "Parque sin presencia de personas en horario nocturno",
+    "timestamp": "2026-04-28T21:46:36Z",
+    "votes": {
+      "confirm": 3,
+      "deny": 3
+    },
+    "active": true
+  },
+  {
+    "id": "rep_bcde5cc4",
+    "type": "bien",
+    "lat": 6.218922,
+    "lon": -75.561168,
+    "severity": 1,
+    "description": "Zona muy iluminada y transitada, me sentí segura",
+    "timestamp": "2026-03-14T08:25:36Z",
+    "votes": {
+      "confirm": 10,
+      "deny": 2
+    },
+    "active": true
+  },
+  {
+    "id": "rep_44f3ca60",
+    "type": "bien",
+    "lat": 6.270591,
+    "lon": -75.550875,
+    "severity": 1,
+    "description": "Zona muy iluminada y transitada, me sentí segura",
+    "timestamp": "2026-04-21T19:57:36Z",
+    "votes": {
+      "confirm": 5,
+      "deny": 2
+    },
+    "active": true
+  },
+  {
+    "id": "rep_1cf5ebee",
+    "type": "iluminacion_deficiente",
+    "lat": 6.291197,
+    "lon": -75.548682,
+    "severity": 2,
+    "description": "Iluminación intermitente, muy tenue",
+    "timestamp": "2026-04-08T16:18:36Z",
+    "votes": {
+      "confirm": 6,
+      "deny": 2
+    },
+    "active": true
+  },
+  {
+    "id": "rep_2564e6f2",
+    "type": "acoso_verbal",
+    "lat": 6.198396,
+    "lon": -75.577047,
+    "severity": 2,
+    "description": "Hombre siguiendo y diciendo comentarios inapropiados",
+    "timestamp": "2026-03-20T10:35:36Z",
+    "votes": {
+      "confirm": 9,
+      "deny": 2
+    },
+    "active": true
+  },
+  {
+    "id": "rep_e47d4262",
+    "type": "acoso_verbal",
+    "lat": 6.312255,
+    "lon": -75.564262,
+    "severity": 3,
+    "description": "Silbidos y gritos desde obra de construcción",
+    "timestamp": "2026-05-13T20:56:36Z",
+    "votes": {
+      "confirm": 5,
+      "deny": 2
+    },
+    "active": true
+  },
+  {
+    "id": "rep_18685e96",
+    "type": "zona_solitaria",
+    "lat": 6.288754,
+    "lon": -75.590753,
+    "severity": 4,
+    "description": "Parque sin presencia de personas en horario nocturno",
+    "timestamp": "2026-03-30T01:48:36Z",
+    "votes": {
+      "confirm": 2,
+      "deny": 2
+    },
+    "active": true
+  },
+  {
+    "id": "rep_33734d33",
+    "type": "iluminacion_deficiente",
+    "lat": 6.250922,
+    "lon": -75.577684,
+    "severity": 2,
+    "description": "Varias luminarias dañadas en este tramo",
+    "timestamp": "2026-05-15T14:37:36Z",
+    "votes": {
+      "confirm": 4,
+      "deny": 2
+    },
+    "active": true
+  },
+  {
+    "id": "rep_2d8469e9",
+    "type": "acoso_verbal",
+    "lat": 6.256529,
+    "lon": -75.569275,
+    "severity": 2,
+    "description": "Hombre haciendo comentarios sobre la apariencia",
+    "timestamp": "2026-03-05T13:46:36Z",
+    "votes": {
+      "confirm": 14,
+      "deny": 3
+    },
+    "active": true
+  },
+  {
+    "id": "rep_e3514ad5",
+    "type": "zona_solitaria",
+    "lat": 6.285946,
+    "lon": -75.557733,
+    "severity": 3,
+    "description": "Callejón sin salida con poca iluminación",
+    "timestamp": "2026-05-08T09:38:36Z",
+    "votes": {
+      "confirm": 14,
+      "deny": 0
+    },
+    "active": true
+  },
+  {
+    "id": "rep_0d5e0594",
+    "type": "acoso_verbal",
+    "lat": 6.245278,
+    "lon": -75.562419,
+    "severity": 3,
+    "description": "Grupo de hombres gritando piropos",
+    "timestamp": "2026-03-28T06:33:36Z",
+    "votes": {
+      "confirm": 13,
+      "deny": 3
+    },
+    "active": true
+  }
+]

@@ -1,0 +1,199 @@
+import { create } from "zustand";
+import type { RouteResponse, AlternativesResponse } from "@/lib/api/routes";
+import type { ExplorationEvent } from "@/lib/api/sse";
+import { alphaFromPreference, betaFromPreference, haversineM, parseNodeId } from "@/lib/utils";
+import { openExploreStream, openExploreMulti } from "@/lib/api/sse";
+import { ROUTE_LABEL_BY_INDEX } from "@/lib/constants";
+import { toast } from "sonner";
+
+export type Coord = { lat: number; lon: number };
+
+type RouteState = {
+  origen: Coord | null;
+  destino: Coord | null;
+  preference: number;         // 0 = full speed, 1 = full safety
+  algoritmo: "astar" | "dijkstra" | "yens" | "greedy";
+  showAlternatives: boolean;
+  comparisonMode: boolean;
+  avoidCriticalZones: boolean;
+  resultado: RouteResponse | null;
+  alternativas: AlternativesResponse | null;
+  comparison: { astar: RouteResponse; dijkstra: RouteResponse } | null;
+  isCalculating: boolean;
+  eventosExploracion: ExplorationEvent[];
+  selectedAlternative: number;
+
+  setOrigen: (p: Coord | null) => void;
+  setDestino: (p: Coord | null) => void;
+  setPreference: (v: number) => void;
+  setAlgoritmo: (a: RouteState["algoritmo"]) => void;
+  setShowAlternatives: (v: boolean) => void;
+  setComparisonMode: (v: boolean) => void;
+  setAvoidCritical: (v: boolean) => void;
+  setSelectedAlternative: (i: number) => void;
+  calcular: () => Promise<void>;
+  addExplorationEvent: (e: ExplorationEvent) => void;
+  reset: () => void;
+};
+
+export const useRouteStore = create<RouteState>((set, get) => ({
+  origen: null,
+  destino: null,
+  preference: 0.5,
+  algoritmo: "astar",
+  showAlternatives: false,
+  comparisonMode: false,
+  avoidCriticalZones: false,
+  resultado: null,
+  alternativas: null,
+  comparison: null,
+  isCalculating: false,
+  eventosExploracion: [],
+  selectedAlternative: 0,
+
+  setOrigen: (p) => set({ origen: p }),
+  setDestino: (p) => set({ destino: p }),
+  setPreference: (v) => set({ preference: v }),
+  setAlgoritmo: (a) => set({ algoritmo: a }),
+  // "3 alternativas" and "comparación" are mutually exclusive search modes.
+  setShowAlternatives: (v) => set(v ? { showAlternatives: true, comparisonMode: false } : { showAlternatives: false }),
+  setComparisonMode: (v) => set(v ? { comparisonMode: true, showAlternatives: false } : { comparisonMode: false }),
+  setAvoidCritical: (v) => set({ avoidCriticalZones: v }),
+  setSelectedAlternative: (i) => set({ selectedAlternative: i }),
+
+  addExplorationEvent: (e) =>
+    set((s) => ({ eventosExploracion: [...s.eventosExploracion, e] })),
+
+  calcular: async () => {
+    const { origen, destino, preference, showAlternatives, comparisonMode, avoidCriticalZones } = get();
+    if (!origen || !destino) {
+      toast.error("Selecciona origen y destino primero");
+      return;
+    }
+
+    const alpha = alphaFromPreference(preference);
+    const beta = betaFromPreference(preference) + (avoidCriticalZones ? 500 : 0);
+
+    set({ isCalculating: true, resultado: null, alternativas: null, comparison: null, eventosExploracion: [] });
+    if (typeof navigator !== "undefined" && "vibrate" in navigator) navigator.vibrate(10);
+
+    const coverageWarn = (r: RouteResponse) => {
+      const snapO = parseNodeId(r.origen_nodo);
+      const snapD = parseNodeId(r.destino_nodo);
+      const dO = snapO ? haversineM(origen.lat, origen.lon, snapO[0], snapO[1]) : 0;
+      const dD = snapD ? haversineM(destino.lat, destino.lon, snapD[0], snapD[1]) : 0;
+      if (Math.max(dO, dD) > 400) {
+        toast.warning("Punto fuera de cobertura", {
+          description: "Se usó la calle con datos más cercana. Cubrimos Medellín central.",
+        });
+      }
+    };
+
+    try {
+      if (comparisonMode) {
+        // A* vs Dijkstra EN PARALELO. Pesos DISTANCIA (alpha=1, beta=0): aquí la
+        // heurística haversine es ajustada, así que A* explora un corredor delgado
+        // y Dijkstra anillos concéntricos → ~8-18x menos nodos, MISMA ruta.
+        // (Con pesos de seguridad altos la heurística se debilita y ambos convergen:
+        //  el costo lo domina beta*risk*length, que haversine no acota. Trade-off real.)
+        const bodies = [
+          { origen, destino, alpha: 1, beta: 0, algoritmo: "astar" },
+          { origen, destino, alpha: 1, beta: 0, algoritmo: "dijkstra" },
+        ];
+        await new Promise<void>((resolve) => {
+          const cancel = openExploreMulti(
+            bodies,
+            (results, events) => {
+              const aStar = results[0] as RouteResponse | null;
+              const dij = results[1] as RouteResponse | null;
+              set({ eventosExploracion: events });
+              const ruta = aStar?.encontrada ? aStar : dij?.encontrada ? dij : null;
+              if (!ruta) {
+                toast.error("No se encontró ruta entre esos puntos", { description: "Probá puntos dentro de Medellín." });
+                set({ isCalculating: false });
+                resolve();
+                return;
+              }
+              coverageWarn(ruta);
+              set({
+                resultado: ruta,
+                comparison: aStar?.encontrada && dij?.encontrada ? { astar: aStar, dijkstra: dij } : null,
+              });
+              resolve();
+            },
+            () => resolve()
+          );
+          setTimeout(() => { cancel(); resolve(); }, 25_000);
+        });
+      } else if (showAlternatives) {
+        // 3 búsquedas EN PARALELO (rápida / balanceada / segura) — frentes a la vez
+        const betas = [0, Math.max(beta, 300), Math.max(beta * 3, 1500)];
+        const bodies = betas.map((b) => ({ origen, destino, alpha, beta: b, algoritmo: "astar" }));
+        await new Promise<void>((resolve) => {
+          const cancel = openExploreMulti(
+            bodies,
+            (results, events) => {
+              const rutas = results.map((r) => r as RouteResponse);
+              set({ eventosExploracion: events });
+              const found = rutas.filter((r) => r?.encontrada);
+              if (found.length === 0) {
+                toast.error("No se encontró ruta entre esos puntos", { description: "Probá puntos dentro de Medellín." });
+                set({ isCalculating: false });
+                resolve();
+                return;
+              }
+              coverageWarn(found[0]);
+              const etiquetas = [...ROUTE_LABEL_BY_INDEX] as ("rapida" | "balanceada" | "segura")[];
+              const selected = preference >= 0.66 ? 2 : preference <= 0.33 ? 0 : 1;
+              set({
+                alternativas: { rutas, etiquetas },
+                resultado: rutas[selected] ?? found[0],
+                selectedAlternative: rutas[selected]?.encontrada ? selected : rutas.findIndex((r) => r?.encontrada),
+              });
+              resolve();
+            },
+            () => resolve()
+          );
+          setTimeout(() => { cancel(); resolve(); }, 25_000);
+        });
+      } else {
+        // Single A* exploration + single route
+        await new Promise<void>((resolve) => {
+          const cancel = openExploreStream(
+            { origen, destino, alpha, beta, algoritmo: "astar" },
+            (resultado, events) => {
+              const r = resultado as RouteResponse;
+              set({ eventosExploracion: events, resultado: r });
+              if (r.encontrada) coverageWarn(r);
+              resolve();
+            },
+            () => resolve()
+          );
+          setTimeout(() => { cancel(); resolve(); }, 20_000);
+        });
+
+        if (!get().resultado?.encontrada) {
+          toast.error("No se encontró ruta entre esos puntos", { description: "Probá puntos dentro de Medellín." });
+          set({ isCalculating: false, resultado: null });
+          return;
+        }
+      }
+
+      set({ isCalculating: false });
+      if (typeof navigator !== "undefined" && "vibrate" in navigator) navigator.vibrate(10);
+    } catch {
+      toast.error("No se pudo calcular la ruta", { description: "¿Está corriendo el backend en :8000?" });
+      set({ isCalculating: false });
+    }
+  },
+
+  reset: () =>
+    set({
+      resultado: null,
+      alternativas: null,
+      comparison: null,
+      isCalculating: false,
+      eventosExploracion: [],
+      selectedAlternative: 0,
+    }),
+}));

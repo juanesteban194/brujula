@@ -1,0 +1,209 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─── Paleta "Medellín Cálido" ───────────────────────────────────────────── */
+:root {
+  /* Fondos: negro cálido con undertone terroso */
+  --bg-base:    #0D0A08;
+  --bg-surface: #151009;
+  --bg-elevated:#1E1610;
+  --bg-overlay: rgba(13, 10, 8, 0.94);
+  --bg-glass:   rgba(21, 16, 9, 0.82);
+
+  /* Texto: cremas cálidas */
+  --text-primary:   #F2EDE7;
+  --text-secondary: #B5A399;
+  --text-tertiary:  #7A6358;
+  --text-muted:     #4F3D35;
+
+  /* Bordes: marrones cálidos */
+  --border-subtle:  #261D17;
+  --border-strong:  #3D2D24;
+  --border-accent:  rgba(245, 158, 11, 0.35);
+
+  /* Acento principal: ámbar cálido */
+  --accent:       #F59E0B;
+  --accent-hover: #D97706;
+  --accent-light: rgba(245, 158, 11, 0.15);
+  --accent-glow:  rgba(245, 158, 11, 0.22);
+
+  /* Escala de riesgo — calibrada para distribución real (p25=0.84, p75=0.95) */
+  /* Usa forma + color para accesibilidad daltónica */
+  --risk-low:     #10B981;   /* esmeralda — riesgo < 0.75 */
+  --risk-mid:     #FBBF24;   /* ámbar     — riesgo 0.75-0.88 */
+  --risk-high:    #F97316;   /* naranja   — riesgo 0.88-0.95 */
+  --risk-extreme: #EF4444;   /* rojo      — riesgo > 0.95    */
+
+  /* Rutas alternativas */
+  --route-fast:     #60A5FA;   /* azul cielo */
+  --route-safe:     #34D399;   /* esmeralda  */
+  --route-balanced: #A78BFA;   /* violeta    */
+
+  /* Alertas SIATA */
+  --alert-yellow: #FCD34D;
+  --alert-orange: #FB923C;
+  --alert-red:    #F87171;
+
+  /* Radios */
+  --radius-xs: 6px;
+  --radius-sm: 10px;
+  --radius-md: 14px;
+  --radius-lg: 18px;
+  --radius-xl: 24px;
+  --radius-2xl: 32px;
+
+  /* Sombras */
+  --shadow-sm:   0 1px 3px rgba(0,0,0,0.4), 0 1px 2px rgba(0,0,0,0.3);
+  --shadow-md:   0 4px 12px rgba(0,0,0,0.5), 0 2px 4px rgba(0,0,0,0.3);
+  --shadow-lg:   0 10px 30px rgba(0,0,0,0.6), 0 4px 8px rgba(0,0,0,0.3);
+  --shadow-glow: 0 0 20px var(--accent-glow), 0 0 40px rgba(245,158,11,0.08);
+
+  /* Safe areas iOS */
+  --safe-top:    env(safe-area-inset-top, 0px);
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+  --safe-left:   env(safe-area-inset-left, 0px);
+  --safe-right:  env(safe-area-inset-right, 0px);
+}
+
+/* ─── Reset ──────────────────────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; padding: 0; margin: 0; }
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+html, body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  background-color: var(--bg-base);
+  color: var(--text-primary);
+  font-family: var(--font-geist-sans), system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ─── Mapa ───────────────────────────────────────────────────────────────── */
+.map-fullscreen {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* MapLibre dark overrides */
+.maplibregl-canvas { outline: none !important; }
+
+.maplibregl-ctrl-attrib {
+  font-size: 9px !important;
+  background: rgba(13,10,8,0.75) !important;
+  color: var(--text-muted) !important;
+  border-radius: 8px !important;
+}
+.maplibregl-ctrl-attrib a { color: var(--text-tertiary) !important; }
+
+.maplibregl-ctrl-bottom-right,
+.maplibregl-ctrl-bottom-left {
+  bottom: calc(var(--safe-bottom) + 104px) !important;
+}
+
+/* ─── Bottom sheet / Vaul ────────────────────────────────────────────────── */
+[data-vaul-drawer-content] {
+  background: var(--bg-surface) !important;
+  border-top: 1px solid var(--border-subtle) !important;
+  border-top-left-radius: var(--radius-2xl) !important;
+  border-top-right-radius: var(--radius-2xl) !important;
+}
+
+/* ─── Scroll ─────────────────────────────────────────────────────────────── */
+.scroll-momentum { -webkit-overflow-scrolling: touch; overflow-y: auto; }
+
+.scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+.scrollbar-hide::-webkit-scrollbar { display: none; }
+
+/* ─── Touch ──────────────────────────────────────────────────────────────── */
+a, button, [role="button"] { -webkit-tap-highlight-color: transparent; }
+
+.touch-target {
+  min-height: 44px;
+  min-width: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ─── Glassmorphism ──────────────────────────────────────────────────────── */
+.glass {
+  background: var(--bg-glass);
+  backdrop-filter: blur(16px) saturate(150%);
+  -webkit-backdrop-filter: blur(16px) saturate(150%);
+  border: 1px solid var(--border-subtle);
+}
+
+.glass-warm {
+  background: rgba(30, 22, 16, 0.88);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid var(--border-strong);
+}
+
+/* ─── Utilidades cálidas ─────────────────────────────────────────────────── */
+.pb-safe  { padding-bottom: max(var(--safe-bottom), 16px); }
+.pt-safe  { padding-top: max(var(--safe-top), 16px); }
+.glow-accent { box-shadow: var(--shadow-glow); }
+
+/* ─── Gradientes ─────────────────────────────────────────────────────────── */
+.gradient-amber {
+  background: linear-gradient(135deg, #F59E0B 0%, #EF4444 100%);
+}
+.gradient-text-amber {
+  background: linear-gradient(135deg, #F59E0B, #FBBF24);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ─── Animaciones ────────────────────────────────────────────────────────── */
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes pulse-ring {
+  0%   { transform: scale(1); opacity: 0.8; }
+  70%  { transform: scale(2.2); opacity: 0; }
+  100% { transform: scale(2.2); opacity: 0; }
+}
+@keyframes compass-spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+@keyframes shimmer {
+  from { background-position: -200% center; }
+  to   { background-position: 200% center; }
+}
+
+.animate-fade-up    { animation: fade-up 0.45s cubic-bezier(0.16,1,0.3,1) both; }
+.animate-fade-in    { animation: fade-in 0.3s ease both; }
+.animate-pulse-ring { animation: pulse-ring 2.4s ease-out infinite; }
+.animate-shimmer {
+  background: linear-gradient(90deg, transparent 25%, rgba(245,158,11,0.08) 50%, transparent 75%);
+  background-size: 200% 100%;
+  animation: shimmer 2s ease infinite;
+}
+
+/* ─── Focus visible ──────────────────────────────────────────────────────── */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* ─── Reduced motion ─────────────────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}
