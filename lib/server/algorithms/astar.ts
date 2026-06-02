@@ -27,6 +27,10 @@ export function astar(
   beta: number,
   capturarEventos = false,
   gamma = 0,
+  /** Edge keys "from|to" to penalize (forces alternative corridors, §5). */
+  penalizadas?: Set<string>,
+  /** Extra cost per metre on penalized edges. */
+  penalMult = 0,
 ): ResultadoRuta {
   const inicio = performance.now();
 
@@ -84,7 +88,10 @@ export function astar(
 
     for (const arista of grafo.vecinos(actual)) {
       if (closed.has(arista.destino)) continue;
-      const tentativeG = gScore.get(actual)! + arista.costo(alpha, beta, gamma);
+      const extra = penalizadas && penalMult > 0 && penalizadas.has(`${actual}|${arista.destino}`)
+        ? penalMult * arista.length
+        : 0;
+      const tentativeG = gScore.get(actual)! + arista.costo(alpha, beta, gamma) + extra;
       if (tentativeG < (gScore.get(arista.destino) ?? Infinity)) {
         cameFrom.set(arista.destino, actual);
         gScore.set(arista.destino, tentativeG);

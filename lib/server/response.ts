@@ -15,6 +15,8 @@ export interface RouteResponse {
   tiempo_ms: number;
   origen_nodo: string;
   destino_nodo: string;
+  /** # of dangerous segments crossed (risk ≥ 0.95 or reported). For the cards. */
+  aristas_peligrosas?: number;
 }
 
 const r4 = (n: number) => Math.round(n * 1e4) / 1e4;

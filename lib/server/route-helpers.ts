@@ -39,8 +39,8 @@ export function normalizeRequest(body: RouteRequestBody): NormalizedRequest | nu
     origen,
     destino,
     alpha: clamp(typeof body.alpha === "number" ? body.alpha : 1.0, 0, 100),
-    beta: clamp(typeof body.beta === "number" ? body.beta : 100.0, 0, 1000),
-    gamma: clamp(typeof body.gamma === "number" ? body.gamma : 0, 0, 10000),
+    beta: clamp(typeof body.beta === "number" ? body.beta : 100.0, 0, 5000),
+    gamma: clamp(typeof body.gamma === "number" ? body.gamma : 0, 0, 20000),
     algoritmo: ["astar", "dijkstra", "yens", "greedy"].includes(algoritmo)
       ? algoritmo
       : "astar",

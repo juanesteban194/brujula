@@ -88,6 +88,16 @@ export default function RouteAlternatives() {
               >
                 {riskLabel(ruta.riesgo_promedio)}
               </span>
+
+              {/* Micro-dato diferenciador: tramos de riesgo que cruza */}
+              {ruta.aristas_peligrosas != null && (
+                <p className="text-[10px] mt-2 flex items-center gap-1" style={{ color: "var(--text-tertiary)" }}>
+                  <span>🚩</span>
+                  {ruta.aristas_peligrosas === 0
+                    ? "evita zonas de riesgo"
+                    : `${ruta.aristas_peligrosas} tramos de riesgo`}
+                </p>
+              )}
             </button>
           );
         })}

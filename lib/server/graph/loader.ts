@@ -108,12 +108,12 @@ export function cargarGrafoDesdeCsv(ruta: string): Grafo {
     if (!grafo.adjacencia.has(nidD)) grafo.adjacencia.set(nidD, []);
 
     const risk = Number.isNaN(row.risk) ? meanRisk : row.risk;
+    // Pedestrian routing IGNORES one-way direction: people walk either way, so
+    // every segment is bidirectional. This also lets routes detour against
+    // one-way streets to get around dangerous/reported zones, and maximizes
+    // connectivity (the main component becomes the whole walkable network).
     grafo.adjacencia.get(nidO)!.push(new Arista(nidD, row.length, risk, row.name));
-
-    // Bidirectional unless oneway is truthy
-    if (!["true", "1", "yes"].includes(row.oneway)) {
-      grafo.adjacencia.get(nidD)!.push(new Arista(nidO, row.length, risk, row.name));
-    }
+    grafo.adjacencia.get(nidD)!.push(new Arista(nidO, row.length, risk, row.name));
   }
 
   marcarComponentePrincipal(grafo);

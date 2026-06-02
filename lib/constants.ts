@@ -18,7 +18,7 @@ export const EXPLORE_REVEAL_MS = 4000;
 export const ROUTE_DRAW_DELAY_MS = EXPLORE_REVEAL_MS + 350;
 
 // Colors for the 3 simultaneous route searches (vivid + readable on light maps)
-// rápida (cian) · balanceada (magenta) · segura (verde)
+// rápida (azul) · balanceada (magenta) · segura (verde) — verde = seguro (convención)
 export const ROUTE_COLORS = {
   rapida: "#0EA5E9",
   balanceada: "#D946EF",
@@ -27,9 +27,9 @@ export const ROUTE_COLORS = {
 
 // Index order used by the multi-exploration (beta: 0 → balanced → high)
 export const ROUTE_COLOR_BY_INDEX = [
-  ROUTE_COLORS.rapida,      // 0: beta=0   → distancia
-  ROUTE_COLORS.balanceada,  // 1: balanced
-  ROUTE_COLORS.segura,      // 2: beta alto → seguridad
+  ROUTE_COLORS.rapida,      // 0: beta=0   → distancia (azul)
+  ROUTE_COLORS.balanceada,  // 1: balanced (magenta)
+  ROUTE_COLORS.segura,      // 2: beta alto → seguridad (verde)
 ];
 export const ROUTE_LABEL_BY_INDEX = ["rapida", "balanceada", "segura"] as const;
 

@@ -22,6 +22,8 @@ export interface RouteResponse {
   tiempo_ms: number;
   origen_nodo: string;
   destino_nodo: string;
+  aristas_peligrosas?: number;
+  solapamiento_rapida?: number;
 }
 
 export interface AlternativesResponse {

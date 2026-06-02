@@ -113,21 +113,15 @@ export default function ExplorationLayer({ map, events, colors, routeReady = fal
     return () => { if (rafId.current != null) { cancelAnimationFrame(rafId.current); rafId.current = null; } };
   }, [map, events, colors]);
 
-  // Once a route is drawn, fade the explored streets to a background tissue so
-  // the brand-green route stands out on top.
+  // Once the final route(s) are drawn, the exploration has served its purpose:
+  // make it DISAPPEAR so only the valid route(s) remain on the map.
   useEffect(() => {
-    if (!map) return;
-    try {
-      if (map.getLayer(LINE)) {
-        map.setPaintProperty(LINE, "line-opacity",
-          routeReady ? 0.22 : ["interpolate", ["linear"], ["get", "age"], 0, 0.78, 1, 0.34]);
-      }
-      if (map.getLayer(GLOW)) {
-        map.setPaintProperty(GLOW, "line-opacity",
-          routeReady ? 0.06 : ["interpolate", ["linear"], ["get", "age"], 0, 0.28, 1, 0.06]);
-      }
-    } catch {}
-  }, [map, routeReady, events]);
+    if (!map || !routeReady) return;
+    if (rafId.current != null) { cancelAnimationFrame(rafId.current); rafId.current = null; }
+    shown.current = 0;
+    const src = map.getSource(SRC) as { setData?: (d: unknown) => void } | undefined;
+    if (src?.setData) src.setData({ type: "FeatureCollection", features: [] });
+  }, [map, routeReady]);
 
   return null;
 }

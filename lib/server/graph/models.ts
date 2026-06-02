@@ -3,6 +3,12 @@ import { haversineM } from "./haversine";
 /** Ordered (lat, lon) pair. */
 export type Coord = [number, number];
 
+/** Risk ≥ this = "critical" street (extreme red). Hard-avoided in safe mode. */
+export const CRITICAL_RISK = 0.95;
+/** gamma ≥ this ALSO hard-avoids critical streets (not just reports). Lets us
+ *  tier the alternatives: low gamma = avoid reports only, high gamma = + critical. */
+export const CRITICAL_GAMMA = 5000;
+
 /**
  * A directed street segment. `risk` is dimensionless (0–1) and may be mutated in
  * memory by the community-report overlay. Node ids are `"lat,lon"` strings.
@@ -24,10 +30,14 @@ export class Arista {
    * routes strongly detour around community-reported segments.
    */
   costo(alpha: number, beta: number, gamma = 0): number {
+    // Reports are hard-avoided whenever gamma>0; critical (extreme-risk) streets
+    // are added only at high gamma. Lets the alternatives tier cleanly:
+    // reports-only (balance) vs reports + critical streets (segura).
+    const peligrosa = this.reportado || (gamma >= CRITICAL_GAMMA && this.risk >= CRITICAL_RISK);
     return (
       alpha * this.length +
       beta * this.risk * this.length +
-      (gamma > 0 && this.reportado ? gamma * this.length : 0)
+      (gamma > 0 && peligrosa ? gamma * this.length : 0)
     );
   }
 }

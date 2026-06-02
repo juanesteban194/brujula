@@ -7,7 +7,7 @@ import type { Report } from "@/lib/server/types";
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 
-const TIPOS = ["acoso_verbal", "zona_solitaria", "iluminacion_deficiente", "robo", "bien"];
+const TIPOS = ["acoso_verbal", "acoso_fisico", "zona_solitaria", "iluminacion_deficiente", "robo", "bien"];
 
 export async function GET(request: Request) {
   const url = new URL(request.url);
@@ -74,10 +74,9 @@ export async function POST(request: Request) {
   state.reportes.push(report);
   persistReports();
 
-  // Apply high-severity reports immediately to the in-memory graph
-  if (report.severity >= 3) {
-    aplicarOverlay(state.grafo, [report]);
-  }
+  // Apply the report to the in-memory graph immediately so the next route
+  // avoids it right away (the overlay skips "bien" / safe zones).
+  aplicarOverlay(state.grafo, [report]);
 
   return NextResponse.json(report, { status: 201 });
 }
