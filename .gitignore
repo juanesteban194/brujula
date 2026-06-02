@@ -34,6 +34,11 @@ pnpm-debug.log*
 # vercel
 .vercel
 
+# serwist (service worker generated at build time)
+/public/sw.js
+/public/sw.js.map
+/public/swe-worker-*.js
+
 # typescript build artifacts
 *.tsbuildinfo
 next-env.d.ts
