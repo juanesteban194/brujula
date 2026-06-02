@@ -2,9 +2,9 @@ import { haversineM } from "@/lib/server/graph/haversine";
 import type { Arista, Grafo } from "@/lib/server/graph/models";
 import type { Report } from "@/lib/server/types";
 
-export const RADIO_M = 80.0; // meters of influence
-export const PESO_GLOBAL = 0.3; // max additional risk contribution
-export const DECAY_DAYS = 30.0; // half-life for temporal decay
+export const RADIO_M = 110.0; // meters of influence (wider so routes detour around clusters)
+export const PESO_GLOBAL = 0.55; // max additional risk contribution — reports strongly steer safe routes
+export const DECAY_DAYS = 60.0; // slower temporal decay so recent reports keep weight
 const GRID_CELL = 0.0015; // ~150m spatial grid cell (deg)
 
 function decay(timestampStr: string): number {
@@ -71,6 +71,7 @@ export function aplicarOverlay(
           if (dist >= radioM) continue;
           const contrib = (sev / 5.0) * d * (1 - dist / radioM) * PESO_GLOBAL;
           a.risk = Math.min(1.0, a.risk + contrib);
+          a.reportado = true; // flag for the hard-avoid (gamma) mode
           modificadas++;
         }
       }

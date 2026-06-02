@@ -12,6 +12,11 @@ export const MEDELLIN_ZOOM = 13;
 
 export const WALK_SPEED_KMH = 5;
 
+// Exploration → route timing: the streets fill in first (EXPLORE_REVEAL_MS),
+// and only AFTER that does the final route get marked (ROUTE_DRAW_DELAY_MS).
+export const EXPLORE_REVEAL_MS = 4000;
+export const ROUTE_DRAW_DELAY_MS = EXPLORE_REVEAL_MS + 350;
+
 // Colors for the 3 simultaneous route searches (vivid + readable on light maps)
 // rápida (cian) · balanceada (magenta) · segura (verde)
 export const ROUTE_COLORS = {

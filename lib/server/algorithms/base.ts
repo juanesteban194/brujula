@@ -1,11 +1,15 @@
 import type { Coord, Grafo } from "@/lib/server/graph/models";
 
+/**
+ * One relaxed/explored street segment (§4 v3). We emit the EDGE by which a node
+ * was reached (parent → node) so the frontier renders as streets filling in,
+ * not scattered points. `coords` are ordered [lat, lon] pairs of the segment.
+ */
 export interface EventoExploracion {
-  tipo: "visit";
-  nodo: string;
-  lat: number;
-  lon: number;
-  f: number;
+  tipo: "edge";
+  coords: [number, number][];
+  orden: number;
+  g: number;
 }
 
 /** Normalized result returned by every pathfinding algorithm. */

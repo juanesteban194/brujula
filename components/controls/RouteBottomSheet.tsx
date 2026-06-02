@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { toast } from "sonner";
 import {
   Navigation, Loader2, Share2, Compass, ChevronUp, ChevronDown,
-  Clock, Footprints, AlertTriangle, X, GitCompare,
+  Clock, Footprints, AlertTriangle, X, GitCompare, ArrowUpDown, Trash2,
 } from "lucide-react";
 import { useRouteStore } from "@/lib/store/routeStore";
 import { useGeolocation } from "@/lib/hooks/useGeolocation";
@@ -33,7 +33,10 @@ export default function RouteBottomSheet() {
   const origen = useRouteStore((s) => s.origen);
   const destino = useRouteStore((s) => s.destino);
   const setOrigen = useRouteStore((s) => s.setOrigen);
-  const setDestino = useRouteStore((s) => s.setDestino);
+  const clearOrigen = useRouteStore((s) => s.clearOrigen);
+  const clearDestino = useRouteStore((s) => s.clearDestino);
+  const swapEndpoints = useRouteStore((s) => s.swapEndpoints);
+  const clearAll = useRouteStore((s) => s.clearAll);
   const resultado = useRouteStore((s) => s.resultado);
   const alternativas = useRouteStore((s) => s.alternativas);
   const isCalculating = useRouteStore((s) => s.isCalculating);
@@ -44,7 +47,6 @@ export default function RouteBottomSheet() {
   const avoidCriticalZones = useRouteStore((s) => s.avoidCriticalZones);
   const setAvoidCritical = useRouteStore((s) => s.setAvoidCritical);
   const calcular = useRouteStore((s) => s.calcular);
-  const reset = useRouteStore((s) => s.reset);
 
   const geo = useGeolocation();
   useEffect(() => {
@@ -131,11 +133,35 @@ export default function RouteBottomSheet() {
           label="Desde"
           value={origen ? `${origen.lat.toFixed(4)}, ${origen.lon.toFixed(4)}` : "Sin definir — GPS o tap en mapa"}
           action={
-            <button onClick={geo.request} disabled={geo.status === "loading"} style={{ color: "var(--accent)", minWidth: 40, minHeight: 40 }} className="flex items-center justify-center" aria-label="Usar GPS">
-              {geo.status === "loading" ? <Loader2 className="w-4 h-4 animate-spin" /> : <Navigation className="w-4 h-4" />}
-            </button>
+            <div className="flex items-center">
+              {origen && (
+                <button onClick={clearOrigen} style={{ color: "var(--text-tertiary)", minWidth: 40, minHeight: 40 }} className="flex items-center justify-center" aria-label="Borrar origen" title="Borrar origen">
+                  <X className="w-4 h-4" />
+                </button>
+              )}
+              <button onClick={geo.request} disabled={geo.status === "loading"} style={{ color: "var(--accent)", minWidth: 40, minHeight: 40 }} className="flex items-center justify-center" aria-label="Usar mi ubicación" title="Usar mi ubicación">
+                {geo.status === "loading" ? <Loader2 className="w-4 h-4 animate-spin" /> : <Navigation className="w-4 h-4" />}
+              </button>
+            </div>
           }
         />
+
+        {/* Swap origen ↔ destino */}
+        {(origen || destino) && (
+          <div className="flex justify-center -my-1">
+            <button
+              onClick={swapEndpoints}
+              disabled={!origen || !destino}
+              className="w-9 h-9 rounded-full glass flex items-center justify-center active:scale-90 transition-transform disabled:opacity-30"
+              style={{ color: "var(--accent)" }}
+              aria-label="Intercambiar origen y destino"
+              title="Intercambiar"
+            >
+              <ArrowUpDown className="w-4 h-4" />
+            </button>
+          </div>
+        )}
+
         {/* Destino */}
         <PointRow
           icon={
@@ -148,7 +174,7 @@ export default function RouteBottomSheet() {
           value={destino ? `${destino.lat.toFixed(4)}, ${destino.lon.toFixed(4)}` : "Tap (o tap largo) en el mapa"}
           action={
             destino ? (
-              <button onClick={() => { setDestino(null); reset(); }} style={{ color: "var(--text-tertiary)", minWidth: 40, minHeight: 40 }} className="flex items-center justify-center" aria-label="Borrar destino">
+              <button onClick={clearDestino} style={{ color: "var(--text-tertiary)", minWidth: 40, minHeight: 40 }} className="flex items-center justify-center" aria-label="Borrar destino" title="Borrar destino">
                 <X className="w-4 h-4" />
               </button>
             ) : null
@@ -177,6 +203,18 @@ export default function RouteBottomSheet() {
         >
           {isCalculating ? (<><Loader2 className="w-5 h-5 animate-spin" /> Calculando…</>) : "Calcular ruta"}
         </button>
+
+        {/* Limpiar todo */}
+        {(origen || destino) && (
+          <button
+            onClick={clearAll}
+            className="w-full h-8 rounded-xl text-xs flex items-center justify-center gap-1.5 transition-colors"
+            style={{ color: "var(--text-tertiary)" }}
+            aria-label="Limpiar origen, destino y ruta"
+          >
+            <Trash2 className="w-3.5 h-3.5" /> Limpiar todo
+          </button>
+        )}
 
         {/* Results */}
         {resultado?.encontrada && (

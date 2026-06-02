@@ -45,3 +45,7 @@ next-env.d.ts
 
 # runtime-generated community reports (seed is committed, runtime copy is not)
 /data/community_reports.json
+
+# OSM fetch intermediates (regenerable; the merged _aumentado.csv is what ships)
+/data/.osm-cache/
+/data/calles_valle_osm.csv

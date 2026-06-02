@@ -21,6 +21,7 @@ export function dijkstra(
   alpha: number,
   beta: number,
   capturarEventos = false,
+  gamma = 0,
 ): ResultadoRuta {
   const inicio = performance.now();
 
@@ -43,14 +44,16 @@ export function dijkstra(
     closed.add(actual);
     nodosExplorados++;
 
-    if (capturarEventos) {
-      const [lat, lon] = grafo.coordenadas.get(actual)!;
+    // Emit the tree edge parent → actual so the frontier paints as streets.
+    if (capturarEventos && cameFrom.has(actual)) {
+      const padre = cameFrom.get(actual)!;
+      const a = grafo.coordenadas.get(padre)!;
+      const b = grafo.coordenadas.get(actual)!;
       eventos.push({
-        tipo: "visit",
-        nodo: actual,
-        lat,
-        lon,
-        f: Math.round(gActual * 100) / 100,
+        tipo: "edge",
+        coords: [a, b],
+        orden: nodosExplorados,
+        g: Math.round(gActual * 100) / 100,
       });
     }
 
@@ -69,7 +72,7 @@ export function dijkstra(
 
     for (const arista of grafo.vecinos(actual)) {
       if (closed.has(arista.destino)) continue;
-      const tentativeG = gScore.get(actual)! + arista.costo(alpha, beta);
+      const tentativeG = gScore.get(actual)! + arista.costo(alpha, beta, gamma);
       if (tentativeG < (gScore.get(arista.destino) ?? Infinity)) {
         cameFrom.set(arista.destino, actual);
         gScore.set(arista.destino, tentativeG);

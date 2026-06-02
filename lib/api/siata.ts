@@ -2,6 +2,8 @@ import { apiGet } from "./client";
 
 export interface WeatherData {
   temperatura_c: number;
+  descripcion: string;
+  emoji: string;
   precipitacion_mmh: number;
   viento_kmh: number;
   humedad_pct: number;
@@ -22,17 +24,12 @@ export interface AirStation {
   timestamp: string;
 }
 
-export interface SiataAlert {
-  id: string;
-  tipo: string;
-  nivel: "amarillo" | "naranja" | "rojo";
-  descripcion: string;
-  poligono: unknown;
-  vigente_hasta: string | null;
-  source: string;
-}
-
-export const getWeather = () => apiGet<WeatherData>("/api/siata/weather/current");
+export const getWeather = (lat?: number, lon?: number) =>
+  apiGet<WeatherData>(
+    lat != null && lon != null
+      ? `/api/weather/current?lat=${lat}&lon=${lon}`
+      : "/api/weather/current"
+  );
 
 export const getAirQuality = () =>
   apiGet<{ stations: AirStation[]; count: number; cache_age_seconds: number }>(
@@ -60,14 +57,6 @@ export interface NearestAir {
 
 export const getNearestAir = (lat: number, lon: number) =>
   apiGet<NearestAir>(`/api/siata/air-quality/nearest?lat=${lat}&lon=${lon}`);
-
-export const getPrecipitation = () =>
-  apiGet<{ type: string; features: unknown[]; source: string }>(
-    "/api/siata/precipitation/grid"
-  );
-
-export const getAlerts = () =>
-  apiGet<{ alerts: SiataAlert[]; count: number }>("/api/siata/alerts/active");
 
 export const getCompositeAlerts = () =>
   apiGet<{ type: string; features: unknown[]; total: number }>(

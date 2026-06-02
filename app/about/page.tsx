@@ -59,9 +59,12 @@ export default function AboutPage() {
               de la comunidad</span> en tiempo real.
             </p>
             <p className="text-xs text-text-tertiary leading-relaxed">
-              No inventamos puntajes de peligrosidad. De 68.749 tramos, 52.654 son medidos y 16.091 se estiman con IDW
-              —técnica estándar en SIG— a partir de los 8 vecinos reales más cercanos. Cada segmento lleva su fuente
-              (<span className="font-mono">real</span> / <span className="font-mono">interpolado</span>).
+              No inventamos puntajes de peligrosidad. La red de calles cubre <span className="text-text-primary font-medium">todo
+              el Valle de Aburrá</span> (OpenStreetMap, ~348.000 tramos). El riesgo viene del dataset oficial medido de Medellín:
+              los tramos que coinciden con una calle medida conservan su valor real y el resto se estima con IDW —técnica
+              estándar en SIG— desde los vecinos reales. Cada tramo lleva su fuente
+              (<span className="font-mono">real</span> / <span className="font-mono">interpolado</span>) y los reportes de la
+              comunidad lo actualizan.
             </p>
           </div>
         </section>

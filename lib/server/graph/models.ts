@@ -8,6 +8,9 @@ export type Coord = [number, number];
  * memory by the community-report overlay. Node ids are `"lat,lon"` strings.
  */
 export class Arista {
+  /** Set by the community-report overlay when a report sits near this edge. */
+  reportado = false;
+
   constructor(
     public destino: string,
     public length: number, // meters
@@ -15,9 +18,17 @@ export class Arista {
     public name: string = "",
   ) {}
 
-  /** Combined cost: alpha * distance + beta * risk * distance. */
-  costo(alpha: number, beta: number): number {
-    return alpha * this.length + beta * this.risk * this.length;
+  /**
+   * Combined cost: alpha * distance + beta * risk * distance, plus a hard
+   * `gamma` penalty on reported edges (the "Evitar zonas con alerta" mode) so
+   * routes strongly detour around community-reported segments.
+   */
+  costo(alpha: number, beta: number, gamma = 0): number {
+    return (
+      alpha * this.length +
+      beta * this.risk * this.length +
+      (gamma > 0 && this.reportado ? gamma * this.length : 0)
+    );
   }
 }
 

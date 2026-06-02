@@ -22,6 +22,7 @@ const REPORTS: Section = {
   title: "Reportes",
   items: [
     { c: "#F97316", t: "Acoso verbal", shape: "dot" },
+    { c: "#DB2777", t: "Acoso físico", shape: "dot" },
     { c: "#EF4444", t: "Robo / Hurto", shape: "dot" },
     { c: "#FCD34D", t: "Sin iluminación", shape: "dot" },
     { c: "#FBBF24", t: "Zona solitaria", shape: "dot" },
@@ -49,18 +50,8 @@ const CRITICAL: Section = {
   ],
 };
 
-const RAIN: Section = {
-  title: "Lluvia (mm/h)",
-  items: [
-    { c: "#78BEFF", t: "Llovizna" },
-    { c: "#468CF0", t: "Ligera" },
-    { c: "#2850DC", t: "Moderada" },
-    { c: "#6E32D2", t: "Fuerte" },
-  ],
-};
-
 export default function MapLegend() {
-  const { riskHeatmap, communityReports, airQuality, criticalZones, weatherRain } = useLayersStore();
+  const { riskHeatmap, communityReports, airQuality, criticalZones } = useLayersStore();
   const [open, setOpen] = useState(false);
 
   const sections: Section[] = [];
@@ -68,7 +59,6 @@ export default function MapLegend() {
   if (communityReports) sections.push(REPORTS);
   if (criticalZones) sections.push(CRITICAL);
   if (airQuality) sections.push(AIR);
-  if (weatherRain) sections.push(RAIN);
 
   if (sections.length === 0) return null;
 

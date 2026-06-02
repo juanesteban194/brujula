@@ -35,6 +35,7 @@ export async function POST(request: Request) {
     req.alpha,
     req.beta,
     true, // capturarEventos
+    req.gamma,
   );
   getState().contadorRutas += 1;
 
@@ -42,7 +43,8 @@ export async function POST(request: Request) {
   const stream = new ReadableStream<Uint8Array>({
     start(controller) {
       const eventos = resultado.eventosExploracion;
-      const step = Math.max(1, Math.floor(eventos.length / 600));
+      // Subsample to ~800 edges for a dense-but-light "streets filling" animation.
+      const step = Math.max(1, Math.floor(eventos.length / 800));
       for (let i = 0; i < eventos.length; i += step) {
         controller.enqueue(encoder.encode(`data: ${JSON.stringify(eventos[i])}\n\n`));
       }

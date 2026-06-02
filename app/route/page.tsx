@@ -15,9 +15,9 @@ import { useLayersStore } from "@/lib/store/layersStore";
 import { LogoCompact, Logo } from "@/components/brand/Logo";
 import RouteBottomSheet from "@/components/controls/RouteBottomSheet";
 import LayersPanel from "@/components/controls/LayersPanel";
-import AlertsBanner from "@/components/controls/AlertsBanner";
 import MapLegend from "@/components/controls/MapLegend";
 import AirQualityWidget from "@/components/controls/AirQualityWidget";
+import WeatherBadge from "@/components/badges/WeatherBadge";
 import ComparisonHud from "@/components/metrics/ComparisonHud";
 import { COMPARE_COLOR_BY_INDEX } from "@/lib/constants";
 
@@ -29,7 +29,6 @@ const RiskHeatmap = dynamic(() => import("@/components/map/RiskHeatmap"), { ssr:
 const ReportsLayer = dynamic(() => import("@/components/map/ReportsLayer"), { ssr: false });
 const CriticalZonesLayer = dynamic(() => import("@/components/map/CriticalZonesLayer"), { ssr: false });
 const AirQualityLayer = dynamic(() => import("@/components/map/AirQualityLayer"), { ssr: false });
-const WeatherLayer = dynamic(() => import("@/components/map/WeatherLayer"), { ssr: false });
 const UserLocationLayer = dynamic(() => import("@/components/map/UserLocationLayer"), { ssr: false });
 const EndpointsLayer = dynamic(() => import("@/components/map/EndpointsLayer"), { ssr: false });
 const AlternativesLayer = dynamic(() => import("@/components/map/AlternativesLayer"), { ssr: false });
@@ -82,12 +81,12 @@ export default function RoutePage() {
         <RiskHeatmap map={map} visible={layers.riskHeatmap} opacity={riskOpacity} />
         <ReportsLayer map={map} visible={layers.communityReports} />
         <CriticalZonesLayer map={map} visible={layers.criticalZones} />
-        <WeatherLayer map={map} visible={layers.weatherRain} />
         <AirQualityLayer map={map} visible={layers.airQuality} />
         <ExplorationLayer
           map={map}
           events={eventosExploracion}
           colors={comparisonMode ? COMPARE_COLOR_BY_INDEX : undefined}
+          routeReady={!!(resultado || alternativas)}
         />
         <UserLocationLayer
           map={map}
@@ -95,11 +94,11 @@ export default function RoutePage() {
           onFix={(lat, lon) => setOrigen({ lat, lon })}
           onError={(m) => { toast.error(m); setTracking(false); }}
         />
-        {alternativas ? (
-          <AlternativesLayer map={map} alternativas={alternativas} selected={selectedAlternative} />
-        ) : (
-          resultado && <RouteLayer map={map} route={resultado} />
-        )}
+        {/* Always mounted so clearing the route also wipes the painted lines:
+            passing null makes each layer clear its own geometry (vs. unmounting,
+            which would leave the last drawn line on the map). */}
+        <RouteLayer map={map} route={alternativas ? null : resultado} />
+        <AlternativesLayer map={map} alternativas={alternativas} selected={selectedAlternative} />
         {/* Origin/destination markers — visible immediately, before calculating */}
         <EndpointsLayer map={map} />
       </MapContainer>
@@ -144,8 +143,8 @@ export default function RoutePage() {
       {/* Permanent air-quality widget (GPS-based) */}
       <AirQualityWidget />
 
-      {/* SIATA alerts banner */}
-      <AlertsBanner visible={layers.siataAlerts} />
+      {/* Current weather badge (top-right) */}
+      <WeatherBadge />
 
       {/* Legend */}
       <MapLegend />

@@ -10,11 +10,12 @@ const LAYER = "reports-circles";
 const GLOW = "reports-glow";
 
 const COLORS: Record<string, string> = {
-  acoso_verbal: "#F97316",
-  zona_solitaria: "#FBBF24",
-  iluminacion_deficiente: "#FCD34D",
-  robo: "#EF4444",
-  bien: "#34D399",
+  acoso_verbal: "#F97316",      // naranja
+  acoso_fisico: "#DB2777",      // rosa intenso (violencia de género)
+  zona_solitaria: "#FBBF24",    // ámbar
+  iluminacion_deficiente: "#FCD34D", // amarillo
+  robo: "#EF4444",              // rojo
+  bien: "#34D399",              // verde (zona segura)
 };
 
 export default function ReportsLayer({ map, visible }: { map: MapLibreMap | null; visible: boolean }) {

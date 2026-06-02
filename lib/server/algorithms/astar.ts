@@ -26,6 +26,7 @@ export function astar(
   alpha: number,
   beta: number,
   capturarEventos = false,
+  gamma = 0,
 ): ResultadoRuta {
   const inicio = performance.now();
 
@@ -54,14 +55,17 @@ export function astar(
     closed.add(actual);
     nodosExplorados++;
 
-    if (capturarEventos) {
-      const [lat, lon] = grafo.coordenadas.get(actual)!;
+    // Emit the edge by which we reached `actual` (the shortest-path-tree edge),
+    // so the frontier paints as streets expanding from the origin.
+    if (capturarEventos && cameFrom.has(actual)) {
+      const padre = cameFrom.get(actual)!;
+      const a = grafo.coordenadas.get(padre)!;
+      const b = grafo.coordenadas.get(actual)!;
       eventos.push({
-        tipo: "visit",
-        nodo: actual,
-        lat,
-        lon,
-        f: Math.round(fActual * 100) / 100,
+        tipo: "edge",
+        coords: [a, b],
+        orden: nodosExplorados,
+        g: Math.round((gScore.get(actual) ?? fActual) * 100) / 100,
       });
     }
 
@@ -80,7 +84,7 @@ export function astar(
 
     for (const arista of grafo.vecinos(actual)) {
       if (closed.has(arista.destino)) continue;
-      const tentativeG = gScore.get(actual)! + arista.costo(alpha, beta);
+      const tentativeG = gScore.get(actual)! + arista.costo(alpha, beta, gamma);
       if (tentativeG < (gScore.get(arista.destino) ?? Infinity)) {
         cameFrom.set(arista.destino, actual);
         gScore.set(arista.destino, tentativeG);

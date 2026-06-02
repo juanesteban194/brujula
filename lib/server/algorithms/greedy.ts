@@ -19,6 +19,7 @@ export function greedy(
   alpha: number,
   beta: number,
   capturarEventos = false,
+  gamma = 0,
 ): ResultadoRuta {
   const inicio = performance.now();
 
@@ -43,17 +44,6 @@ export function greedy(
     visitados.add(actual);
     nodosExplorados++;
 
-    if (capturarEventos) {
-      const [lat, lon] = grafo.coordenadas.get(actual)!;
-      eventos.push({
-        tipo: "visit",
-        nodo: actual,
-        lat,
-        lon,
-        f: Math.round(h(actual) * 100) / 100,
-      });
-    }
-
     const vecinos = grafo.vecinos(actual).filter((a) => !visitados.has(a.destino));
     if (vecinos.length === 0) {
       return noEncontrada("Greedy", inicio, nodosExplorados, eventos);
@@ -68,7 +58,14 @@ export function greedy(
         mejorH = hv;
       }
     }
-    costo += mejor.costo(alpha, beta);
+    costo += mejor.costo(alpha, beta, gamma);
+
+    if (capturarEventos) {
+      const a = grafo.coordenadas.get(actual)!;
+      const b = grafo.coordenadas.get(mejor.destino)!;
+      eventos.push({ tipo: "edge", coords: [a, b], orden: nodosExplorados, g: Math.round(costo * 100) / 100 });
+    }
+
     actual = mejor.destino;
     ruta.push(actual);
 

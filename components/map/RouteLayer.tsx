@@ -8,8 +8,10 @@ const SRC = "route-src";
 const CASING = "route-casing";
 const CORE = "route-core";
 
-// Calm, serene route color (deep teal) — clearly readable on beige/gray bases
-const SERENE = "#0D9488";
+// Brand green (§5) — the chosen route, distinct from the turquoise exploration.
+// It only arrives once the exploration has finished filling (gated by the store),
+// so here we draw it as soon as it's handed to us.
+const BRAND = "#00E5A0";
 
 export default function RouteLayer({
   map,
@@ -28,11 +30,10 @@ export default function RouteLayer({
 
     const ok = route?.encontrada && route.coordenadas.length > 1;
     const coords = ok ? route!.coordenadas.map(([lat, lon]) => [lon, lat]) : [];
-    const color = colorOverride ?? SERENE;
+    const color = colorOverride ?? BRAND;
 
     const line = { type: "Feature", geometry: { type: "LineString", coordinates: coords }, properties: {} };
 
-    // Source with lineMetrics for the gradient reveal
     const src = map.getSource(SRC) as { setData?: (d: unknown) => void } | undefined;
     if (src?.setData) {
       src.setData(line);
@@ -41,30 +42,41 @@ export default function RouteLayer({
       map.addLayer({
         id: CASING, type: "line", source: SRC,
         layout: { "line-cap": "round", "line-join": "round" },
-        paint: { "line-color": color, "line-width": 13, "line-blur": 8, "line-opacity": 0.35 },
+        paint: { "line-color": color, "line-width": 12, "line-blur": 8, "line-opacity": 0 },
       });
       map.addLayer({
         id: CORE, type: "line", source: SRC,
         layout: { "line-cap": "round", "line-join": "round" },
-        paint: { "line-width": 5, "line-gradient": ["step", ["line-progress"], color, 0.0001, "rgba(0,0,0,0)"] },
+        paint: { "line-width": 6, "line-gradient": ["step", ["line-progress"], "rgba(0,0,0,0)", 0.0001, "rgba(0,0,0,0)"] },
       });
     }
 
     if (!ok) {
       if (map.getLayer(CASING)) map.setPaintProperty(CASING, "line-opacity", 0);
+      if (map.getLayer(CORE)) map.setPaintProperty(CORE, "line-gradient", ["step", ["line-progress"], "rgba(0,0,0,0)", 0.0001, "rgba(0,0,0,0)"]);
       return;
     }
 
-    if (map.getLayer(CASING)) {
-      map.setPaintProperty(CASING, "line-color", color);
-      map.setPaintProperty(CASING, "line-opacity", 0.35);
-    }
+    if (map.getLayer(CASING)) map.setPaintProperty(CASING, "line-color", color);
 
-    // Animated "draw" reveal via line-progress
+    // Frame the route immediately (exploration is happening inside these bounds).
+    import("maplibre-gl").then(({ LngLatBounds }) => {
+      const b = coords.reduce(
+        (bb, c) => bb.extend(c as [number, number]),
+        new LngLatBounds(coords[0] as [number, number], coords[0] as [number, number]),
+      );
+      const leftPad = typeof window !== "undefined" && window.innerWidth >= 400 ? 380 : 60;
+      map.fitBounds(b, { padding: { top: 120, bottom: 80, left: leftPad, right: 60 }, duration: 800, maxZoom: 16 });
+    });
+
     const reduce = typeof window !== "undefined" && window.matchMedia?.("(prefers-reduced-motion: reduce)").matches;
-    if (reduce) {
-      if (map.getLayer(CORE)) map.setPaintProperty(CORE, "line-gradient", color);
-    } else {
+
+    const draw = () => {
+      if (map.getLayer(CASING)) map.setPaintProperty(CASING, "line-opacity", 0.4);
+      if (reduce) {
+        if (map.getLayer(CORE)) map.setPaintProperty(CORE, "line-gradient", color);
+        return;
+      }
       let p = 0;
       const loop = () => {
         if (!map.getLayer(CORE)) return;
@@ -75,17 +87,15 @@ export default function RouteLayer({
         if (p < 1) rafId.current = requestAnimationFrame(loop);
       };
       rafId.current = requestAnimationFrame(loop);
-    }
+    };
 
-    // Fit bounds
-    import("maplibre-gl").then(({ LngLatBounds }) => {
-      const b = coords.reduce((bb, c) => bb.extend(c as [number, number]), new LngLatBounds(coords[0] as [number, number], coords[0] as [number, number]));
-      const leftPad = typeof window !== "undefined" && window.innerWidth >= 400 ? 380 : 60;
-      map.fitBounds(b, { padding: { top: 120, bottom: 80, left: leftPad, right: 60 }, duration: 800, maxZoom: 16 });
-    });
+    // The store already waited for the exploration to finish; draw now.
+    draw();
 
-    return () => { if (rafId.current != null) cancelAnimationFrame(rafId.current); };
-  }, [map, route]);
+    return () => {
+      if (rafId.current != null) cancelAnimationFrame(rafId.current);
+    };
+  }, [map, route]); // eslint-disable-line react-hooks/exhaustive-deps
 
   return null;
 }

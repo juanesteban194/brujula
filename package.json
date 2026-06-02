@@ -9,6 +9,8 @@
     "lint": "next lint",
     "type-check": "tsc --noEmit",
     "augment": "node scripts/augment-data.ts",
+    "fetch:osm": "node scripts/fetch-osm-valle.ts",
+    "seed:reports": "node scripts/seed-reports.ts",
     "icons": "node scripts/generate-icons.ts",
     "test:e2e": "playwright test",
     "test:e2e:ui": "playwright test --ui"

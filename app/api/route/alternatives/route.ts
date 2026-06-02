@@ -29,9 +29,9 @@ export async function POST(request: Request) {
   const balancedBeta = Math.max(req.beta, 300.0);
   const safeBeta = Math.max(req.beta * 3.0, 1500.0);
   const raw: ResultadoRuta[] = [
-    astar(grafo, origenNodo, destinoNodo, req.alpha, 0.0),
-    astar(grafo, origenNodo, destinoNodo, req.alpha, balancedBeta),
-    astar(grafo, origenNodo, destinoNodo, req.alpha, safeBeta),
+    astar(grafo, origenNodo, destinoNodo, req.alpha, 0.0, false, req.gamma),
+    astar(grafo, origenNodo, destinoNodo, req.alpha, balancedBeta, false, req.gamma),
+    astar(grafo, origenNodo, destinoNodo, req.alpha, safeBeta, false, req.gamma),
   ];
   const encontradas = raw.filter((r) => r.encontrada);
   if (encontradas.length === 0) {

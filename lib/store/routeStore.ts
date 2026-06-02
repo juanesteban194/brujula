@@ -3,7 +3,7 @@ import type { RouteResponse, AlternativesResponse } from "@/lib/api/routes";
 import type { ExplorationEvent } from "@/lib/api/sse";
 import { alphaFromPreference, betaFromPreference, haversineM, parseNodeId } from "@/lib/utils";
 import { openExploreStream, openExploreMulti } from "@/lib/api/sse";
-import { ROUTE_LABEL_BY_INDEX } from "@/lib/constants";
+import { ROUTE_LABEL_BY_INDEX, ROUTE_DRAW_DELAY_MS } from "@/lib/constants";
 import { toast } from "sonner";
 
 export type Coord = { lat: number; lon: number };
@@ -25,6 +25,10 @@ type RouteState = {
 
   setOrigen: (p: Coord | null) => void;
   setDestino: (p: Coord | null) => void;
+  clearOrigen: () => void;
+  clearDestino: () => void;
+  swapEndpoints: () => void;
+  clearAll: () => void;
   setPreference: (v: number) => void;
   setAlgoritmo: (a: RouteState["algoritmo"]) => void;
   setShowAlternatives: (v: boolean) => void;
@@ -53,6 +57,12 @@ export const useRouteStore = create<RouteState>((set, get) => ({
 
   setOrigen: (p) => set({ origen: p }),
   setDestino: (p) => set({ destino: p }),
+  // Clear one endpoint independently; the existing route/exploration are no
+  // longer valid without both ends, so wipe those but keep the other endpoint.
+  clearOrigen: () => { set({ origen: null }); get().reset(); },
+  clearDestino: () => { set({ destino: null }); get().reset(); },
+  swapEndpoints: () => { const { origen, destino } = get(); set({ origen: destino, destino: origen }); get().reset(); },
+  clearAll: () => { set({ origen: null, destino: null }); get().reset(); },
   setPreference: (v) => set({ preference: v }),
   setAlgoritmo: (a) => set({ algoritmo: a }),
   // "3 alternativas" and "comparación" are mutually exclusive search modes.
@@ -72,7 +82,9 @@ export const useRouteStore = create<RouteState>((set, get) => ({
     }
 
     const alpha = alphaFromPreference(preference);
-    const beta = betaFromPreference(preference) + (avoidCriticalZones ? 500 : 0);
+    const beta = betaFromPreference(preference);
+    // "Evitar zonas con alerta" → hard-avoid reported segments (near-impassable).
+    const gamma = avoidCriticalZones ? 1500 : 0;
 
     set({ isCalculating: true, resultado: null, alternativas: null, comparison: null, eventosExploracion: [] });
     if (typeof navigator !== "undefined" && "vibrate" in navigator) navigator.vibrate(10);
@@ -106,7 +118,7 @@ export const useRouteStore = create<RouteState>((set, get) => ({
             (results, events) => {
               const aStar = results[0] as RouteResponse | null;
               const dij = results[1] as RouteResponse | null;
-              set({ eventosExploracion: events });
+              set({ eventosExploracion: events }); // streets fill first
               const ruta = aStar?.encontrada ? aStar : dij?.encontrada ? dij : null;
               if (!ruta) {
                 toast.error("No se encontró ruta entre esos puntos", { description: "Probá puntos dentro de Medellín." });
@@ -114,12 +126,15 @@ export const useRouteStore = create<RouteState>((set, get) => ({
                 resolve();
                 return;
               }
-              coverageWarn(ruta);
-              set({
-                resultado: ruta,
-                comparison: aStar?.encontrada && dij?.encontrada ? { astar: aStar, dijkstra: dij } : null,
-              });
-              resolve();
+              // Mark the final route only AFTER the exploration finishes drawing.
+              setTimeout(() => {
+                coverageWarn(ruta);
+                set({
+                  resultado: ruta,
+                  comparison: aStar?.encontrada && dij?.encontrada ? { astar: aStar, dijkstra: dij } : null,
+                });
+                resolve();
+              }, ROUTE_DRAW_DELAY_MS);
             },
             () => resolve()
           );
@@ -128,13 +143,13 @@ export const useRouteStore = create<RouteState>((set, get) => ({
       } else if (showAlternatives) {
         // 3 búsquedas EN PARALELO (rápida / balanceada / segura) — frentes a la vez
         const betas = [0, Math.max(beta, 300), Math.max(beta * 3, 1500)];
-        const bodies = betas.map((b) => ({ origen, destino, alpha, beta: b, algoritmo: "astar" }));
+        const bodies = betas.map((b) => ({ origen, destino, alpha, beta: b, algoritmo: "astar", gamma }));
         await new Promise<void>((resolve) => {
           const cancel = openExploreMulti(
             bodies,
             (results, events) => {
               const rutas = results.map((r) => r as RouteResponse);
-              set({ eventosExploracion: events });
+              set({ eventosExploracion: events }); // streets fill first
               const found = rutas.filter((r) => r?.encontrada);
               if (found.length === 0) {
                 toast.error("No se encontró ruta entre esos puntos", { description: "Probá puntos dentro de Medellín." });
@@ -142,15 +157,18 @@ export const useRouteStore = create<RouteState>((set, get) => ({
                 resolve();
                 return;
               }
-              coverageWarn(found[0]);
               const etiquetas = [...ROUTE_LABEL_BY_INDEX] as ("rapida" | "balanceada" | "segura")[];
               const selected = preference >= 0.66 ? 2 : preference <= 0.33 ? 0 : 1;
-              set({
-                alternativas: { rutas, etiquetas },
-                resultado: rutas[selected] ?? found[0],
-                selectedAlternative: rutas[selected]?.encontrada ? selected : rutas.findIndex((r) => r?.encontrada),
-              });
-              resolve();
+              // Reveal the alternatives only AFTER the exploration finishes drawing.
+              setTimeout(() => {
+                coverageWarn(found[0]);
+                set({
+                  alternativas: { rutas, etiquetas },
+                  resultado: rutas[selected] ?? found[0],
+                  selectedAlternative: rutas[selected]?.encontrada ? selected : rutas.findIndex((r) => r?.encontrada),
+                });
+                resolve();
+              }, ROUTE_DRAW_DELAY_MS);
             },
             () => resolve()
           );
@@ -160,16 +178,21 @@ export const useRouteStore = create<RouteState>((set, get) => ({
         // Single A* exploration + single route
         await new Promise<void>((resolve) => {
           const cancel = openExploreStream(
-            { origen, destino, alpha, beta, algoritmo: "astar" },
+            { origen, destino, alpha, beta, algoritmo: "astar", gamma },
             (resultado, events) => {
               const r = resultado as RouteResponse;
-              set({ eventosExploracion: events, resultado: r });
-              if (r.encontrada) coverageWarn(r);
-              resolve();
+              set({ eventosExploracion: events }); // streets fill first
+              if (r.encontrada) {
+                // Mark the final route only AFTER the exploration finishes drawing.
+                setTimeout(() => { set({ resultado: r }); coverageWarn(r); resolve(); }, ROUTE_DRAW_DELAY_MS);
+              } else {
+                set({ resultado: r });
+                resolve();
+              }
             },
             () => resolve()
           );
-          setTimeout(() => { cancel(); resolve(); }, 20_000);
+          setTimeout(() => { cancel(); resolve(); }, 25_000);
         });
 
         if (!get().resultado?.encontrada) {

@@ -102,27 +102,11 @@ const LAYER_GROUPS = [
     section: "Clima en vivo",
     items: [
       {
-        key: "weatherRain" as LayerKey,
-        icon: Icons.rain,
-        label: "Lluvia",
-        sublabel: "SIATA",
-        color: "var(--route-fast)",
-        live: true,
-      },
-      {
         key: "airQuality" as LayerKey,
         icon: Icons.air,
         label: "Calidad del aire",
         sublabel: "PM2.5 · ICA",
         color: "var(--route-safe)",
-        live: true,
-      },
-      {
-        key: "siataAlerts" as LayerKey,
-        icon: Icons.alert,
-        label: "Alertas activas",
-        sublabel: "SIATA",
-        color: "var(--alert-red)",
         live: true,
       },
     ],
@@ -133,7 +117,7 @@ export default function LayersPanel() {
   const [open, setOpen] = useState(false);
   const store = useLayersStore();
   const qc = useQueryClient();
-  const timeAgo = useTimeAgo(store.lastUpdate.weatherRain ?? null);
+  const timeAgo = useTimeAgo(store.lastUpdate.airQuality ?? null);
 
   const toggle = (key: LayerKey, live: boolean) => {
     store.toggle(key);

@@ -1,11 +1,10 @@
 import { API_URL } from "@/lib/constants";
 
 export interface ExplorationEvent {
-  tipo: "visit" | "done";
-  nodo?: string;
-  lat?: number;
-  lon?: number;
-  f?: number;
+  tipo: "edge" | "done";
+  coords?: [number, number][]; // [[lat,lon],[lat,lon]] of the explored segment
+  orden?: number;
+  g?: number;
   ruta?: number; // which of the parallel searches (0/1/2) — for color
   resultado?: unknown;
 }

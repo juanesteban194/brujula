@@ -6,6 +6,7 @@ export interface RouteRequestBody {
   destino?: { lat: number; lon: number };
   alpha?: number;
   beta?: number;
+  gamma?: number;
   algoritmo?: "astar" | "dijkstra" | "yens" | "greedy";
 }
 
@@ -14,6 +15,7 @@ export interface NormalizedRequest {
   destino: { lat: number; lon: number };
   alpha: number;
   beta: number;
+  gamma: number;
   algoritmo: "astar" | "dijkstra" | "yens" | "greedy";
 }
 
@@ -38,6 +40,7 @@ export function normalizeRequest(body: RouteRequestBody): NormalizedRequest | nu
     destino,
     alpha: clamp(typeof body.alpha === "number" ? body.alpha : 1.0, 0, 100),
     beta: clamp(typeof body.beta === "number" ? body.beta : 100.0, 0, 1000),
+    gamma: clamp(typeof body.gamma === "number" ? body.gamma : 0, 0, 10000),
     algoritmo: ["astar", "dijkstra", "yens", "greedy"].includes(algoritmo)
       ? algoritmo
       : "astar",

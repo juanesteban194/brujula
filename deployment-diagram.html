@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SafeRoutes — Diagrama de Despliegue</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900&family=Space+Mono:wght@400;700&family=Cormorant+Garamond:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg:       #0b0b0b;
+  --bronze:   #8B6914;
+  --bronze-l: #C49A2A;
+  --orange:   #E8620A;
+  --orange-b: #FF7420;
+  --cream:    #F0E6CC;
+  --cream-d:  #C4B48A;
+  --grey:     #6B6B6B;
+  --grey-l:   #A0A0A0;
+  --blue:     #1A4A7A;
+  --blue-l:   #2E7DC7;
+  --green:    #2A7A4B;
+  --green-l:  #3DAD6B;
+  --purple:   #4A2A7A;
+  --purple-l: #7A4EC4;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{
+  background:var(--bg);
+  color:var(--cream);
+  font-family:'Cormorant Garamond',serif;
+  min-height:100vh;
+}
+.header{
+  display:flex; align-items:center; justify-content:space-between;
+  padding:1.8rem 4rem;
+  border-bottom:1px solid rgba(139,105,20,0.2);
+  background:rgba(11,11,11,0.97);
+  position:sticky; top:0; z-index:50;
+}
+.brand{ display:flex; align-items:center; gap:1rem; }
+.brand-dot{
+  width:9px; height:9px; border-radius:50%;
+  background:var(--orange); box-shadow:0 0 10px var(--orange);
+  animation:pulse 2s ease-in-out infinite;
+}
+@keyframes pulse{0%,100%{box-shadow:0 0 10px var(--orange);}50%{box-shadow:0 0 22px var(--orange-b);}}
+.brand-name{ font-family:'Playfair Display',serif; font-size:1.15rem; font-weight:700; color:var(--cream); }
+.brand-name span{ color:var(--orange); }
+.header-label{ font-family:'Space Mono',monospace; font-size:0.58rem; letter-spacing:0.35em; color:var(--grey); text-transform:uppercase; }
+.header-badge{ font-family:'Space Mono',monospace; font-size:0.58rem; letter-spacing:0.2em; padding:0.4rem 1rem; border:1px solid rgba(139,105,20,0.35); color:var(--bronze-l); text-transform:uppercase; }
+
+.canvas{ padding:3rem 4rem 5rem; max-width:1200px; margin:0 auto; }
+.eyebrow{ font-family:'Space Mono',monospace; font-size:0.6rem; letter-spacing:0.4em; color:var(--orange); text-transform:uppercase; margin-bottom:0.5rem; display:flex; align-items:center; gap:1rem; }
+.eyebrow::after{ content:''; height:1px; width:50px; background:var(--orange); }
+.page-title{ font-family:'Playfair Display',serif; font-size:clamp(1.8rem,3vw,2.6rem); font-weight:700; color:var(--cream); line-height:1.1; margin-bottom:0.5rem; }
+.page-title em{ color:var(--orange); font-style:normal; }
+.page-sub{ font-size:1rem; color:var(--grey-l); line-height:1.7; max-width:620px; margin-bottom:3rem; }
+
+/* DIAGRAMA */
+.diagram-box{
+  border:1px solid rgba(139,105,20,0.2);
+  background:rgba(255,255,255,0.01);
+  position:relative; overflow:hidden; padding:2.5rem;
+}
+.diagram-box::before{
+  content:''; position:absolute; inset:0;
+  background-image:
+    linear-gradient(rgba(139,105,20,0.025) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(139,105,20,0.025) 1px,transparent 1px);
+  background-size:40px 40px; pointer-events:none;
+}
+
+/* MÁQUINA */
+.machine{
+  border:1px dashed rgba(139,105,20,0.4);
+  padding:2rem; position:relative;
+  background:rgba(139,105,20,0.015);
+}
+.machine-label{
+  position:absolute; top:-0.75rem; left:1.5rem;
+  background:var(--bg); padding:0 0.8rem;
+  font-family:'Space Mono',monospace; font-size:0.55rem;
+  letter-spacing:0.3em; color:var(--bronze-l); text-transform:uppercase;
+}
+
+/* FILA SUPERIOR: 3 zonas */
+.three-cols{
+  display:grid;
+  grid-template-columns:1fr 64px 1fr 64px 1fr;
+  gap:0; align-items:start; margin-top:0.5rem;
+}
+
+/* ZONA */
+.zone{ border:1px solid; border-radius:2px; overflow:hidden; animation:fadeIn 0.5s ease both; }
+.zone-ui    { border-color:rgba(46,125,199,0.4);  animation-delay:0.1s; }
+.zone-algo  { border-color:rgba(61,173,107,0.4);  animation-delay:0.25s; }
+.zone-datos { border-color:rgba(122,78,196,0.4);  animation-delay:0.4s; }
+@keyframes fadeIn{from{opacity:0;transform:translateY(12px);}to{opacity:1;transform:translateY(0);}}
+
+.zone-head{
+  padding:0.7rem 1.1rem;
+  font-family:'Space Mono',monospace; font-size:0.58rem;
+  letter-spacing:0.25em; text-transform:uppercase;
+  display:flex; align-items:center; gap:0.6rem;
+  border-bottom:1px solid;
+}
+.zone-head.ui    { background:rgba(26,74,122,0.18);  border-color:rgba(46,125,199,0.25);  color:var(--blue-l); }
+.zone-head.algo  { background:rgba(42,122,75,0.18);  border-color:rgba(61,173,107,0.25);  color:var(--green-l); }
+.zone-head.datos { background:rgba(74,42,122,0.18);  border-color:rgba(122,78,196,0.25);  color:var(--purple-l); }
+
+.zdot{ width:6px; height:6px; border-radius:50%; }
+.zdot.ui    { background:var(--blue-l);   box-shadow:0 0 6px var(--blue-l); }
+.zdot.algo  { background:var(--green-l);  box-shadow:0 0 6px var(--green-l); }
+.zdot.datos { background:var(--purple-l); box-shadow:0 0 6px var(--purple-l); }
+
+.zone-body{ padding:1rem; display:flex; flex-direction:column; gap:0.7rem; }
+
+/* COMPONENTE */
+.comp{
+  background:rgba(255,255,255,0.03); border:1px solid rgba(139,105,20,0.1);
+  padding:0.85rem 1rem; transition:all 0.2s; cursor:default;
+  position:relative; overflow:hidden;
+}
+.comp::before{
+  content:''; position:absolute; left:0; top:0; bottom:0;
+  width:2px; transform:scaleY(0); transform-origin:bottom; transition:transform 0.3s;
+}
+.zone-ui   .comp::before { background:var(--blue-l); }
+.zone-algo .comp::before { background:var(--green-l); }
+.zone-datos .comp::before{ background:var(--purple-l); }
+.comp:hover{ background:rgba(255,255,255,0.06); border-color:rgba(139,105,20,0.25); }
+.comp:hover::before{ transform:scaleY(1); }
+
+.comp-type{ font-family:'Space Mono',monospace; font-size:0.5rem; letter-spacing:0.2em; text-transform:uppercase; margin-bottom:0.35rem; }
+.zone-ui   .comp-type { color:var(--blue-l); }
+.zone-algo .comp-type { color:var(--green-l); }
+.zone-datos .comp-type{ color:var(--purple-l); }
+
+.comp-name{ font-family:'Playfair Display',serif; font-size:0.95rem; color:var(--cream); margin-bottom:0.3rem; line-height:1.2; }
+.comp-tags{ display:flex; flex-wrap:wrap; gap:0.3rem; margin-top:0.4rem; }
+.tag{ font-family:'Space Mono',monospace; font-size:0.55rem; padding:0.1rem 0.45rem; background:rgba(139,105,20,0.07); border:1px solid rgba(139,105,20,0.13); color:var(--cream-d); transition:border-color 0.2s; }
+.comp:hover .tag{ border-color:rgba(232,98,10,0.2); }
+.comp-url{ margin-top:0.5rem; font-family:'Space Mono',monospace; font-size:0.6rem; color:var(--orange); }
+
+/* FLECHA */
+.arrow-col{ display:flex; flex-direction:column; align-items:center; justify-content:center; padding-top:3.5rem; gap:4px; }
+.arr-fwd{ width:100%; height:2px; background:linear-gradient(90deg,var(--orange),var(--bronze)); position:relative; }
+.arr-fwd::after{ content:''; position:absolute; right:-1px; top:50%; transform:translateY(-50%); border:5px solid transparent; border-left-color:var(--orange); }
+.arr-bck{ width:100%; height:1px; background:linear-gradient(270deg,var(--bronze-l),var(--grey)); position:relative; margin-top:5px; }
+.arr-bck::before{ content:''; position:absolute; left:-1px; top:50%; transform:translateY(-50%); border:4px solid transparent; border-right-color:var(--grey); }
+.arr-lbl{ font-family:'Space Mono',monospace; font-size:0.48rem; color:var(--grey); letter-spacing:0.12em; text-transform:uppercase; white-space:nowrap; text-align:center; }
+
+/* NOTA NEXT.JS — DESTACA QUE TODO ES UN SOLO SERVIDOR */
+.nextjs-note{
+  margin-top:1.5rem;
+  padding:1.2rem 2rem;
+  border:1px solid rgba(61,173,107,0.3);
+  background:rgba(42,122,75,0.06);
+  display:flex; align-items:center; gap:1.5rem;
+}
+.nextjs-note-icon{ font-size:1.6rem; flex-shrink:0; }
+.nextjs-note-text{ font-size:0.9rem; color:var(--cream-d); line-height:1.6; }
+.nextjs-note-text strong{ color:var(--green-l); font-style:normal; }
+
+/* PUERTO */
+.port-single{
+  margin-top:1rem;
+  padding:1rem 1.8rem;
+  border:1px solid rgba(139,105,20,0.2);
+  background:rgba(139,105,20,0.03);
+  display:flex; align-items:center; gap:1.5rem;
+  transition:all 0.2s;
+}
+.port-single:hover{ border-color:var(--orange); background:rgba(232,98,10,0.05); }
+.port-icon{ font-size:1.4rem; flex-shrink:0; }
+.port-name{ font-family:'Playfair Display',serif; font-size:1rem; color:var(--cream); margin-bottom:0.2rem; }
+.port-addr{ font-family:'Space Mono',monospace; font-size:0.65rem; color:var(--orange); }
+.port-desc{ font-family:'Space Mono',monospace; font-size:0.55rem; color:var(--grey-l); margin-top:0.15rem; }
+
+/* FLUJO */
+.flow-section{ margin-top:2.5rem; }
+.flow-label{ font-family:'Space Mono',monospace; font-size:0.58rem; letter-spacing:0.35em; color:var(--bronze-l); text-transform:uppercase; margin-bottom:1.2rem; display:flex; align-items:center; gap:1rem; }
+.flow-label::after{ content:''; height:1px; flex:1; background:linear-gradient(90deg,var(--bronze),transparent); }
+.flow-steps{ display:grid; grid-template-columns:repeat(9,1fr); border:1px solid rgba(139,105,20,0.2); }
+.flow-step{ padding:1.1rem 0.6rem; border-right:1px solid rgba(139,105,20,0.15); text-align:center; transition:background 0.2s; }
+.flow-step:last-child{ border-right:none; }
+.flow-step:hover{ background:rgba(232,98,10,0.04); }
+.flow-n{ font-family:'Space Mono',monospace; font-size:0.48rem; color:var(--orange); letter-spacing:0.2em; margin-bottom:0.35rem; }
+.flow-ico{ font-size:1.1rem; margin-bottom:0.3rem; }
+.flow-name{ font-family:'Playfair Display',serif; font-size:0.8rem; color:var(--cream); margin-bottom:0.2rem; }
+.flow-desc{ font-family:'Space Mono',monospace; font-size:0.49rem; color:var(--grey-l); line-height:1.35; }
+.flow-arr{ display:flex; align-items:center; justify-content:center; font-size:0.85rem; color:var(--orange); border-right:1px solid rgba(139,105,20,0.15); }
+
+/* LEYENDA */
+.legend{ margin-top:1.8rem; display:flex; gap:2rem; flex-wrap:wrap; align-items:center; }
+.leg-item{ display:flex; align-items:center; gap:0.5rem; font-family:'Space Mono',monospace; font-size:0.55rem; color:var(--grey-l); }
+.leg-dot{ width:8px; height:8px; border-radius:50%; }
+.leg-line{ width:22px; height:2px; }
+
+.footer{ margin-top:4rem; padding:1.4rem 4rem; border-top:1px solid rgba(139,105,20,0.15); display:flex; justify-content:space-between; align-items:center; }
+.footer-l{ font-family:'Space Mono',monospace; font-size:0.55rem; color:var(--grey); letter-spacing:0.15em; }
+.footer-r{ font-family:'Playfair Display',serif; font-size:0.9rem; color:var(--bronze-l); }
+</style>
+</head>
+<body>
+
+<header class="header">
+  <div class="brand">
+    <div class="brand-dot"></div>
+    <div class="brand-name">Safe<span>Routes</span></div>
+  </div>
+  <div class="header-label">Universidad de Medellín · 2026 · ADA</div>
+  <div class="header-badge">Diagrama de Despliegue</div>
+</header>
+
+<main class="canvas">
+
+  <div class="eyebrow">Arquitectura</div>
+  <h1 class="page-title">Diagrama de <em>Despliegue</em></h1>
+  <p class="page-sub">Sistema 100% TypeScript corriendo en una sola máquina local. Next.js actúa como servidor web y como backend al mismo tiempo — un único proceso en el puerto 3000.</p>
+
+  <div class="diagram-box">
+    <div class="machine">
+      <div class="machine-label">💻 Máquina local — npm run dev → localhost:3000</div>
+
+      <div class="three-cols">
+
+        <!-- ZONA: INTERFAZ WEB -->
+        <div class="zone zone-ui">
+          <div class="zone-head ui">
+            <div class="zdot ui"></div>
+            Interfaz · navegador
+          </div>
+          <div class="zone-body">
+
+            <div class="comp">
+              <div class="comp-type">Páginas React</div>
+              <div class="comp-name">Next.js App Router</div>
+              <div class="comp-tags">
+                <span class="tag">React 19</span>
+                <span class="tag">TypeScript</span>
+                <span class="tag">TailwindCSS</span>
+              </div>
+              <div class="comp-url">localhost:3000/route</div>
+            </div>
+
+            <div class="comp">
+              <div class="comp-type">Mapa interactivo</div>
+              <div class="comp-name">MapLibre GL</div>
+              <div class="comp-tags">
+                <span class="tag">rutas coloreadas</span>
+                <span class="tag">heatmap riesgo</span>
+                <span class="tag">tiles CARTO</span>
+              </div>
+            </div>
+
+            <div class="comp">
+              <div class="comp-type">Estado global</div>
+              <div class="comp-name">Zustand store</div>
+              <div class="comp-tags">
+                <span class="tag">origen / destino</span>
+                <span class="tag">slider α / β</span>
+                <span class="tag">resultado rutas</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- FLECHA -->
+        <div class="arrow-col">
+          <div style="width:100%">
+            <div class="arr-fwd"></div>
+            <div class="arr-lbl" style="margin-top:4px">fetch /api/route</div>
+            <div class="arr-bck" style="margin-top:6px"></div>
+            <div class="arr-lbl">JSON con ruta</div>
+          </div>
+        </div>
+
+        <!-- ZONA: ALGORITMOS (Route Handlers) -->
+        <div class="zone zone-algo">
+          <div class="zone-head algo">
+            <div class="zdot algo"></div>
+            Backend · Route Handlers Next.js
+          </div>
+          <div class="zone-body">
+
+            <div class="comp">
+              <div class="comp-type">Endpoints API</div>
+              <div class="comp-name">/api/route</div>
+              <div class="comp-tags">
+                <span class="tag">POST</span>
+                <span class="tag">origen + destino + β</span>
+                <span class="tag">server-side TS</span>
+              </div>
+            </div>
+
+            <div class="comp">
+              <div class="comp-type">Algoritmo 1 · impl. propia</div>
+              <div class="comp-name">A* + haversine</div>
+              <div class="comp-tags">
+                <span class="tag">heurística geográfica</span>
+                <span class="tag">explora corredor</span>
+                <span class="tag">O((V+E) log V)</span>
+              </div>
+            </div>
+
+            <div class="comp">
+              <div class="comp-type">Algoritmo 2 · impl. propia</div>
+              <div class="comp-name">Dijkstra</div>
+              <div class="comp-tags">
+                <span class="tag">sin heurística</span>
+                <span class="tag">explora en anillos</span>
+                <span class="tag">O((V+E) log V)</span>
+              </div>
+            </div>
+
+            <div class="comp">
+              <div class="comp-type">Función de costo</div>
+              <div class="comp-name">C(e) = α·dist + β·riesgo·dist</div>
+              <div class="comp-tags">
+                <span class="tag">3 perfiles de β</span>
+                <span class="tag">rápida / balance / segura</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- FLECHA -->
+        <div class="arrow-col">
+          <div style="width:100%">
+            <div class="arr-fwd"></div>
+            <div class="arr-lbl" style="margin-top:4px">lee CSV</div>
+            <div class="arr-bck" style="margin-top:6px"></div>
+            <div class="arr-lbl">grafo en mem.</div>
+          </div>
+        </div>
+
+        <!-- ZONA: DATOS -->
+        <div class="zone zone-datos">
+          <div class="zone-head datos">
+            <div class="zdot datos"></div>
+            Datos · archivos locales
+          </div>
+          <div class="zone-body">
+
+            <div class="comp">
+              <div class="comp-type">Dataset principal</div>
+              <div class="comp-name">CSV red vial Medellín</div>
+              <div class="comp-tags">
+                <span class="tag">68.749 tramos</span>
+                <span class="tag">52.654 medidos</span>
+                <span class="tag">16.091 interpolados</span>
+              </div>
+            </div>
+
+            <div class="comp">
+              <div class="comp-type">Campos por tramo</div>
+              <div class="comp-name">Atributos de arista</div>
+              <div class="comp-tags">
+                <span class="tag">length</span>
+                <span class="tag">harassmentRisk</span>
+                <span class="tag">fuente (medido/IDW)</span>
+              </div>
+            </div>
+
+            <div class="comp">
+              <div class="comp-type">Estructura en memoria</div>
+              <div class="comp-name">Grafo dirigido</div>
+              <div class="comp-tags">
+                <span class="tag">dict adyacencia</span>
+                <span class="tag">cargado al arrancar</span>
+              </div>
+            </div>
+
+            <div class="comp">
+              <div class="comp-type">Datos de prueba</div>
+              <div class="comp-name">Reportes JSON</div>
+              <div class="comp-tags">
+                <span class="tag">reportes sintéticos</span>
+                <span class="tag">overlay de riesgo</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div><!-- /three-cols -->
+
+      <!-- NOTA CLAVE -->
+      <div class="nextjs-note">
+        <div class="nextjs-note-icon">💡</div>
+        <div class="nextjs-note-text">
+          <strong>Todo en un solo proceso Next.js.</strong> No hay backend separado ni segundo puerto. Los Route Handlers corren server-side dentro del mismo servidor de Next.js — la interfaz y los algoritmos comparten el mismo proceso en <strong>localhost:3000</strong>.
+        </div>
+      </div>
+
+      <!-- PUERTO ÚNICO -->
+      <div class="port-single">
+        <div class="port-icon">🌐</div>
+        <div>
+          <div class="port-name">Único punto de acceso</div>
+          <div class="port-addr">http://localhost:3000</div>
+          <div class="port-desc">npm run dev · Next.js dev server · interfaz + API en el mismo proceso</div>
+        </div>
+      </div>
+
+    </div><!-- /machine -->
+  </div><!-- /diagram-box -->
+
+  <!-- FLUJO -->
+  <div class="flow-section">
+    <div class="flow-label">Flujo de una solicitud de ruta</div>
+    <div class="flow-steps">
+      <div class="flow-step">
+        <div class="flow-n">01</div>
+        <div class="flow-ico">👤</div>
+        <div class="flow-name">Usuario</div>
+        <div class="flow-desc">marca origen y destino en el mapa</div>
+      </div>
+      <div class="flow-arr">→</div>
+      <div class="flow-step">
+        <div class="flow-n">02</div>
+        <div class="flow-ico">⚖️</div>
+        <div class="flow-name">Slider β</div>
+        <div class="flow-desc">ajusta rápido ↔ seguro</div>
+      </div>
+      <div class="flow-arr">→</div>
+      <div class="flow-step">
+        <div class="flow-n">03</div>
+        <div class="flow-ico">🌐</div>
+        <div class="flow-name">React</div>
+        <div class="flow-desc">fetch POST a /api/route con coords + β</div>
+      </div>
+      <div class="flow-arr">→</div>
+      <div class="flow-step">
+        <div class="flow-n">04</div>
+        <div class="flow-ico">🧠</div>
+        <div class="flow-name">A* / Dijkstra</div>
+        <div class="flow-desc">calcula ruta sobre el grafo en memoria</div>
+      </div>
+      <div class="flow-arr">→</div>
+      <div class="flow-step">
+        <div class="flow-n">05</div>
+        <div class="flow-ico">🗺️</div>
+        <div class="flow-name">MapLibre</div>
+        <div class="flow-desc">pinta ruta con colores y métricas</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- LEYENDA -->
+  <div class="legend">
+    <div class="leg-item"><div class="leg-dot" style="background:var(--blue-l)"></div>Interfaz web (React · navegador)</div>
+    <div class="leg-item"><div class="leg-dot" style="background:var(--green-l)"></div>Lógica server-side (Route Handlers · TypeScript)</div>
+    <div class="leg-item"><div class="leg-dot" style="background:var(--purple-l)"></div>Datos y grafo en memoria</div>
+    <div class="leg-item"><div class="leg-line" style="background:linear-gradient(90deg,var(--orange),var(--bronze))"></div>Petición del cliente al servidor</div>
+    <div class="leg-item"><div class="leg-line" style="background:linear-gradient(90deg,var(--bronze-l),var(--grey))"></div>Respuesta / lectura de datos</div>
+  </div>
+
+</main>
+
+<footer class="footer">
+  <div class="footer-l">ANÁLISIS Y DISEÑO DE ALGORITMOS · UNIVERSIDAD DE MEDELLÍN · 2026 · PAULA S. MENESES &amp; JUAN ESTEBAN ECHAVARRÍA</div>
+  <div class="footer-r">SafeRoutes — Brújula</div>
+</footer>
+
+</body>
+</html>

@@ -35,7 +35,7 @@ export async function POST(request: Request) {
     }
   } else {
     const fn = { astar, dijkstra, greedy }[req.algoritmo] ?? astar;
-    resultado = fn(grafo, origenNodo, destinoNodo, req.alpha, req.beta);
+    resultado = fn(grafo, origenNodo, destinoNodo, req.alpha, req.beta, false, req.gamma);
   }
 
   getState().contadorRutas += 1;
