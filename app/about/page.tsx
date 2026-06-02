@@ -33,7 +33,7 @@ export default function AboutPage() {
           <div className="space-y-3">
             {[
               { icon: <Zap className="w-4 h-4 text-route-fast" />, title: "A* con heurística haversine", desc: "Óptimo y rápido. La heurística es admisible: siempre subestima el costo real." },
-              { icon: <BarChart2 className="w-4 h-4 text-route-balanced" />, title: "Yen's K-Shortest Paths", desc: "Genera 3 alternativas distintas. Clasifica automáticamente en Rápida, Segura y Balanceada." },
+              { icon: <BarChart2 className="w-4 h-4 text-route-balanced" />, title: "Comparación A* vs Dijkstra", desc: "Mismo óptimo; A* explora un corredor dirigido por la heurística, Dijkstra anillos concéntricos. Las 3 alternativas son A* con 3 perfiles de β." },
               { icon: <Shield className="w-4 h-4 text-route-safe" />, title: "Función de costo compuesta", desc: "costo = α·distancia + β·riesgo·distancia. El slider mueve β de 0 a 500." },
               { icon: <Globe className="w-4 h-4 text-risk-mid" />, title: "Capas en vivo (SIATA)", desc: "Integra datos reales de lluvia, calidad del aire y alertas del Sistema de Alerta Temprana del Valle de Aburrá." },
             ].map((item) => (
@@ -48,12 +48,30 @@ export default function AboutPage() {
           </div>
         </section>
 
+        {/* Data transparency (§6.10) */}
+        <section>
+          <h2 className="text-xl font-semibold mb-3">Datos y transparencia</h2>
+          <div className="p-4 rounded-xl bg-bg-surface border border-border-subtle space-y-3">
+            <p className="text-sm text-text-secondary leading-relaxed">
+              Los datos de riesgo combinan <span className="text-text-primary font-medium">mediciones reales</span> del
+              dataset oficial de Medellín, <span className="text-text-primary font-medium">estimaciones por interpolación
+              espacial (IDW)</span> donde faltaba cobertura, y <span className="text-text-primary font-medium">reportes
+              de la comunidad</span> en tiempo real.
+            </p>
+            <p className="text-xs text-text-tertiary leading-relaxed">
+              No inventamos puntajes de peligrosidad. De 68.749 tramos, 52.654 son medidos y 16.091 se estiman con IDW
+              —técnica estándar en SIG— a partir de los 8 vecinos reales más cercanos. Cada segmento lleva su fuente
+              (<span className="font-mono">real</span> / <span className="font-mono">interpolado</span>).
+            </p>
+          </div>
+        </section>
+
         {/* Stack */}
         <section>
           <h2 className="text-xl font-semibold mb-3">Stack</h2>
           <div className="grid grid-cols-2 gap-2 text-sm">
             {[
-              ["Backend", "FastAPI · Python 3.12 · Railway"],
+              ["Backend", "Route Handlers de Next.js · TypeScript"],
               ["Frontend", "Next.js 15 · React 19 · Vercel"],
               ["Mapas", "MapLibre GL JS · OSM tiles"],
               ["UI", "TailwindCSS · shadcn/ui · vaul"],

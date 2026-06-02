@@ -1,3 +1,4 @@
+import { existsSync } from "node:fs";
 import { join } from "node:path";
 
 /**
@@ -7,8 +8,13 @@ import { join } from "node:path";
  */
 const root = process.cwd();
 
+// Prefer the IDW-augmented dataset (full city coverage + `fuente` column, §6.10)
+// when it has been generated; fall back to the raw official CSV otherwise.
+const augmentedCsv = join(root, "data", "calles_de_medellin_aumentado.csv");
+const originalCsv = join(root, "data", "calles_de_medellin_con_acoso.csv");
+
 export const config = {
-  csvPath: process.env.CSV_PATH || join(root, "data", "calles_de_medellin_con_acoso.csv"),
+  csvPath: process.env.CSV_PATH || (existsSync(augmentedCsv) ? augmentedCsv : originalCsv),
   reportsSeedPath:
     process.env.REPORTS_PATH || join(root, "data", "community_reports_seed.json"),
   /** Writable copy used in dev/local; ignored when the FS is read-only (Vercel). */
